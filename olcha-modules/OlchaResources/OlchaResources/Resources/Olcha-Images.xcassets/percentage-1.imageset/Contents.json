@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "u_percentage.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

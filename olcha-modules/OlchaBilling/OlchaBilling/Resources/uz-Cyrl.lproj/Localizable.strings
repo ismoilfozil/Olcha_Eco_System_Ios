@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  OlchaBilling
+
+  Created by Elbek Khasanov on 20/06/23.
+  
+*/
+"order_num" = "Ариза №";
+"with_application" = "Илова орқали";
+"with_cards" = "Карта орқали";
+
+"amount_pay" = "Тўлов суммаси";
+
+"pay_success" = "Оплата совершена успешно";
+
+"pay_success" = "Тўлов муваффақиятли амалга оширилди";
+
+"otp_code" = "СМС код";
+
+"currency" = "Валюта";

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="20G80" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="BasketEntity" representedClassName=".BasketEntity" syncable="YES">
+        <attribute name="category_id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="category_image" optional="YES" attributeType="String"/>
+        <attribute name="categoryname_oz" optional="YES" attributeType="String"/>
+        <attribute name="categoryname_ru" optional="YES" attributeType="String"/>
+        <attribute name="categoryname_uz" optional="YES" attributeType="String"/>
+        <attribute name="count" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="discount_price" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="image" optional="YES" attributeType="String"/>
+        <attribute name="manufacturer_id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="manufacturer_oz" optional="YES" attributeType="String"/>
+        <attribute name="manufacturer_ru" optional="YES" attributeType="String"/>
+        <attribute name="manufacturer_uz" optional="YES" attributeType="String"/>
+        <attribute name="name_oz" optional="YES" attributeType="String"/>
+        <attribute name="name_ru" optional="YES" attributeType="String"/>
+        <attribute name="name_uz" optional="YES" attributeType="String"/>
+        <attribute name="per_month_price" optional="YES" attributeType="String"/>
+        <attribute name="plan_id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="quantity" optional="YES" attributeType="String"/>
+        <attribute name="total_price" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="BasketModel" representedClassName=".BasketModel" syncable="YES">
+        <attribute name="count" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="product" optional="YES" attributeType="Binary"/>
+        <attribute name="product_id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="store_id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="CompareEntity" representedClassName=".CompareEntity" syncable="YES">
+        <attribute name="category_id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="category_image" optional="YES" attributeType="String"/>
+        <attribute name="categoryname_oz" optional="YES" attributeType="String"/>
+        <attribute name="categoryname_ru" optional="YES" attributeType="String"/>
+        <attribute name="categoryname_uz" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="image" optional="YES" attributeType="String"/>
+        <attribute name="manufacturer_id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="manufacturer_oz" optional="YES" attributeType="String"/>
+        <attribute name="manufacturer_ru" optional="YES" attributeType="String"/>
+        <attribute name="manufacturer_uz" optional="YES" attributeType="String"/>
+        <attribute name="name_oz" optional="YES" attributeType="String"/>
+        <attribute name="name_ru" optional="YES" attributeType="String"/>
+        <attribute name="name_uz" optional="YES" attributeType="String"/>
+        <attribute name="per_month_price" optional="YES" attributeType="String"/>
+        <attribute name="plan_id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="total_price" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="CompareModel" representedClassName=".CompareModel" syncable="YES">
+        <attribute name="category_id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="product" optional="YES" attributeType="Binary"/>
+        <attribute name="product_id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="HistoryEntity" representedClassName=".HistoryEntity" syncable="YES">
+        <attribute name="category_id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="category_image" optional="YES" attributeType="String"/>
+        <attribute name="categoryname_oz" optional="YES" attributeType="String"/>
+        <attribute name="categoryname_ru" optional="YES" attributeType="String"/>
+        <attribute name="categoryname_uz" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="image" optional="YES" attributeType="String"/>
+        <attribute name="manufacturer_id" optional="YES" attributeType="Integer 16" defaultValueString="-1" usesScalarValueType="YES"/>
+        <attribute name="manufacturer_oz" optional="YES" attributeType="String"/>
+        <attribute name="manufacturer_ru" optional="YES" attributeType="String"/>
+        <attribute name="manufacturer_uz" optional="YES" attributeType="String"/>
+        <attribute name="name_oz" optional="YES" attributeType="String"/>
+        <attribute name="name_ru" optional="YES" attributeType="String"/>
+        <attribute name="name_uz" optional="YES" attributeType="String"/>
+        <attribute name="per_month_price" optional="YES" attributeType="String"/>
+        <attribute name="plan_id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="total_price" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="BasketEntity" positionX="0" positionY="0" width="128" height="329"/>
+        <element name="BasketModel" positionX="0" positionY="153" width="128" height="89"/>
+        <element name="CompareEntity" positionX="0" positionY="0" width="128" height="284"/>
+        <element name="CompareModel" positionX="0" positionY="153" width="128" height="74"/>
+        <element name="HistoryEntity" positionX="0" positionY="0" width="128" height="284"/>
+    </elements>
+</model>

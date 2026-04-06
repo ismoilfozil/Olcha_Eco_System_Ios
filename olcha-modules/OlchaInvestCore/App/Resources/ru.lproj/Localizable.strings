@@ -1,0 +1,279 @@
+/* 
+  InvestLocalizable.strings
+  OlchaInvestCore
+
+  Created by Akhrorkhuja on 11/06/23.
+  Copyright © 2023 Olcha. All rights reserved.
+*/
+
+"uzbek_language" = "O’zbek tili";
+"uzbek_cyrilic_language" = "Ўзбек тили";
+"russian_language" = "Русский язык";
+
+//##** TABS **##//
+"main_tab_item" = "Главная";
+"home_tab_item" = "Invest";
+"package_tab_item" = "Тарифы";
+"profile_tab_item" = "Профиль";
+
+//##** COST-VIEW **##//
+"cost_view_invest" = "Сумма инвестиции";
+"cost_view_profit" = "Сумма прибыли";
+
+//##** PROFIT **##//
+"profit_withdraw_button" = "Вывести";
+"profit_total_sum" = "Общая сумма";
+"profit_income_sum" = "Сумма прибыли";
+"profit_withdraw" = "Вывод прибыли";
+"profit_withdraw_all" = "Вывести все деньги";
+"profit_autowithraw" = "Автовывод прибыли";
+
+//##** NOTIFICATION **##//
+"notification_congrats" = "Поздравления";
+
+//##** SUBSCRIBE **##//
+"subscribe_us" = "Подписывайтесь на нас";
+
+//##** HELP **##//
+"help_chat" = "Онлайн чат";
+"help_phone" = "Связаться по телефону";
+"help_message" = "Напишите нам";
+"help_faq" = "Частые вопросы";
+
+"invest_modal_fill" = "Пополнить";
+"invest_modal_withdraw" = "Вывод прибыли";
+"invest_modal_history" = "История";
+"invest_modal_statistics" = "Статистика";
+
+"menu_suggestions" = "Советы и статьи";
+"menu_faq" = "Частые вопросы";
+"menu_help" = "Служба поддержки";
+"menu_logout" = "Выйти";
+
+"profile_heading" = "Профиль";
+"profile_phone" = "Телефонные данные";
+"profile_cards" = "Прикрепленные карты";
+"profile_passport" = "Паспортные данные";
+"profile_security" = "Безопасность";
+
+"settings_language" = "Язык приложения";
+"settings_push_notifications" = "Пуш уведомления";
+"settings_public_offer" = "Публичная офферта";
+"settings_about_company" = "О приложении";
+"settings_clear_tooptip_cache" = "Повторить обучение";
+
+"add_card_number" = "Номер карты";
+"add_card_expire_date" = "Срок карты";
+"add_card_code" = "Введите 5-значный код";
+"add_card_title" = "Добавьте карту";
+"add_card_code_button" = "Отправить код";
+"add_card_continue_button" = "Продолжить";
+
+"card_withdraw" = "Вывод прибыли";
+"card_withdraw_title" = "Карта зачисления";
+"card_fill" = "Выберите карту";
+"card_fill_title" = "Карта заполнения";
+"card_add" = "Добавить карту";
+
+"package" = "Тариф";
+"package_heading" = "Тарифы";
+"package_currency" = "Валюта";
+"package_title" = "Название тарифа";
+"package_invest_button" = "Инвестировать";
+"package_warning_text" = "Внимание! Процент будет меняться зависимости от срока";
+"package_heading_additional" = "Дополнительная информация:";
+"package_heading_category" = "Описание категории:";
+
+"contract_my_invests" = "Мои инвестиции";
+"contract_percent" = "Процент";
+"contract_term" = "Срок";
+"contract_statistics" = "Статистика";
+"contract_history" = "История";
+
+"faq" = "Частые вопросы";
+"faqs" = "Вопросы";
+"faq_ask_question" = "Задать вопрос";
+"faq_title" = "Не нашли подходящий ответ?";
+"faq_detail" = "В таком случае вы можете задать интересующий вас вопрос в онлайн чат";
+
+"home_invest" = "Инвестировать";
+"home_more" = "Подробнее";
+"home_empty_placeholder" = "У вас пока нет активных инвестиции";
+
+"select_package" = "Выберите тариф";
+"select" = "Выбрать";
+"select_condition" = "Выберите условия";
+
+"invest_amount" = "Сумма";
+"invest_question" = "На что вы хотите инвестировать?";
+"invest_warning" = "Вы можете выбрать тарифы, с выгодной для вас условией\nТарифы - это категории товаров которые вы можете инвестировать они приносят вам доход каждый месяц, до окончания периода!\nПроценты меняются с изменения срока";
+
+"autowithdraw" = "Настройте автовывод";
+"autowithdraw_desc" = "Выберите процент от прибыли, который будет посутпать на вашу карту ежемесячно";
+"save_button" = "Сохранить";
+
+
+"min_price_empty" = "Сумма должно быть больше 0 сум.";
+
+"history_profit" = "Поступления средств";
+"history_loss" = "Вывода средств";
+
+"contract_category_title" = "Название категории для инвестиции есть 2 строка";
+
+"success_text" = "Ваш запрос находится на рассмотрении.";
+"success_close" = "Закрыть";
+
+"help_heading" = "Помощь";
+"help_call_alert_title" = "Связаться по телефону +998 (71) 202 202 1";
+"help_call_alert_cancel" = "Отменить";
+"help_call_alert_call" = "Вызов";
+
+"write_us_message_placeholder" = "Ваше сообщение";
+"write_us_heading" = "Написать нам";
+"write_us_button" = "Отправить сообщение";
+
+"profile_personal_details" = "Персональные данные";
+
+"notification_heading" = "Уведомление";
+"notification_empty_placeholder" = "У вас пока нет уведомлении";
+
+"about_app" = "О приложении";
+"about_rate_us" = "Оцените нас в App Store";
+"about_share" = "Поделиться с друзьями";
+
+"language_heading" = "Язык";
+
+"settings_heading" = "Настройки";
+
+"enter_more_than_min_amount" = "Введите сумму больше, чем %@";
+"enter_more_than_max_amount" = "Введите сумму, равную или меньше %@";
+"enter_amount_limit" = "от %@";
+
+"contract_pause" = "Приостоновить";
+"contract_resume" = "Возобновить";
+"contract_cancel" = "Запрос на отмену";
+"contract_cancel_warning" = "Вам нужно приостановить сеанс, чтобы запросить отмену инвестиций";
+"contract_phone_alert_title" = "Запрос отмены";
+"contract_phone_alert_message" = "Вы запрашиваете отменить вашу инвестицию, это приведет к потере всех инвестиции в том числе и денег";
+"contract_phone_alert_cancel_button" = "Отмена";
+"contract_phone_alert_yes_button" = "Да";
+"contract_reinvest" = "Реинввест";
+"contract_reason_title" = "Подтвердите действие";
+"contract_reason_confirm_button" = "Подтвердить";
+"contract_reason_delete" = "Хочу удалить инвестицию";
+"contract_reason_problem" = "Возникло проблема";
+"contract_reason_no_profit" = "Деньги не капают";
+"contract_reason_cant_withdraw" = "Не могу вывести деньги";
+"contract_reason_other" = "Другое";
+"contract_reason_other_top_hint" = "Укажите причину";
+"contract_reason_other_placeholder" = "Заполните причину паузы";
+
+"term_value" = "%@ мес";
+
+"person_id" = "ID пользователя";
+
+"invest_contract_name_hint" = "Придумайте название";
+"invest_contract_name"= "Название контракта";
+
+"contract_status_active" = "Активно";
+"contract_status_paused" = "Приостановлено";
+"contract_status_cancelled" = "Отменено";
+"contract_status_pending_for_payment" = "В ожидании платежа";
+
+"tooltip_next_button" = "Далее";
+"tooltip_done_button" = "Готово";
+
+"contract_view_controller_tooltip_name_title" = "Название и ID";
+"contract_view_controller_tooltip_amounts_title" = "Суммы";
+"contract_view_controller_tooltip_withdraw_title" = "Вывод прибыли";
+"contract_view_controller_tooltip_details_title" = "Процент и срок";
+"contract_view_controller_tooltip_package_title" = "Тариф";
+"contract_view_controller_tooltip_chart_title" = "Статистика";
+"contract_view_controller_tooltip_history_title" = "История";
+
+"contract_view_controller_tooltip_name_description" = "Позволяют вам легко отслеживать и управлять своими инвестициями, обеспечивая удобство и ясность в вашем портфолио.";
+"contract_view_controller_tooltip_amounts_description" = "Наблюдайте за суммой, полученным прибылем";
+"contract_view_controller_tooltip_withdraw_description" = "Позволяет снимать накопленную прибыль со своих инвестиций. Когда накопилась сумма прибыли от своих инвестиций в активы или проекты, вы может запросить вывод на свой банковский счет или другой указанный способ.";
+"contract_view_controller_tooltip_details_description" = "Пказатель суммы и срока вашего тарифного плана";
+"contract_view_controller_tooltip_package_description" = "Выбранные вами тарифный план. Вы не можете изменять ее";
+"contract_view_controller_tooltip_chart_description" = "Статистика помогают вам отслеживать и анализировать свои инвестиции.";
+"contract_view_controller_tooltip_history_description" = "История предоставляет подробную информацию о ваших предыдущих финансовых операциях и сделках. ";
+
+"menu_view_controller_tooltip_suggestions_title" = "Советы и статьи";
+"menu_view_controller_tooltip_faq_title" = "Частые вопросы";
+"menu_view_controller_tooltip_support_title" = "Служба поддержки";
+
+"menu_view_controller_tooltip_suggestions_description" = "Посмотрите полезные статьи и видео уроки про халяльные инвестиции инвестиции";
+"menu_view_controller_tooltip_faq_description" = "Найдите ответ на все свои интересующие вопросы";
+"menu_view_controller_tooltip_support_description" = "Свяжитесь с нами если у вас возникнут проблемы в работе";
+
+"invest_view_controller_name_title" = "Название инвестиции";
+"invest_view_controller_package_title" = "Тариф";
+"invest_view_controller_term_title" = "Срок";
+"invest_view_controller_percent_title" = "Процент";
+"invest_view_controller_amount_title" = "Сумма инвестиции";
+"invest_view_controller_preview_title" = "Предварительный показатель";
+
+"invest_view_controller_name_description" = "Придумайте название для инвестиции. Подойдет любое название которую вы придумаете";
+"invest_view_controller_package_description" = "Широкий выбор тарифных планов, которые соответствуют различным потребностям и возможностям";
+"invest_view_controller_term_description" = "Срок и процент варьируются в зависимости от выбранного тарифного плана. Он определяет период, в течение которого ваша инвестиция будет работать и приносить прибыль. Выбор срока зависит от вашей финансовой стратегии, ожиданий доходности и личных целей.";
+"invest_view_controller_percent_description" = "Срок и процент варьируются в зависимости от выбранного тарифного плана. Он определяет период, в течение которого ваша инвестиция будет работать и приносить прибыль. Выбор срока зависит от вашей финансовой стратегии, ожиданий доходности и личных целей.";
+"invest_view_controller_amount_description" = "Вы можете выбрать сумму, которая соответствует вашим возможностям и комфортному уровню риска.";
+"invest_view_controller_preview_description" = "Помогает оценить потенциальную прибыль от ваших инвестиций на основе выбранного тарифного плана и суммы инвестиции.";
+
+"packages_view_controller_percent_title" = "Процент";
+"packages_view_controller_term_title" = "Срок";
+"packages_view_controller_currency_title" = "Валюта";
+"packages_empty_placeholder" = "Тарифы отсутствуют";
+
+"packages_view_controller_percent_description" = "Максимальный процент";
+"packages_view_controller_term_description" = "Максимальный срок";
+"packages_view_controller_currency_description" = "Валюта по которой можно инвестировать";
+
+"invest_home_view_controller_investButton_title" = "Добро пожаловать";
+"invest_home_view_controller_packagesTabItem_title" = "Тарифы";
+"invest_home_view_controller_profileTabItem_title" = "Профиль";
+"invest_home_view_controller_notificationButton_title" = "Уведомления";
+"invest_home_view_controller_menuButton_title" = "Боковое меню";
+
+"invest_home_view_controller_investButton_description" = "На этой странице будут отображаться все ваши инвестиции. Нажмите на кнопку \"Инвестировать\" чтобы начать инвестицию";
+"invest_home_view_controller_packagesTabItem_description" = "Предлагаем разнообразные тарифные планы, позволяющие выбрать оптимальный вариант в соответствии с вашими инвестиционными целями и потребностями.";
+"invest_home_view_controller_profileTabItem_description" = "Вы можете добавить личные данные, установить предпочтительные параметры инвестирования и выбрать удобные способы уведомлений.";
+"invest_home_view_controller_notificationButton_description" = "Список новых и старых уведомлений!";
+"invest_home_view_controller_menuButton_description" = "Вы можете добавить личные данные, установить предпочтительные параметры инвестирования и выбрать удобные способы уведомлений.";
+
+"select_package_view_controller_selectButton_title" = "Выберите тариф";
+"select_package_view_controller_selectButton_description" = "Разнообразные тарифные планы, позволяющие выбрать оптимальный вариант в соответствии с вашими инвестиционными целями и потребностями.";
+
+"amount_view_controller_amount_title" = "Введите сумму";
+"amount_view_controller_amount_description" = "Введите сумму, которая соответствует вашим возможностям и комфортному уровню риска.";
+
+"select_term_view_controller_term_title" = "Выберите условия";
+"select_term_view_controller_term_description" = "Проценты меняються зависимомсти от выбранного срока, выберите подходящий для вас срок";
+
+"profile_view_controller_tooltip_balance_title" = "Invest Balans";
+"profile_view_controller_tooltip_phone_details_title" = "Телефонные данные";
+"profile_view_controller_tooltip_card_details_title" = "Прикрепленные карты";
+"profile_view_controller_tooltip_passport_details_title" = "Паспортные данные";
+"profile_view_controller_tooltip_security_title" = "Безопасность";
+
+"profile_view_controller_tooltip_balance_description" = "Ваш текущий invest баланс. Вы можете пополнить ее с помощью картой и начать инвестировать";
+"profile_view_controller_tooltip_phoneDetails_description" = "Вы можете управлять вашими телефонными данными";
+"profile_view_controller_tooltip_cardDetails_description" = "Добавляйте и ускорьте процесс вывода и инвестировании";
+"profile_view_controller_tooltip_passportDetails_description" = "Необходимо чтобы в дальнейшем";
+"profile_view_controller_tooltip_security_description" = "Установите пароль или ПИН-код чтобы совершать безопасное инвестирование ";
+
+"delete_success_message" = "Уважаемый пользователь, ваша заявка на удаление аккаунта принято. Этот процесс может занять некоторое время. Так как ваш аккаунт будет проверен на наличие истории финансовой деятельности.";
+
+"onboarding_title_0" = "Olcha Invest - Халяльное инвестиционное приложение";
+"onboarding_title_1" = "Легко начать";
+"onboarding_title_2" = "Служба поддержки";
+"onboarding_title_3" = "Полезные советы и статьи";
+
+"onboarding_subtitle_0" = "Пройдите быструю регистрацию, верифицируйте аккаунт и инвестируйте на актуальные тарифы ";
+"onboarding_subtitle_1" = "Сформируйте финансовую подушку, сохраняйте и получайте пассивную прибыль для достижения ваших целей";
+"onboarding_subtitle_2" = "Возможность получения круглосуточной поддержки, помощь и ответы на вопросы в режиме реального времени.";
+"onboarding_subtitle_3" = "Актуальные материалы по теме финансов и финансовой грамотности для начинающих так и для опытных инвесторов";
+
+"profit_out" = "Полученная прибыль";
+"profit_inside" = "Остаточная прибыль";

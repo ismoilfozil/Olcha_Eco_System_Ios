@@ -1,0 +1,167 @@
+/* 
+  Localizable.strings
+  OlchaNasiyaModule
+
+  Created by Elbek Khasanov on 10/05/23.
+  
+*/
+"back" = "Orqaga";
+"main" = "Asosiy";
+
+"balans_olcha" = "Olcha balansi";
+
+"reset_limit" = "Cheklovni tiklash";
+
+"empty_payments" = "Sizda faol to'lovlar yo'q";
+
+"next_payment" = "Keyingi to'lov";
+
+"notification" = "Bildirishnoma";
+
+"most_faqs" = "Ko'p so'raladigan savollar";
+"connection" = "Aloqa uchun";
+
+"not_found_faq" = "Mos javob topilmadi?";
+"not_found_faq_subtitle" = "U holda siz bizning qo'llab-quvvatlash xizmatiga qiziqarli savolingizni berishingiz mumkin";
+
+"my_applications" = "Arizalarim";
+"profile" = "Profil";
+"active" = "Faol";
+"closed" = "Yopilgan";
+
+"apply" = "Ariza";
+
+"paid" = "To'landi";
+"need_pay" = "Qoldi";
+
+"graph" = "Grafik";
+"detailed" = "Batafsil";
+
+"choose_region" = "Viloyatni tanlang";
+"category" = "Toifalar";
+"stores" = "Do'konlar";
+
+"search_stores" = "Do'kon qidirish...";
+
+"store_locations" = "Do'kon manzillari";
+
+"about_partner" = "Hamkor haqida";
+
+"passport_data" = "Pasport ma'lumotlari";
+
+"phone_numbers" = "Telefon raqamlari";
+
+"person_id" = "Foydalanuvchi IDsi";
+
+"offerta" = "Ijtimoiy shartnoma";
+
+"about_app" = "Dastur haqida";
+
+"subscribe_us" = "Bizga obuna bo'ling";
+
+"rank_us" = "Bizni AppStoreda baholang";
+
+"share_friends" = "Do'stlar bilan ulashing";
+
+"partners" = "Hamkorlar";
+
+"empty_notifications" = "Sizda xabarlar yo'q";
+
+"reset_limit" = "Limitni tiklash";
+
+"store" = "Magazin";
+
+"choose_product" = "Mahsulot tanlang";
+
+"applications" = "So'rovlar";
+
+"sort" = "Tarkiblash";
+
+"total_installment_amount" = "Nasiya miqdori";
+
+"period" = "Muddat";
+
+"given_date" = "Berilgan sana";
+
+
+"settings_clear_tooptip_cache" = "Mashg'ulotni takrorlash";
+
+// TOOLTIPS
+"nasiya_home_view_controller_reset_button_title" = "Xush kelibsiz";
+"nasiya_home_view_controller_reset_button_description" = "Ushbu tugmani bosish orqali siz Limit balansingiz uchun qo'shimcha mablag'ga murojaat qilasiz.";
+
+"nasiya_home_view_controller_menu_button_title" = "Yon menyu";
+"nasiya_home_view_controller_menu_button_description" = "Yon menyu orqali siz Tez-tez so'raladigan savollar va qo'llab-quvvatlash xizmati bandlariga o'tishingiz mumkin!";
+
+"nasiya_home_view_controller_notification_button_title" = "Bildirishnomalar";
+"nasiya_home_view_controller_notification_button_description" = "Yangi va eski bildirishnomalar ro'yxati!";
+
+"nasiya_home_view_controller_verify_button_title" = "Verifikatsiya";
+"nasiya_home_view_controller_verify_button_description" = "Koʻproq funksiyalardan foydalanish uchun verifikatsiyadan o'ting";
+
+"side_menu_view_controller_faq_title" = "Ko'p beriladigan savollar";
+"side_menu_view_controller_faq_description" = "Sizning qiziqtirgan barcha savollarga javob topishingiz mumkin.";
+
+"side_menu_view_controller_support_title" = "Yordam xizmati";
+"side_menu_view_controller_support_description" = "Agar sizda ishlashda biron bir muammo bo'lsa, biz bilan bog'lanish";
+
+"my_installments_view_controller_select_button_title" = "Mahsulot tanlovi";
+"my_installments_view_controller_select_button_description" = "Do'konlarimizda mahsulotni tanlang va unga bo'lib-bo'lib ariza topshiring!";
+
+"my_installments_view_controller_single_installment_title" = "Birinchi ariza";
+"my_installments_view_controller_single_installment_description" = "Birinchi arizangiz muvaffaqiyatli topshirildi, arziangizni kuzating va to'lovlarni vaqtida amalga oshiring.";
+
+"my_installments_view_controller_filter_button_title" = "Saralash";
+"my_installments_view_controller_filter_button_description" = "To'lov miqdori, muddati va berilgan sana bilan tanishishingiz mumkin.";
+
+"my_installment_view_controller_installment_number_title" = "Ariza raqami";
+"my_installment_view_controller_installment_number_description" = "Bu raqam arizalarni kuzatish va identifikatsiyalash uchun qo'llaniladi.";
+
+"my_installment_view_controller_paid_content_title" = "To'langan";
+"my_installment_view_controller_paid_content_description" = "Ushbu qismda siz to'langan umumiy miqdorni ko'rasiz.";
+
+"my_installment_view_controller_need_content_title" = "Qoldi";
+"my_installment_view_controller_need_content_description" = "Ushbu qismda to'lash kerak bo'lgan miqdorni ko'rasiz.";
+
+"my_installment_view_controller_graphic_segment_title" = "Grafik";
+"my_installment_view_controller_graphic_segment_description" = "To'lov sanalari va miqdorlarini osonlik bilan kuzatishingizga imkon beradi.";
+
+"my_installment_view_controller_detail_segment_title" = "Batafsil";
+"my_installment_view_controller_detail_segment_description" = "To'lov miqdori, muddati va berilgan sana bilan tanishishingiz mumkin.";
+
+"nasiya_profile_view_controller_verification_title" = "Tasdiqlash";
+"nasiya_profile_view_controller_verification_description" = "Ko'proq imkoniyatlardan foydalanish uchun tasdiqlash jarayonidan o'ting.";
+
+"nasiya_profile_view_controller_phone_numbers_title" = "Kontakt ma'lumotlar";
+"nasiya_profile_view_controller_phone_numbers_description" = "Kontakt ma'lumotlaringizni boshqarishingiz mumkin.";
+
+"nasiya_profile_view_controller_bank_cards_title" = "Biriktirilgan kartalar";
+"nasiya_profile_view_controller_bank_cards_description" = "Pul chiqarish va investitsiyalarni tezlashtirish uchun qo'shing.";
+
+"nasiya_profile_view_controller_passport_title" = "Pasport ma'lumotlari";
+"nasiya_profile_view_controller_passport_description" = "Shaxsiy maʼlumotlaringizni boshqarishingiz mumkin.";
+
+"nasiya_profile_view_controller_pincode_title" = "Xavfsizlik";
+"nasiya_profile_view_controller_pincode_description" = "Xavfsiz investitsiya qilish uchun parol yoki PIN-kod o'rnating";
+
+"period_with_months" = "%@ oy";
+
+"onboarding_title_0" = "Xush kelibsiz";
+"onboarding_subtitle_0" = "Olcha Nasiya Halal to'lovi tizimi. Yashirin to'lovlar, jarimalarsiz";
+
+"onboarding_title_1" = "Sizga qulay shartlarni tanlang";
+"onboarding_subtitle_1" = "Olcha Nasiya bilan to'lov muddatini tanlang. Olcha saytida / ilovasida Olcha Nasiya bo'yicha eng qulay to'lov muddatini tanlang. Mahsulotni olib, foydalaning";
+
+"onboarding_title_2" = "Qo'llab-quvvatlash xizmati";
+"onboarding_subtitle_2" = "Shaxsiy xizmat olish, yordam va savollarga javob olish imkoniyati mavjud.";
+
+"onboarding_title_3" = "Tez ro'yxatdan o'tish";
+"onboarding_subtitle_3" = "Ro'yxatdan o'tish uchun faqat telefon raqami, pasport / ID karta, to'lov kartasi va telefon kamera kerak.";
+
+"main_tab_item" = "Asosiy";
+"home_tab_item" = "Nasiya";
+"my_applications_tab_item" = "Arizalarim";
+"partners_tab_item" = "Hamkorlar";
+"profile_tab_item" = "Profil";
+
+"request_limit_title" = "Olcha Nasiya limitni so'rash";

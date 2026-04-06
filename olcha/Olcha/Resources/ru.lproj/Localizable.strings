@@ -1,0 +1,94 @@
+/* 
+  Localizable.strings
+  Olcha
+
+  Created by Assistant on Localization Fix
+  
+*/
+
+// Common strings
+"app_name" = "Olcha";
+"welcome" = "Добро пожаловать";
+"loading" = "Загрузка...";
+"error" = "Ошибка";
+"success" = "Успешно";
+"cancel" = "Отмена";
+"ok" = "ОК";
+"save" = "Сохранить";
+"delete" = "Удалить";
+"edit" = "Редактировать";
+"done" = "Готово";
+"back" = "Назад";
+"next" = "Далее";
+"previous" = "Предыдущий";
+"search" = "Поиск";
+"filter" = "Фильтр";
+"sort" = "Сортировка";
+"refresh" = "Обновить";
+"retry" = "Повторить";
+
+// Navigation
+"home" = "Главная";
+"profile" = "Профиль";
+"settings" = "Настройки";
+"notifications" = "Уведомления";
+"cart" = "Корзина";
+"orders" = "Заказы";
+"favorites" = "Избранное";
+
+// Authentication
+"login" = "Войти";
+"register" = "Регистрация";
+"logout" = "Выйти";
+"email" = "Электронная почта";
+"password" = "Пароль";
+"phone" = "Телефон";
+"forgot_password" = "Забыли пароль?";
+
+// Product
+"product" = "Товар";
+"products" = "Товары";
+"price" = "Цена";
+"description" = "Описание";
+"add_to_cart" = "Добавить в корзину";
+"buy_now" = "Купить сейчас";
+"out_of_stock" = "Нет в наличии";
+"in_stock" = "В наличии";
+
+// Cart & Checkout
+"checkout" = "Оформление заказа";
+"total" = "Итого";
+"subtotal" = "Промежуточный итог";
+"shipping" = "Доставка";
+"tax" = "Налог";
+"discount" = "Скидка";
+"apply_coupon" = "Применить купон";
+"place_order" = "Оформить заказ";
+
+// Orders
+"order_number" = "Номер заказа";
+"order_date" = "Дата заказа";
+"order_status" = "Статус заказа";
+"track_order" = "Отследить заказ";
+"order_history" = "История заказов";
+
+// Profile & Settings
+"personal_info" = "Личная информация";
+"address" = "Адрес";
+"payment_methods" = "Способы оплаты";
+"language" = "Язык";
+"notifications_settings" = "Настройки уведомлений";
+"privacy_policy" = "Политика конфиденциальности";
+"terms_of_service" = "Условия использования";
+"about_us" = "О нас";
+"contact_us" = "Связаться с нами";
+
+// Messages
+"no_internet_connection" = "Нет подключения к интернету";
+"something_went_wrong" = "Что-то пошло не так";
+"try_again_later" = "Попробуйте позже";
+"data_loaded_successfully" = "Данные успешно загружены";
+"changes_saved_successfully" = "Изменения успешно сохранены";
+"item_added_to_cart" = "Товар добавлен в корзину";
+"item_removed_from_cart" = "Товар удален из корзины";
+

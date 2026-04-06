@@ -1,0 +1,97 @@
+/* 
+  Localizable.strings
+  OlchaEcoSystemCore
+
+  Created by Akhrorkhuja on 25/08/23.
+  Copyright © 2023 Olcha. All rights reserved.
+*/
+
+"home_search_placeholder" = "Поиск в Olcha";
+"home_nasiya_limit_title" = "Баланс Olcha Nasiya";
+"home_nasiya_limit_value" = "Лимит %@";
+"home_nasiya_limit_request" = "Получить лимит";
+
+"search_actual_title" = "Актуальное";
+"search_history_title" = "История";
+"search_history_clear" = "Очистить";
+"search_empty_placeholder" = "По вашему запросу ничего не найдено";
+
+
+"onboarding_title_0" = "С нами легко и безопасно!";
+"onboarding_title_1" = "Покупайте сейчас, платите потом!";
+"onboarding_title_2" = "Будьте финансово свободными и обеспечьте свое будущее!";
+"onboarding_title_3" = "Безопасные и быстрые транзакции сделают вашу жизнь проще!";
+"onboarding_title_4" = "Ваше путешествие с нами будет комфортным и безопасным!";
+
+
+"search_segment_products" = "Продукты";
+"search_segment_categories" = "Категории";
+"search_segment_brands" = "Бренды";
+"search_segment_pay" = "Olcha Pay";
+"search_segment_all" = "Все";
+
+"home_balance_pay" = "Общий баланс";
+"home_balance_total" = "Olcha кошeлёк";
+"home_balance_bonus" = "Бонусная программа";
+
+"home_section_all" = "Все";
+"profile_section_application" = "Приложение";
+"profile_section_orders" = "Заказы";
+"profile_section_products" = "Товары";
+"profile_section_information" = "Информация";
+
+"profile_row_app_language" = "Язык приложения";
+"profile_row_about_app" = "О приложении";
+"profile_row_help" = "Помощь";
+
+"profile_row_my_orders" = "Мои заказы";
+"profile_row_refund_exchange" = "Возврат и обмен";
+"profile_row_tickets_tours" = "Билеты и туры";
+"profile_row_favorites" = "Избранные";
+
+"profile_row_comments" = "Отзывы";
+"profile_row_compare" = "Сравнение товара";
+"profile_row_question_answers" = "Мои вопросы и ответы";
+
+"profile_row_cards" = "Мои карты";
+"profile_row_bonus_program" = "Бонусная программа";
+"profile_row_installment_data" = "Данные для рассрочки";
+"profile_row_notifications" = "Уведомление";
+"profile_row_addressess" = "Адреса";
+"profile_row_security" = "Безопасность";
+
+"profile_row_settings" = "Настройки";
+"profile_row_about" = "О приложении";
+"profile_row_help" = "Помощь";
+"profile_row_logout" = "Выйти";
+
+"home_module_market" = "Market";
+"home_module_sayohat" = "Sayohat";
+"home_module_nasiya" = "Nasiya";
+"home_module_invest" = "Invest";
+"home_module_pay" = "Pay";
+"home_module_cashback" = "Cashback";
+"home_module_tv" = "TV";
+"home_module_food" = "Food";
+"home_module_myId" = "My ID";
+"home_module_bus" = "Bus";
+
+
+"home_tab_item" = "Главная";
+"market_tab_item" = "Market";
+"search_tab_item" = "Поиск";
+"basket_tab_item" = "Корзина";
+"profile_tab_item" = "Профиль";
+"home_module_barcode" = "Штрих-код";
+
+// Order Confirmation
+"order_confirmation_title" = "Подтвердить заказ";
+"order_confirmation_code_title" = "Код подтверждения заказа";
+"order_confirmation_description" = "Покажите этот штрих-код для подтверждения заказа";
+"order_confirmation_code_expires_in" = "Код истекает через:";
+"order_confirmation_code_expired" = "Код истёк";
+"order_confirmation_update_code" = "Обновить код";
+"order_confirmation_loading" = "Загрузка...";
+"order_confirmation_failed" = "Не удалось загрузить штрих-код";
+"order_confirmation_error_message" = "Не удалось создать штрих-код. Пожалуйста, попробуйте еще раз.";
+"order_confirmation_error_title" = "Ошибка";

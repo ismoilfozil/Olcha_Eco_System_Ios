@@ -1,0 +1,12 @@
+/*
+  Localizable.strings
+  OlchaPincode
+
+  Created by Elbek Khasanov on 19/05/23.
+  
+*/
+
+"enter_pincode" = "Pinkodni kiriting";
+"add_new_pincode" = "Yangi pinkod kiriting";
+"confirm_new_pincode" = "Pinkodni tasdiqlang";
+"edit_pincode" = "Pinkodni o'zgartirish";

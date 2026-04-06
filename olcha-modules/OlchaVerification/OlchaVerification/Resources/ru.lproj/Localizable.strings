@@ -1,0 +1,34 @@
+/* 
+  Localizable.strings
+  OlchaVerification
+
+  Created by Elbek Khasanov on 21/05/23.
+  
+*/
+"identification" = "Идентификация";
+"passport_front" = "Лицевая сторона паспорта";
+"selfi_passport" = "Селфи с паспортом";
+"registration_verification" = "Прописка с паспорта или задняя сторона ID карты";
+"checkout_installment" = "Оформить рассрочку";
+"phone_numbers" = "Телефонные номера";
+"verify_profile" = "Верификация";
+
+"passports_verification_page_passport_title" = "Лицевая сторона паспорта";
+"passports_verification_page_passport_description" = "Загрузите фотографию или сфотографируйте, лицевую сторону паспорта или ID-карты, Размер фотографии не должно превышать 5мб";
+
+"passports_verification_page_selfie_title" = "Селфи с паспортом";
+"passports_verification_page_selfie_description" = "Сделайте селфи с паспортом или ID-картой. Размер фотографии не должно превышать 5мб";
+
+"passports_verification_page_registration_title" = "Прописка с паспорта или задняя сторона ID карты";
+"passports_verification_page_registration_description" = "Сфотографируйте или загрузите фотографию прописку пасспорта или заднюю сторону ID-карты, Размер фотографии не должно превышать 5мб";
+
+"success_identification" = "Идентификация прошла успешно";
+"deny_identification" = "Ваша информация не проверена. Пожалуйста, попробуйте еще раз";
+"timer_title" = "Ваша информация проверяется, пожалуйста, подождите. Мы проверим это в ближайшее время.";
+
+"status_approved" = "Ваш статус: Подтвержден";
+"status_rejected" = "Ваш статус: Отклонено";
+"status_requested" = "Ваш статус: Проверка";
+"status_none" = "Ваш статус: Не проверен";
+"status_expired" = "Ваш статус: Не проверен";
+"status_blocked" = "Ваш статус: Заблокирован";

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>265869676492-8ftkkniu7u1r9bgkbp0odv77lk335gg0.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.265869676492-8ftkkniu7u1r9bgkbp0odv77lk335gg0</string>
+	<key>API_KEY</key>
+	<string>AIzaSyD3U4RLPOzgyZXEtxJfdkA15zjRWzZ6msc</string>
+	<key>GCM_SENDER_ID</key>
+	<string>265869676492</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.olcha.ecommerce</string>
+	<key>PROJECT_ID</key>
+	<string>olcha-8dd6e</string>
+	<key>STORAGE_BUCKET</key>
+	<string>olcha-8dd6e.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<true/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:265869676492:ios:f29c8286b57fdbfcd4d769</string>
+</dict>
+</plist>

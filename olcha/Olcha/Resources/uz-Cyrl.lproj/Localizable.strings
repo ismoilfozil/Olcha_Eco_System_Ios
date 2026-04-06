@@ -1,0 +1,94 @@
+/* 
+  Localizable.strings
+  Olcha
+
+  Created by Assistant on Localization Fix
+  
+*/
+
+// Common strings
+"app_name" = "Olcha";
+"welcome" = "Хуш келибсиз";
+"loading" = "Юкланмоқда...";
+"error" = "Хатолик";
+"success" = "Муваффақият";
+"cancel" = "Бекор қилиш";
+"ok" = "ОК";
+"save" = "Сақлаш";
+"delete" = "Ўчириш";
+"edit" = "Таҳрирлаш";
+"done" = "Тайёр";
+"back" = "Орқага";
+"next" = "Кейинги";
+"previous" = "Олдинги";
+"search" = "Қидириш";
+"filter" = "Филтр";
+"sort" = "Тартиблаш";
+"refresh" = "Янгилаш";
+"retry" = "Қайта уриниш";
+
+// Navigation
+"home" = "Бош саҳифа";
+"profile" = "Профил";
+"settings" = "Созламалар";
+"notifications" = "Хабарномалар";
+"cart" = "Саватча";
+"orders" = "Буюртмалар";
+"favorites" = "Севимлилар";
+
+// Authentication
+"login" = "Кириш";
+"register" = "Рўйхатдан ўтиш";
+"logout" = "Чиқиш";
+"email" = "Электрон почта";
+"password" = "Парол";
+"phone" = "Телефон";
+"forgot_password" = "Паролни унутдингизми?";
+
+// Product
+"product" = "Маҳсулот";
+"products" = "Маҳсулотлар";
+"price" = "Нарх";
+"description" = "Тавсиф";
+"add_to_cart" = "Саватчага қўшиш";
+"buy_now" = "Ҳозир сотиб олиш";
+"out_of_stock" = "Стокда йўқ";
+"in_stock" = "Стокда бор";
+
+// Cart & Checkout
+"checkout" = "Буюртма бериш";
+"total" = "Жами";
+"subtotal" = "Қисман жами";
+"shipping" = "Етказиб бериш";
+"tax" = "Солиқ";
+"discount" = "Чегирма";
+"apply_coupon" = "Купон қўллаш";
+"place_order" = "Буюртма бериш";
+
+// Orders
+"order_number" = "Буюртма рақами";
+"order_date" = "Буюртма санаси";
+"order_status" = "Буюртма ҳолати";
+"track_order" = "Буюртмани кузатиш";
+"order_history" = "Буюртмалар тарихи";
+
+// Profile & Settings
+"personal_info" = "Шахсий маълумот";
+"address" = "Манзил";
+"payment_methods" = "Тўлов усуллари";
+"language" = "Тил";
+"notifications_settings" = "Хабарнома созламалари";
+"privacy_policy" = "Махфийлик сиёсати";
+"terms_of_service" = "Хизмат кўрсатиш шартлари";
+"about_us" = "Биз ҳақимизда";
+"contact_us" = "Биз билан богланинг";
+
+// Messages
+"no_internet_connection" = "Интернет алоқаси йўқ";
+"something_went_wrong" = "Нимдир нотўғри кетди";
+"try_again_later" = "Кейинроқ уриниб кўринг";
+"data_loaded_successfully" = "Маълумотлар муваффақиятли юкланди";
+"changes_saved_successfully" = "Ўзгаришлар муваффақиятли сақланди";
+"item_added_to_cart" = "Маҳсулот саватчага қўшилди";
+"item_removed_from_cart" = "Маҳсулот саватчадан ўчирилди";
+

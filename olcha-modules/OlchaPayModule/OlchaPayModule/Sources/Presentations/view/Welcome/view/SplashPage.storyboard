@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bc8-iG-vJm">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Splash Page-->
+        <scene sceneID="jCu-2H-usd">
+            <objects>
+                <viewController id="bc8-iG-vJm" customClass="SplashPage" customModule="Olcha_uz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="88j-V5-D5L">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I4W-3d-mvx">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="olcha_main" translatesAutoresizingMaskIntoConstraints="NO" id="zIC-r4-ivZ">
+                                        <rect key="frame" x="157" y="394" width="100" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="Aqh-Xy-fre"/>
+                                            <constraint firstAttribute="height" constant="30" id="enc-eL-fYD"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="zIC-r4-ivZ" firstAttribute="centerY" secondItem="I4W-3d-mvx" secondAttribute="centerY" id="0kL-SM-q8Y"/>
+                                    <constraint firstItem="zIC-r4-ivZ" firstAttribute="centerX" secondItem="I4W-3d-mvx" secondAttribute="centerX" id="Lf7-7U-j9H"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ahm-5c-JZ6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="I4W-3d-mvx" firstAttribute="leading" secondItem="Ahm-5c-JZ6" secondAttribute="leading" id="E7m-Rb-7VC"/>
+                            <constraint firstItem="I4W-3d-mvx" firstAttribute="top" secondItem="Ahm-5c-JZ6" secondAttribute="top" id="EQ9-U1-J52"/>
+                            <constraint firstItem="Ahm-5c-JZ6" firstAttribute="trailing" secondItem="I4W-3d-mvx" secondAttribute="trailing" id="EUf-DF-GBp"/>
+                            <constraint firstItem="Ahm-5c-JZ6" firstAttribute="bottom" secondItem="I4W-3d-mvx" secondAttribute="bottom" id="pbp-dh-IlD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="aiM-80-vfc"/>
+                    <connections>
+                        <outlet property="olchaImg" destination="zIC-r4-ivZ" id="lbB-vF-Vqx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qcL-kH-AlV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1573.913043478261" y="-273.21428571428572"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="olcha_main" width="80" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

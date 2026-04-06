@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nj3-fE-iT1" customClass="CodeItemView" customModule="Olcha_uz" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="55" height="65"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J4I-ND-EvE">
+                    <rect key="frame" x="0.0" y="0.0" width="55" height="65"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ASg-Ix-sMV">
+                            <rect key="frame" x="0.0" y="63" width="55" height="2"/>
+                            <color key="backgroundColor" systemColor="viewFlipsideBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="2" id="w51-RB-Jep"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="ASg-Ix-sMV" secondAttribute="trailing" id="DBO-vY-xRF"/>
+                        <constraint firstAttribute="height" constant="65" id="EkY-Tm-irQ"/>
+                        <constraint firstAttribute="width" constant="55" id="OJZ-J8-GL2"/>
+                        <constraint firstItem="ASg-Ix-sMV" firstAttribute="leading" secondItem="J4I-ND-EvE" secondAttribute="leading" id="PB2-Zm-NEe"/>
+                        <constraint firstAttribute="bottom" secondItem="ASg-Ix-sMV" secondAttribute="bottom" id="lOd-AH-q9t"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <textField opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dml-y4-puA">
+                    <rect key="frame" x="0.0" y="16" width="55" height="33.5"/>
+                    <color key="textColor" red="0.0" green="0.4549019608" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="28"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                </textField>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="DBt-De-Y5d"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="J4I-ND-EvE" secondAttribute="trailing" id="0vO-1W-J8s"/>
+                <constraint firstItem="J4I-ND-EvE" firstAttribute="top" secondItem="nj3-fE-iT1" secondAttribute="top" id="5LY-S0-p6v"/>
+                <constraint firstItem="dml-y4-puA" firstAttribute="centerY" secondItem="nj3-fE-iT1" secondAttribute="centerY" id="BSr-iK-Vpi"/>
+                <constraint firstItem="dml-y4-puA" firstAttribute="leading" secondItem="nj3-fE-iT1" secondAttribute="leading" id="Q57-58-5Wf"/>
+                <constraint firstItem="J4I-ND-EvE" firstAttribute="leading" secondItem="nj3-fE-iT1" secondAttribute="leading" id="rRJ-Z1-nsy"/>
+                <constraint firstAttribute="bottom" secondItem="J4I-ND-EvE" secondAttribute="bottom" id="x4w-SO-fcc"/>
+                <constraint firstAttribute="trailing" secondItem="dml-y4-puA" secondAttribute="trailing" id="xK2-bb-zh5"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="container" destination="J4I-ND-EvE" id="R6q-OJ-2mu"/>
+                <outlet property="textField" destination="dml-y4-puA" id="IdJ-o6-Zoe"/>
+                <outlet property="underline" destination="ASg-Ix-sMV" id="qCr-CO-PZw"/>
+            </connections>
+            <point key="canvasLocation" x="357" y="-65"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="viewFlipsideBackgroundColor">
+            <color red="0.1215686274509804" green="0.12941176470588239" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

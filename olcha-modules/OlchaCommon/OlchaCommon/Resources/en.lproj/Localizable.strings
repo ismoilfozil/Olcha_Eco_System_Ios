@@ -1,0 +1,24 @@
+/* 
+  Localizable.strings
+  OlchaCommon
+
+  Created by ahrorxudja on 03/10/23.
+  
+*/
+
+"notification_heading" = "Bildirishnoma";
+"notification_empty_placeholder" = "Sizda hali bildirishnoma yoʻq";
+
+"about_app" = "Dastur haqida";
+"about_rate_us" = "Bizni App Store'da baholang";
+"about_share" = "Do'stlaringiz bilan ulashish";
+
+"uzbek_language" = "O’zbek tili";
+"uzbek_cyrilic_language" = "Ўзбек тили";
+"russian_language" = "Русский язык";
+
+"settings_language" = "Dastur tili";
+"settings_push_notifications" = "Push-xabarlar";
+"settings_public_offer" = "Ommaviy taklif";
+
+"language_heading" = "Til";

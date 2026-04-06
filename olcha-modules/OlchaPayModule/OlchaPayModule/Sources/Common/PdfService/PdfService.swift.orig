@@ -1,0 +1,105 @@
+//
+//  PdfService.swift
+//  OlchaUtils
+//
+//  Created by Elbek Khasanov on 30/03/23.
+//
+
+import Foundation
+import OlchaUI
+import SimplePDF
+import UIKit
+
+public class PdfService {
+    
+    static let shared = PdfService()
+    
+    private let a4PaperSize = CGSize(width: 595, height: 842)
+    
+    /// should receive on main thread
+    public func createCheck(_ transaction: TransactionModel? = nil, completion: @escaping((Data?) -> Void) ) {
+        DispatchQueue.global().async { [weak self] in
+            guard let self = self else { completion(nil); return }
+            
+            var check: Data?
+            let pdf: SimplePDF = .init(pageSize: self.a4PaperSize)
+            
+            
+            // add logo image
+            pdf.addLineSpace(30)
+            
+            pdf.setContentAlignment(.left)
+            pdf.addText("Olcha Pay")
+            pdf.addLineSeparator()
+            
+            pdf.setContentAlignment(.center)
+            pdf.addLineSpace(30)
+
+            if let img = UIImage.olchaIcon {
+                pdf.addImage(img)
+            }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4d0a7ff4ac37525a27ac667c2ed6fa3c5d9c04a6
+            pdf.addLineSpace(30)
+            pdf.setContentAlignment(.left)
+            
+            
+            self.createCustomTable(pdf: pdf,
+                                   title: "sender_card".localized(),
+                                   value: transaction?.card_id?.bank_card?.getSpacedPan() ?? " - ")
+            
+            pdf.addLineSpace(20)
+            
+            self.createCustomTable(pdf: pdf,
+                                   title: "sender".localized(),
+                                   value: transaction?.card_id?.bank_card?.full_name ?? " - ")
+            
+            
+            
+            pdf.addLineSpace(10)
+            pdf.addLineSeparator(height: 0.0001)
+            pdf.addLineSpace(10)
+            self.createCustomTable(pdf: pdf,
+                                   title: "date".localized(),
+                                   value: transaction?.date() ?? " - ")
+            pdf.addLineSpace(10)
+            pdf.addLineSeparator(height: 0.0001)
+            pdf.addLineSpace(10)
+            self.createCustomTable(pdf: pdf,
+                                   title: "summa".localized(),
+                                   value: transaction?.amount?.string.originalPrice ?? " - ",
+                                   titleFont: .boldSystemFont(ofSize: 14),
+                                   valueFont: .boldSystemFont(ofSize: 14))
+            
+            
+            
+            let fileName = "olcha-pay-\(transaction?.id ?? 0)" + ".pdf"
+            
+            var pdfData = pdf.generatePDFdata()
+            
+            check = pdfData
+            
+            completion(check)
+        }
+    }
+    
+    
+    
+    private func createCustomTable(
+        pdf: SimplePDF,
+        title: String,
+        value: String,
+        titleFont: UIFont = .systemFont(ofSize: 10, weight: .regular),
+        valueFont: UIFont = .systemFont(ofSize: 10, weight: .medium)
+    ) {
+        pdf.beginHorizontalArrangement()
+        pdf.setContentAlignment(.left)
+        pdf.addText(title + ":            ", font: titleFont, textColor: .lightGray)
+        pdf.setContentAlignment(.right)
+        
+        pdf.addText(value, font: valueFont, textColor: .black)
+        pdf.endHorizontalArrangement()
+    }
+}

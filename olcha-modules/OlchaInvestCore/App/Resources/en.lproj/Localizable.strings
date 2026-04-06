@@ -1,0 +1,282 @@
+/* 
+  InvestLocalizable.strings
+  OlchaInvestCore
+
+  Created by Akhrorkhuja on 11/06/23.
+  Copyright © 2023 Olcha. All rights reserved.
+*/
+
+"uzbek_language" = "O’zbek tili";
+"uzbek_cyrilic_language" = "Ўзбек тили";
+"russian_language" = "Русский язык";
+
+
+//##** TABS **##//
+"main_tab_item" = "Asosiy";
+"home_tab_item" = "Invest";
+"package_tab_item" = "Tariflar";
+"profile_tab_item" = "Profil";
+
+//##** COST-VIEW **##//
+"cost_view_invest" = "Investitsiya miqdori";
+"cost_view_profit" = "Foyda miqdori";
+
+//##** PROFIT **##//
+"profit_withdraw_button" = "Chiqarish";
+"profit_total_sum" = "Umumiy miqdor";
+"profit_income_sum" = "Foyda miqdori";
+"profit_withdraw" = "Foyda chiqarish";
+"profit_withdraw_all" = "Barcha pulni chiqarish";
+"profit_autowithraw" = "Avtomatik foyda chiqarish";
+
+//##** NOTIFICATION **##//
+"notification_congrats" = "Tabriklaymiz";
+
+//##** SUBSCRIBE **##//
+"subscribe_us" = "Bizga obuna bo'ling";
+
+//##** HELP **##//
+"help_chat" = "Onlayn chat";
+"help_phone" = "Telefon orqali bog'lanish";
+"help_message" = "Bizga xabar yozing";
+"help_faq" = "Tez-tez so'raladigan savollar";
+
+"invest_modal_fill" = "To'ldirish";
+"invest_modal_withdraw" = "Foyda chiqarish";
+"invest_modal_history" = "Tarix";
+"invest_modal_statistics" = "Statistika";
+
+"menu_suggestions" = "Maslahatlar va maqolalar";
+"menu_faq" = "Tez-tez so'raladigan savollar";
+"menu_help" = "Yordam xizmati";
+"menu_logout" = "Chiqish";
+
+"profile_heading" = "Profil";
+"profile_phone" = "Telefon ma'lumotlari";
+"profile_cards" = "Bog'langan kartalar";
+"profile_passport" = "Pasport ma'lumotlari";
+"profile_security" = "Xavfsizlik";
+
+"settings_language" = "Dastur tili";
+"settings_push_notifications" = "Push-xabarlar";
+"settings_public_offer" = "Ommaviy taklif";
+"settings_about_company" = "Dastur haqida";
+"settings_clear_tooptip_cache" = "Mashg'ulotni takrorlash";
+
+"add_card_number" = "Karta raqami";
+"add_card_expire_date" = "Amal qilish muddati";
+"add_card_code" = "5-xonali kodi kiriting";
+"add_card_title" = "Kartani qo'shish";
+"add_card_code_button" = "Kodni yuborish";
+"add_card_continue_button" = "Davom etish";
+
+"card_withdraw" = "Foydani chiqarish";
+"card_withdraw_title" = "O'tkazma karta";
+"card_fill" = "Kartani tanlash";
+"card_fill_title" = "To'ldirish karta";
+"card_add" = "Kartani qo'shish";
+
+"package" = "Tarif";
+"package_heading" = "Tariflar";
+"package_currency" = "Valyuta";
+"package_title" = "Tarif nomi";
+"package_invest_button" = "Investitsiya qilish";
+"package_warning_text" = "Ehtiyot bo'ling! Foiz muddatga bog'liq ravishda o'zgarishi mumkin";
+"package_heading_additional" = "Qo'shimcha ma'lumot:";
+"package_heading_category" = "Kategoriya ta'riflari:";
+
+"contract_my_invests" = "Mening investitsiyalarim";
+"contract_percent" = "Foiz";
+"contract_term" = "Muddat";
+"contract_statistics" = "Statistika";
+"contract_history" = "Tarix";
+
+"faq" = "Ko'p beriladigan savollar";
+"faqs" = "Savollar";
+"faq_ask_question" = "Savol berish";
+"faq_title" = "Mos javob topa olmadingizmi?";
+"faq_detail" = "Bunday holatda, qiziqtirgan savolingizni onlayn chat orqali berishingiz mumkin";
+
+
+"home_invest" = "Investitsiya qilish";
+"home_more" = "Batafsil";
+"home_empty_placeholder" = "Sizda hech qanday faol investitsiya yo'q";
+
+"select_package" = "Tarifni tanlang";
+"select" = "Tanlash";
+"select_condition" = "Shartlarni tanlang";
+
+"invest_amount" = "Summa";
+"invest_question" = "Nimaga sarmoya kiritmoqchisiz?";
+"invest_warning" = "Siz o'zingiz uchun qulay shartli tariflarni tanlashingiz mumkin\nTariflar bu siz investitsiya qilishingiz mumkin bo'lgan tovarlar toifalari bo'lib, ular sizga har oyda, davr oxirigacha daromad keltiradi!\nMuddat o'zgarishi bilan foizlar o'zgaradi.";
+
+"autowithdraw" = "Avtomatik chiqimni sozlash";
+"autowithdraw_desc" = "Oylik daromadning qancha foizini kartaingizga tushirishni tanlang";
+"save_button" = "Saqlash";
+
+
+
+"min_price_empty" = "Summa 0 dan katta bo'lishi kerak.";
+
+"history_profit" = "Pul tushumi";
+"history_loss" = "Pul chiqimi";
+
+"contract_category_title" = "Investitsiya uchun kategoriya nomi 2 qator mavjud";
+
+"success_text" = "So'rovingiz ko'rib chiqilmoqda.";
+"success_close" = "Yopish";
+
+"help_heading" = "Yordam";
+"help_call_alert_title" = "+998 (71) 202 202 1 raqami bilan bog'lanish";
+"help_call_alert_cancel" = "Bekor qilish";
+"help_call_alert_call" = "Qo'ng'iroq";
+
+"write_us_message_placeholder" = "Sizning xabaringiz";
+"write_us_heading" = "Bizga yozing";
+"write_us_button" = "Xabarni yuborish";
+
+"profile_personal_details" = "Shaxsiy ma'lumotlar";
+
+"notification_heading" = "Bildirishnoma";
+"notification_empty_placeholder" = "Sizda hali bildirishnoma yoʻq";
+
+"about_app" = "Dastur haqida";
+"about_rate_us" = "Bizni App Store'da baholang";
+"about_share" = "Do'stlaringiz bilan ulashish";
+
+"language_heading" = "Til";
+
+"settings_heading" = "Sozlamalar";
+
+"enter_more_than_min_amount" = "%@dan katta summani kiriting";
+"enter_more_than_max_amount" = "%@ga teng yoki kichik summani kiriting";
+"enter_amount_limit" = "%@ dan boshlab";
+
+"contract_pause" = "To'xtatish";
+"contract_resume" = "Davom ettirish";
+"contract_cancel" = "Bekor qilish";
+"contract_cancel_warning" = "Bekor qilish so'rovingizni yuborish uchun sessiyani to'xtating";
+"contract_phone_alert_title" = "Bekor qilish so'rovi";
+"contract_phone_alert_message" = "Siz investitsiyangizni bekor qilishni so'rayapsiz, bu barcha investitsiyalarning, shuningdek, pulning yo'qolishiga olib keladi";
+"contract_phone_alert_cancel_button" = "Bekor qilish";
+"contract_phone_alert_yes_button" = "Ha";
+"contract_reinvest" = "Qayta investitsiya qilish";
+"contract_reason_title" = "Tasqdiqlang";
+"contract_reason_confirm_button" = "Tasdiqlash";
+"contract_reason_delete" = "Investitsiyamni o'chirmoqchiman";
+"contract_reason_problem" = "Muammo yuzaga keldi";
+"contract_reason_no_profit" = "Pul kelmayapti";
+"contract_reason_cant_withdraw" = "Pulni chiqaraman";
+"contract_reason_other" = "Boshqa";
+"contract_reason_other_top_hint" = "Sababini ko'rsating";
+"contract_reason_other_placeholder" = "Pauza sababini to'ldiring";
+
+"term_value" = "%@ oy";
+
+"person_id" = "Foydalanuvchi IDsi";
+
+"invest_contract_name_hint" = "Nom o'ylab toping";
+"invest_contract_name"= "Shartnoma nomi";
+
+"contract_status_active" = "Faol";
+"contract_status_paused" = "To'xtatildi";
+"contract_status_cancelled" = "Bekor qilingan";
+"contract_status_pending_for_payment" = "To'lov qilish kerak";
+
+"tooltip_next_button" = "Keyingisi";
+"tooltip_done_button" = "Tayyor";
+
+"contract_view_controller_tooltip_name_title" = "Nomi va ID";
+"contract_view_controller_tooltip_amounts_title" = "Mablag'lar";
+"contract_view_controller_tooltip_withdraw_title" = "Foydani chiqarish";
+"contract_view_controller_tooltip_details_title" = "Foiz va muddat";
+"contract_view_controller_tooltip_package_title" = "Paket";
+"contract_view_controller_tooltip_chart_title" = "Statistika";
+"contract_view_controller_tooltip_history_title" = "Tarix";
+
+"contract_view_controller_tooltip_name_description" = "Sizning investitsiyalaringizni osongina kuzatib borish va boshqarishga imkon beradi, portfelingizda qulaylik va aniqlikni ta'minlaydi.";
+"contract_view_controller_tooltip_amounts_description" = "Olingan foydalanish miqdorini kuzating";
+"contract_view_controller_tooltip_withdraw_description" = "Investitsiyalaringizdan yig'ilgan foydani chiqarishingizga imkon beradi. Aktivlarga yoki loyihalarga qo'yilgan investitsiyalaringizdan foydalanish foydasi belgilangan miqdordagi foydani bank hisobingizga yoki boshqa ko'rsatilgan usulga so'rashingiz mumkin.";
+"contract_view_controller_tooltip_details_description" = "Paketning miqdorini va muddatini ko'rsatadi.";
+"contract_view_controller_tooltip_package_description" = "Tanlagan paket. Uni o'zgartira olmaysiz.";
+"contract_view_controller_tooltip_chart_description" = "Statistika sizning investitsiyalaringizni kuzatib borish va tahlil qilishga yordam beradi.";
+"contract_view_controller_tooltip_history_description" = "Tarix, oldingi moliyaviy operatsiyalaringiz va shartnomalar haqida tafsilotli ma'lumot beradi.";
+
+"menu_view_controller_tooltip_suggestions_title" = "Maslahatlar va Maqolalar";
+"menu_view_controller_tooltip_faq_title" = "Ko'p beriladigan savollar";
+"menu_view_controller_tooltip_support_title" = "Yordam xizmati";
+
+"menu_view_controller_tooltip_suggestions_description" = "Halol investitsiyalar haqida foydali maqolalar va video darslarni ko'ring.";
+"menu_view_controller_tooltip_faq_description" = "Barcha savollaringizga javob topishingiz mumkin.";
+"menu_view_controller_tooltip_support_description" = "Agarda sizda muammo paydo bo'lsa, biz bilan bog'laning.";
+
+"invest_view_controller_name_title" = "Investitsiya Nomi";
+"invest_view_controller_package_title" = "Paket";
+"invest_view_controller_term_title" = "Muddat";
+"invest_view_controller_percent_title" = "Foiz";
+"invest_view_controller_amount_title" = "Investitsiya Mablag'asi";
+"invest_view_controller_preview_title" = "Oldindan ko'rish";
+
+"invest_view_controller_name_description" = "Investitsiyangiz uchun nom toping. Siz o'zingiz istagan nom bo'ladi.";
+"invest_view_controller_package_description" = "Turli talablarga va imkoniyatlarga mos keladigan paket rejalari keng taqqoslanadi.";
+"invest_view_controller_term_description" = "Muddat va foiz tanlangan paket rejasiga qarab o'zgaradi. Bu sizning moliyaviy strategiyangiz, qaytish kutilmalariz va shaxsiy maqsadlaringizga bog'liq.";
+"invest_view_controller_percent_description" = "Muddat va foiz tanlangan paket rejasiga qarab o'zgaradi. Bu sizning moliyaviy strategiyangiz, qaytish kutilmalariz va shaxsiy maqsadlaringizga bog'liq.";
+"invest_view_controller_amount_description" = "Sizning imkoniyatlar va xavfsizlik darajasiga mos keladigan mablaghani tanlaysiz.";
+"invest_view_controller_preview_description" = "Tanlangan paket rejasi va investitsiya mablaghiga asosan potentsial foydani baholashga yordam beradi.";
+
+"packages_view_controller_percent_title" = "Foiz";
+"packages_view_controller_term_title" = "Muddat";
+"packages_view_controller_currency_title" = "Valyuta";
+"packages_empty_placeholder" = "Tariflar mavjud emas";
+
+"packages_view_controller_percent_description" = "Maksimal foiz";
+"packages_view_controller_term_description" = "Maksimal muddat";
+"packages_view_controller_currency_description" = "Investitsiya qilish mumkin bo'lgan valyuta.";
+
+"invest_home_view_controller_investButton_title" = "Xush kelibsiz";
+"invest_home_view_controller_packagesTabItem_title" = "Paketlar";
+"invest_home_view_controller_profileTabItem_title" = "Profil";
+"invest_home_view_controller_notificationButton_title" = "Bildirishnomalar";
+"invest_home_view_controller_menuButton_title" = "Yon menyu";
+
+"invest_home_view_controller_investButton_description" = "Ushbu sahifada barcha investitsiyalaringiz ko'rsatiladi. Investitsiya boshlash uchun \"Investitsiya\" tugmasini bosing.";
+"invest_home_view_controller_packagesTabItem_description" = "Biz o'z vaqtida va imkoniyatlariga mos keladigan bir nechta paket rejalari taklif qilamiz.";
+"invest_home_view_controller_profileTabItem_description" = "Shaxsiy ma'lumotlarni qo'shishingiz, istalgan investitsiya parametrlarini o'rnatishingiz va qulay bildirishnomalar usullarini tanlashingiz mumkin.";
+"invest_home_view_controller_notificationButton_description" = "Yangi va eski bildirishnomalar ro'yxati!";
+"invest_home_view_controller_menuButton_description" = "Yon menyu orqali siz Tez-tez so'raladigan savollar va qo'llab-quvvatlash xizmati bandlariga o'tishingiz mumkin!";
+
+"select_package_view_controller_selectButton_title" = "Paketni tanlang";
+"select_package_view_controller_selectButton_description" = "Investitsiya maqsadlaringiz va talablaringizga mos keladigan turli paket rejalari.";
+
+"amount_view_controller_amount_title" = "Mablag'ani kiriting";
+"amount_view_controller_amount_description" = "Sizning imkoniyatlar va xavfsizlik darajasiga mos keladigan mablag'ni kiriting.";
+
+"select_term_view_controller_term_title" = "Shartlarni tanlang";
+"select_term_view_controller_term_description" = "Foizlar tanlangan muddatga qarab o'zgaradi. Sizga mos keladigan muddatni tanlang.";
+
+"profile_view_controller_tooltip_balance_title" = "Invest Balans";
+"profile_view_controller_tooltip_phone_details_title" = "Telefon ma'lumotlari";
+"profile_view_controller_tooltip_card_details_title" = "Bog'langan kartalar";
+"profile_view_controller_tooltip_passport_details_title" = "Pasport ma'lumotlari";
+"profile_view_controller_tooltip_security_title" = "Xavfsizlik";
+
+"profile_view_controller_tooltip_balance_description" = "Joriy invest balansingiz. Uni karta orqali to'ldirib, investitsiya qilishga boshlashingiz mumkin.";
+"profile_view_controller_tooltip_phoneDetails_description" = "Telefon ma'lumotlaringizni boshqarishingiz mumkin.";
+"profile_view_controller_tooltip_cardDetails_description" = "Chiqarish va investitsiya jarayonini tezlashtirib, kartalarni qo'shing.";
+"profile_view_controller_tooltip_passportDetails_description" = "Keyinroq foydalanish uchun kerak.";
+"profile_view_controller_tooltip_security_description" = "Xavfsiz investitsiya amalga oshirish uchun parol yoki PIN-kod o'rnatishingiz mumkin.";
+
+"delete_success_message" = "Hurmatli foydalanuvchi, akkauntingizni o'chirish haqidagi so'rovingiz qabul qilindi. Bu jarayon biroz vaqt talab qilishi mumkin. Sizning hisobingiz moliyaviy faoliyat tarixi uchun tekshiriladi.";
+
+"onboarding_title_0" = "Olcha Invest - Halol investitsiya ilovasi";
+"onboarding_title_1" = "Oson boshlash";
+"onboarding_title_2" = "Qo'llab-quvvatlash xizmati";
+"onboarding_title_3" = "Foydali maslahatlar va maqolalar";
+
+"onboarding_subtitle_0" = "Tezkor ro'yxatdan o'ting, hisobingizni tasdiqlang va aktual tariflarga investitsiya qiling";
+"onboarding_subtitle_1" = "Moliyaviy oyoqni yaratib, maqsadlaringizga erishish uchun passiv daromad olishingiz mumkin";
+"onboarding_subtitle_2" = "Haftaning 24 soati yordam olish, yordam va savollaringizga rejalashtirilgan vaqtda javob olish imkoniyati.";
+"onboarding_subtitle_3" = "Boshlang'ich va tajribali investitsiyadorlar uchun moliyaviy mavzular va moliya bilimi bo'yicha aktual materiallar";
+
+"profit_out" = "Yechilgan foyda";
+"profit_inside" = "Qolgan foyda";

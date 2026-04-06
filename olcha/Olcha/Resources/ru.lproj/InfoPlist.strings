@@ -1,0 +1,16 @@
+/* 
+  InfoPlist.strings
+  NewOlcha
+
+  Created by Muhammadjon on 8/5/21.
+  
+*/
+
+
+"NSCameraUsageDescription" = "Разрешите Olcha.uz доступ к галерее, чтобы вы могли легко загружать свои фотографии, видео и личную информацию!";
+
+"NSPhotoLibraryAddUsageDescription" = "Разрешите Olcha.uz доступ к галерее, чтобы вы могли легко загружать свои фотографии, видео и личную информацию!";
+
+"NSPhotoLibraryUsageDescription" = "Разрешите Olcha.uz доступ к галерее, чтобы вы могли легко загружать свои фотографии, видео и личную информацию!";
+
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Разрешите GPS для Olcha.uz получать данные вашей карты!";

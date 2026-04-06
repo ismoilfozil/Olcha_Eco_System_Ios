@@ -1,0 +1,99 @@
+/* 
+  Localizable.strings
+  OlchaEcoSystemCore
+
+  Created by Akhrorkhuja on 25/08/23.
+  Copyright © 2023 Olcha. All rights reserved.
+*/
+
+"home_search_placeholder" = "Olchada qidiruv";
+"home_nasiya_limit_title" = "Olcha Nasiya balansi";
+"home_nasiya_limit_value" = "Limit %@";
+"home_nasiya_limit_request" = "Limit olish";
+
+"search_actual_title" = "Joriy";
+"search_history_title" = "Tarix";
+"search_history_clear" = "Tozalash";
+"search_empty_placeholder" = "Sizning so'rovingiz bo'yicha hech narsa topilmadi";
+
+
+"onboarding_title_0" = "Biz bilan oson va xavfsiz!";
+"onboarding_title_1" = "Hozir xarid qiling, keyinroq to‘lang!";
+"onboarding_title_2" = "Moliyaviy erkin bo‘ling va kelajagingizni kafolatlang!";
+"onboarding_title_3" = "Xavfsiz va tezkor tranzaktsiyalar, hayotingizni osonlashtiring!";
+"onboarding_title_4" = "Biz bilan sayohatingiz qulay va xavfsiz!";
+
+
+"search_segment_products" = "Mahsulotlar";
+"search_segment_categories" = "Kategoriyalar";
+"search_segment_brands" = "Brendlar";
+"search_segment_pay" = "Olcha Pay";
+"search_segment_all" = "Hammasi";
+
+"home_balance_pay" = "Umumiy balans";
+"home_balance_total" = "Olcha hamyon";
+"home_balance_bonus" = "Bonus dasturi";
+
+"home_section_all" = "Hammasi";
+"profile_section_application" = "Ilovalar";
+"profile_section_orders" = "Buyurtmalar";
+"profile_section_products" = "Mahsulotlar";
+"profile_section_information" = "Ma'lumot";
+
+"profile_row_app_language" = "Ilov tili";
+"profile_row_about_app" = "Ilov haqida";
+"profile_row_help" = "Yordam";
+
+"profile_row_my_orders" = "Mening buyurtmalarim";
+"profile_row_refund_exchange" = "Qaytarish va almashtirish";
+"profile_row_tickets_tours" = "Bilet va sayohatlar";
+"profile_row_favorites" = "Tanlanganlar";
+
+"profile_row_comments" = "Sharhlar";
+"profile_row_compare" = "Mahsulotni solishtirish";
+"profile_row_question_answers" = "Mening savollarim va javoblar";
+
+"profile_row_cards" = "Mening kartalarim";
+"profile_row_bonus_program" = "Bonus dasturi";
+"profile_row_installment_data" = "Muddatli to’lov uchun ma’lumotlar";
+"profile_row_notifications" = "Bildirishnomalar";
+"profile_row_addressess" = "Manzillar";
+"profile_row_security" = "Xavfsizlik";
+
+"profile_row_settings" = "Sozlamalar";
+"profile_row_about" = "Ilov haqida";
+"profile_row_help" = "Yordam";
+"profile_row_logout" = "Chiqish";
+
+"home_module_market" = "Market";
+"home_module_sayohat" = "Sayohat";
+"home_module_nasiya" = "Nasiya";
+"home_module_invest" = "Invest";
+"home_module_pay" = "Pay";
+"home_module_cashback" = "Cashback";
+"home_module_tv" = "TV";
+"home_module_food" = "Food";
+"home_module_myId" = "My ID";
+"home_module_bus" = "Bus";
+
+
+
+"home_tab_item" = "Bosh sahifa";
+"market_tab_item" = "Market";
+"search_tab_item" = "Qidiruv";
+"basket_tab_item" = "Savatcha";
+"profile_tab_item" = "Profil";
+"home_module_barcode" = "Barcode";
+
+// Order Confirmation
+"order_confirmation_title" = "Buyurtmani Tasdiqlash";
+"order_confirmation_code_title" = "Buyurtma Tasdiqlash Kodi";
+"order_confirmation_description" = "Buyurtmani tasdiqlash uchun ushbu shtrix-kodni ko‘rsating";
+"order_confirmation_code_expires_in" = "Kod amal qilish muddati:";
+"order_confirmation_code_expired" = "Kod Muddati Tugadi";
+"order_confirmation_update_code" = "Kodlarni Yangilash";
+"order_confirmation_loading" = "Yuklanmoqda...";
+"order_confirmation_failed" = "Shtrix-kodni yuklab bo‘lmadi";
+"order_confirmation_error_message" = "Shtrix-kod yaratishda xatolik. Iltimos, qayta urinib ko‘ring.";
+"order_confirmation_error_title" = "Xatolik";
+

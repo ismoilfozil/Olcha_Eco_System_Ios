@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "u_graph-bar.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

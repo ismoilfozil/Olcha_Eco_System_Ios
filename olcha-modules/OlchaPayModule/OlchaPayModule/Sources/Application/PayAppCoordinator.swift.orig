@@ -1,0 +1,207 @@
+//
+//  AppCoordinator.swift
+//  OlchaPayModule
+//
+//  Created by Elbek Khasanov on 26/01/23.
+//
+
+import OlchaUI
+import UIKit
+import IQKeyboardManagerSwift
+import OlchaAuth
+public enum PayAppState {
+
+    case auth
+    case pincode
+    case initialPincode
+    case home
+
+}
+
+public protocol PayAppCoordinatorProtocol: AnyObject {
+
+    var pincodeCoordinator: PincodeCoordinatorProtocol { get }
+    
+    var tabcontroller: PayMainTabbarController? { get }
+    func start()
+    func startSplash(_ observer: (() -> Void)?)
+    func startApp()
+    func restart()
+
+    func presentInitialPincode(completion: (() -> Void)?)
+    func presentPincode(completion: (() -> Void)?)
+    func presentTabController()
+    
+    func presentAuth(completion: (() -> Void)?)
+    
+    func deeplinkRouter(url: String)
+    func notificationRouter(json: [AnyHashable: Any]?)
+}
+
+public class PayAppCoordinator: PayAppCoordinatorProtocol {
+    public var pincodeCoordinator: PincodeCoordinatorProtocol
+    public var addCardCoordinator: AddCardCoordinatorProtocol
+    public var authCoordinator: AuthCoordinatorProtocol
+    
+    public let navigationController: BaseNavigation
+    public var tabcontroller: PayMainTabbarController?
+    
+    
+    public init(navigationController: BaseNavigation) {
+        IQKeyboardManager.shared.enable = true
+
+        self.navigationController = navigationController
+        
+        self.pincodeCoordinator = PincodeCoordinator(navigationController: navigationController, state: .initial)
+        self.addCardCoordinator = AddCardCoordinator(navigationController: navigationController)
+        self.authCoordinator = AuthCoordinator(navigationController: navigationController)
+<<<<<<< HEAD
+    
+=======
+        
+
+>>>>>>> 4d0a7ff4ac37525a27ac667c2ed6fa3c5d9c04a6
+    }
+    
+    public func start() {
+        startApp()
+    }
+    
+    public func startSplash(_ observer: (() -> Void)?) {
+        let vc = SplashPage()
+        vc.observer = observer
+        navigationController.set([vc])
+    }
+    
+    public func startApp() {
+        appFlow(state: .auth)
+    }
+    
+    public func restart() {
+        navigationController.popToRootViewController(animated: false)
+        appFlow(state: .auth)
+    }
+    
+    public func presentInitialPincode(completion: (() -> Void)?) {
+        pincodeCoordinator.startAddPincodeFlow()
+        pincodeCoordinator.completion = completion
+    }
+    
+    public func presentPincode(completion: (() -> Void)?) {
+        pincodeCoordinator.startPincodeFlow()
+        pincodeCoordinator.completion = completion
+    }
+    
+    public func presentAddCard(completion: (() -> Void)?) {
+        addCardCoordinator.pushOnboardingAddCard(isSet: false)
+        addCardCoordinator.completed = completion
+    }
+    
+    public func presentTabController() {
+        PayGlobalDefaults.session.isEntered = true
+        self.tabcontroller = PayMainTabbarController()
+        tabcontroller?.appCoordinator = self
+        tabcontroller?.configureTabbars()
+        guard let tabcontroller = tabcontroller else { return }
+        navigationController.set([tabcontroller])
+    }
+    
+    public func presentAuth(completion: (() -> Void)?) {
+        guard !AuthGlobalDefaults.isUser() else { completion?(); return }
+        authCoordinator.pushAuth(isSet: !PayApplicationConfigurator.shared.isModule,
+                                 completion: completion)
+        
+    }
+    
+    private func appFlow(state: PayAppState, appStarted: (() -> Void)? = nil) {
+        switch state {
+        case .auth:
+            presentAuth { [weak self] in
+                guard let self = self else { return }
+                self.appFlow(state: self.getPinCodeState())
+            }
+            break
+        case .pincode:
+            presentPincode { [weak self] in
+                guard let self = self else { return }
+                self.appFlow(state: .home)
+            }
+            break
+        case .initialPincode:
+            presentInitialPincode { [weak self] in
+                guard let self = self else { return }
+                self.presentAddCard {
+                    self.appFlow(state: .home)
+                }
+            }
+            break
+        case .home:
+            startSplash { [weak self] in
+                guard let self = self else { return }
+                self.presentTabController()
+                appStarted?()
+            }
+            break
+        }
+    }
+    
+    private func getPinCodeState() -> PayAppState {
+        let checkSession = (PayGlobalDefaults.session.isEntered ?? false) && !(PayGlobalDefaults.session.pincode?.isEmpty ?? true)
+        return checkSession ? .pincode : .initialPincode
+    }
+}
+
+//Deeplinks
+extension PayAppCoordinator {
+    public func deeplinkRouter(url: String) {
+        appFlow(state: .auth) { [weak self] in
+            guard let self = self else { return }
+            let type = DeeplinkRouter.checkDeeplinkType(urlString: url)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                switch type {
+                case .payment(let helper):
+                    Funcs.changeTab(.home)
+                    self.tabcontroller?.pushMakeTransaction(makePaymentHelper: helper)
+                    break
+                case .news(_):
+                    break
+                case .notification(_):
+                    break
+                case .none:
+                    break
+                }
+            }
+        }
+        
+    }
+    
+    public func notificationRouter(json: [AnyHashable: Any]?) {
+        guard let json = json else { return }
+        do {
+            let jsonData = try JSONSerialization.data(withJSONObject: json, options: [])
+            let data: PushNotificationData? = try JSONDecoder().decode(
+                PushNotificationData?.self,
+                from: jsonData
+            )
+            notificationRouterPush(data: data)
+            
+        } catch {}
+    }
+    
+    public func notificationRouterPush(data: PushNotificationData?) {
+        guard let data = data else { return }
+        appFlow(state: .auth) { [weak self] in
+            guard let self = self else { return }
+            let type = NotificationRouter.checkNotificationType(data: data)
+            switch type {
+            case .payment(let helper):
+                Funcs.changeTab(.home)
+                self.tabcontroller?.pushMakeTransaction(makePaymentHelper: helper)
+                break
+            case .none:
+                break
+            }
+        }
+    }
+    
+}

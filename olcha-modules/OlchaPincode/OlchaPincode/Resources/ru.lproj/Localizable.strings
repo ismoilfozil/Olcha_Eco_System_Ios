@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  OlchaPincode
+
+  Created by Elbek Khasanov on 19/05/23.
+  
+*/
+
+"enter_pincode" = "Введите пинкод";
+"add_new_pincode" = "Введите новый пинкод";
+"confirm_new_pincode" = "Подтвердите новый пинкод";
+"edit_pincode" = "Изменить пинкод";

@@ -1,0 +1,159 @@
+/* 
+  Localizable.strings
+  OlchaNasiyaModule
+
+  Created by Elbek Khasanov on 10/05/23.
+  
+*/
+"main" = "Асосий";
+
+
+
+"balans_olcha" = "Олча баланси";
+
+"reset_limit" = "Чекловни тиклаш";
+
+"empty_payments" = "Сизда фаол тўловлар йўқ";
+
+"next_payment" = "Кейинги тўлов";
+
+"notification" = "Билдиришнома";
+
+"most_faqs" = "Кўп сўраладиган саволлар";
+"connection" = "Алоқа учун";
+
+"not_found_faq" = "Мос жавоб топилмади?";
+"not_found_faq_subtitle" = "У ҳолда сиз бизнинг қўллаб-қувватлаш хизматига қизиқарли саволингизни беришингиз мумкин";
+
+"my_applications" = "Аризаларим";
+
+"active" = "Фаол";
+"closed" = "Ёпилган";
+
+"apply" = "Ариза";
+
+"paid" = "Тўланди";
+"need_pay" = "Қолди";
+
+"graph" = "График";
+"detailed" = "Батафсил";
+
+"choose_region" = "Вилоятни танланг";
+"category" = "Тоифалар";
+"stores" = "Дўконлар";
+
+"search_stores" = "Дўкон қидириш...";
+
+"store_locations" = "Дўкон манзиллари";
+
+"about_partner" = "Ҳамкор ҳақида";
+
+"passport_data" = "Паспорт маълумотлари";
+
+"phone_numbers" = "Телефон рақамлари";
+
+"person_id" = "Фойдаланувчи ИДси";
+
+"offerta" = "Ижтимоий шартнома";
+
+"about_app" = "Дастур ҳақида";
+
+"subscribe_us" = "Бизга обуна бўлинг";
+
+"rank_us" = "Бизни AppStoredа баҳоланг";
+
+"share_friends" = "Дўстлар билан улашинг";
+
+"partners" = "Ҳамкорлар";
+
+"empty_notifications" = "Cизда хабарлар йўқ";
+
+"reset_limit" = "Лимитни тиклаш";
+
+"store" = "Магазин";
+
+"choose_product" = "Маҳсулот танланг";
+
+"applications" = "Сўровлар";
+
+"sort" = "Таркиблаш";
+
+"total_installment_amount" = "Насия миқдори";
+
+"period" = "Муддат";
+
+"given_date" = "Берилган сана";
+
+
+
+"profile" = "Профиль";
+
+"settings_clear_tooptip_cache" = "Машғулотни такрорлаш";
+
+// TOOLTIPS
+"nasiya_home_view_controller_reset_button_title" = "Хуш келибсиз";
+"nasiya_home_view_controller_reset_button_description" = "Ушбу тугмани босиш орқали сиз Лимит балансингиз учун қўшимча маблағга мурожаат қиласиз.";
+
+"nasiya_home_view_controller_menu_button_title" = "Ён меню";
+"nasiya_home_view_controller_menu_button_description" = "Ён меню орқали сиз Тез-тез сўраладиган саволлар ва қўллаб-қувватлаш хизмати бандларига ўтишингиз мумкин!";
+
+"nasiya_home_view_controller_notification_button_title" = "Билдиришномалар";
+"nasiya_home_view_controller_notification_button_description" = "Янги ва эски билдиришномалар рўйхати!";
+
+"side_menu_view_controller_faq_title" = "Кўп бериладиган саволлар";
+"side_menu_view_controller_faq_description" = "Сизнинг қизиқтирган барча саволларга жавоб топишингиз мумкин.";
+
+"side_menu_view_controller_support_title" = "Ёрдам хизмати";
+"side_menu_view_controller_support_description" = "Агар сизда ишлашда бирон бир муаммо бўлса, биз билан боғланиш";
+
+"my_installments_view_controller_select_button_title" = "Маҳсулот танлови";
+"my_installments_view_controller_select_button_description" = "Дўконларимизда маҳсулотни танланг ва унга бўлиб-бўлиб ариза топширинг!";
+
+"my_installments_view_controller_single_installment_title" = "Биринчи ариза";
+"my_installments_view_controller_single_installment_description" = "Биринчи аризангиз муваффақиятли топширилди, арзиангизни кузатинг ва тўловларни вақтида амалга оширинг.";
+
+"my_installments_view_controller_filter_button_title" = "Саралаш";
+"my_installments_view_controller_filter_button_description" = "Тўлов миқдори, муддати ва берилган сана билан танишишингиз мумкин.";
+
+"my_installment_view_controller_installment_number_title" = "Ариза рақами";
+"my_installment_view_controller_installment_number_description" = "Бу рақам аризаларни кузатиш ва идентификациялаш учун қўлланилади.";
+
+"my_installment_view_controller_paid_content_title" = "Тўланган";
+"my_installment_view_controller_paid_content_description" = "Ушбу қисмда сиз тўланган умумий миқдорни кўрасиз.";
+
+"my_installment_view_controller_need_content_title" = "Қолди";
+"my_installment_view_controller_need_content_description" = "Ушбу қисмда тўлаш керак бўлган миқдорни кўрасиз.";
+
+"my_installment_view_controller_graphic_segment_title" = "График";
+"my_installment_view_controller_graphic_segment_description" = "Тўлов саналари ва миқдорларини осонлик билан кузатишингизга имкон беради.";
+
+"my_installment_view_controller_detail_segment_title" = "Батафсил";
+"my_installment_view_controller_detail_segment_description" = "Тўлов миқдори, муддати ва берилган сана билан танишишингиз мумкин.";
+
+"nasiya_profile_view_controller_verification_title" = "Тасдиқлаш";
+"nasiya_profile_view_controller_verification_description" = "Кўпроқ имкониятлардан фойдаланиш учун тасдиқлаш жараёнидан ўтинг.";
+
+"nasiya_profile_view_controller_phone_numbers_title" = "Контакт маълумотлар";
+"nasiya_profile_view_controller_phone_numbers_description" = "Контакт маълумотларингизни бошқаришингиз мумкин.";
+
+"nasiya_profile_view_controller_bank_cards_title" = "Бириктирилган карталар";
+"nasiya_profile_view_controller_bank_cards_description" = "Пул чиқариш ва инвестицияларни тезлаштириш учун қўшинг.";
+
+"nasiya_profile_view_controller_passport_title" = "Паспорт маълумотлари";
+"nasiya_profile_view_controller_passport_description" = "Кейинги босқичларда талаб қилинади.";
+
+"nasiya_profile_view_controller_pincode_title" = "Хавфсизлик";
+"nasiya_profile_view_controller_pincode_description" = "Хавфсиз инвестиция қилиш учун пароль ёки ПИН-код ўрнатинг";
+"period_with_months" = "%@ ой";
+
+"onboarding_title_0" = "Хуш келибсиз";
+"onboarding_subtitle_0" = "Олча Насия Халал тўлови тизими. Яширин тўловлар, жарималарсиз";
+
+"onboarding_title_1" = "Сизга қулай шартларни танланг";
+"onboarding_subtitle_1" = "Олча Насия билан тўлов муддатини танланг. Олча сайтида / иловасида Олча Насия бўйича энг қулай тўлов муддатини танланг. Маҳсулотни олиб, фойдаланинг";
+
+"onboarding_title_2" = "Қўллаб-қувватлаш хизмати";
+"onboarding_subtitle_2" = "Шахсий хизмат олиш, ёрдам ва саволларга жавоб олиш имконияти мавжуд.";
+
+"onboarding_title_3" = "Тез рўйхатдан ўтиш";
+"onboarding_subtitle_3" = "Рўйхатдан ўтиш учун фақат телефон рақами, паспорт / ID карта, тўлов картаси ва телефон камера керак.";

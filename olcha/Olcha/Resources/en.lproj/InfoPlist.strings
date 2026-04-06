@@ -1,0 +1,15 @@
+/*
+  InfoPlist.strings
+  NewOlcha
+
+  Created by Muhammadjon on 8/5/21.
+  
+*/
+
+"NSCameraUsageDescription" = "Olcha.uz ga foto, video va shaxsiy ma'lumotlaringizni oson yuklay olishingiz uchun galereyaga kirishga ruxsat bering!";
+
+"NSPhotoLibraryAddUsageDescription" = "Olcha.uz ga foto, video va shaxsiy ma'lumotlaringizni oson yuklay olishingiz uchun galereyaga kirishga ruxsat bering!";
+
+"NSPhotoLibraryUsageDescription" = "Olcha.uz ga foto, video va shaxsiy ma'lumotlaringizni oson yuklay olishingiz uchun galereyaga kirishga ruxsat bering!";
+
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Olcha.uz sizning xarita ma'lumotlaringizni olishi uchun GPSga ruxsat bering!";

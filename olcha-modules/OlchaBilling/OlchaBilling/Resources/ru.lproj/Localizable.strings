@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  OlchaBilling
+
+  Created by Elbek Khasanov on 20/06/23.
+  
+*/
+
+"order_num" = "Заявка №";
+"with_application" = "Через приложения";
+"with_cards" = "Через карту";
+
+"amount_pay" = "Сумма к оплате";
+
+"pay_success" = "Оплата совершена успешно";
+
+"otp_code" = "СМС код";
+
+"currency" = "Валюта";

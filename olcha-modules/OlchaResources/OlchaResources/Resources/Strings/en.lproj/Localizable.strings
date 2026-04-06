@@ -1,0 +1,1373 @@
+/* 
+  Localizable.strings
+  OlchaResources
+
+  Created by Elbek Khasanov on 25/04/23.
+  
+*/
+"catalog_products" = "Maxsulotlar katalogi";
+"married" = "Uylangan/Turmush qurgan";
+"not_married" = "Buydoq/Turmushga chiqmagan";
+"unmaried" = "Ajrashgan";
+"single" = "Beva";
+"family_status" = "Oilaviy axvolingiz";
+"work_place" = "Ish joyingiz";
+"position" = "Mansabingiz";
+"salary" = "Oylik maoishingiz";
+"experience" = "Staj";
+"continue" = "Davom etish";
+"load_passport" = "Pasportingizni birinchi betini yuklang";
+"load_location_photo" = "Pasportingizni yashash manzil betini yuklang";
+"take_pass_picture" = "Pasportingiz bosh sahifasi va birinchi beti bilan rasmga tushing";
+"take_picture_subtitle" = "Pasportingizdagi maʼlumotni o‘qish imkoni bo‘lishi lozim";
+"take_picture" = "Rasmga olish";
+"load_picture" = "Yuklash";
+"first_phone" = "Birinchi raqam";
+"second_phone" = "Ikkinchi raqam";
+"third_phone" = "Uchinchi raqam";
+"attach_card" = "Humo yoki Uzcard kartangizni biriktiring";
+"card_number" = "Karta raqami ";
+"card_year" = "Amal qilish muddati";
+"card_phone" = "Kartaga biriktirilgan telefon raqami ";
+"scan" = "Kamera orqali skanerlash";
+"verification_finish" = "Verifikatsiya omadli yakunlandi";
+"verification_finish_subtitle" = "Bizni xodimlarimiz maʼlumotlaringizni tasdiqlashlari uchun iltimos biroz kutib turing";
+"to_home" = "Bosh sahifaga";
+"code_number_subtitle" = "Tekshiruv kodi avval belgilangan raqamga jo‘natildi";
+"code_number" = "Tekshiruv kodi";
+"send_again" = "Kodni qayta yuborish";
+"next" = "Keyingi";
+"installment_formalization" = "Bo‘lib to‘lashga rasmiylatirish";
+"verification" = "Verifikatsiya";
+"installment_subtitle" = "Muddatli to‘lovga rasmiylashtirish uchun Siz identifikatsiyadan o‘tishingiz lozim. Identifikatsiyadan o‘tish uchun Sizdan \n\n quyidagi xujjatlar so‘raladi:";
+"passport_photo" = "Pasportingiz rasmi ";
+"installment_identification" = "Muddatli to‘lovga rasmiylashtirish uchun Siz identifikatsiyadan o‘tishingiz lozim. ";
+"go_verification" = "Verifikatsiyadan o‘tish";
+"main" = "Bosh sahifa";
+"categories" = "Kategoriyalar";
+"basket" = "Savatcha";
+"profile" = "Profil";
+"overall" = "Jami";
+"price_all" = "To‘lov miqdori:";
+"sale_all" = "Chegirma:";
+"price_pay_all" = "To‘lov uchun jami:";
+"checkout_order" = "Rasmiylashtirish";
+"also_buy" = "Shuningdek qo‘shib xarid qilishayapti";
+"settings" = "Sozlamalar";
+"verified_user" = "Tasdiqlangan profil";
+"not_verified_user" = "Tasdiqlanmagan profil ";
+"verify" = "Verifikatsiyadan o‘tish";
+"my_profile" = "Mening profilim";
+"other" = "Boshqalar";
+"bonus_title" = "Bonus xisob raqami ";
+"order_feedback_title" = "Savollaringiz bormi? Qo‘ng‘iroq qiling!";
+"order_feedback" = "Qo‘ng‘iroq buyurtma berish";
+"bonus_subtitle" = "Olcha ilovasida xaridlar va to‘lovlarni amalga oshiring va haqiqiy bonuslarga ega bo‘ling";
+"use_bonus" = "Bonus hisobdan ishlatish";
+"cart_comment" = "Buyurtma uchun izoh";
+"app_language" = "Ilova tili";
+"login_acc" = "Akkauntga kirish";
+
+"password" = "Parol";
+"forgot_password" = "Parolni unutdingizmi ? ";
+"login" = "Kirish";
+"signin" = "Ro‘yxatdan o‘tish";
+"registration" = "Ro‘yxatdan o‘tish";
+"create_profile" = "Akkaunt yaratish ";
+"name" = "Ism";
+"lastname" = "Familiya";
+"try_password" = "Parolni qayta tering";
+
+"profile_oferta_subtitle1" = "\"Ro‘yxatdan o‘tish\" tugmasini bosganda, man ommaviy oferta shartnomasi shartlariga rozi bo‘laman";
+
+"profile_oferta_subtitle2" = "ommaviy oferta shartnomasi shartlariga roziligimni bildiraman";
+
+"reset_password" = "Parolni qayta tiklash";
+"enter_new_password" = "Yangi parolni kiriting";
+"new_password" = "Yangi parol";
+"retry_new_password" = "Yangi parolni qayta tering";
+"update_password" = "Parolni yangilang";
+"password_updated" = "Sizning parolingiz muvoffaqiyatli yangilandi";
+"continue_buy" = "Xarid qilishni davom ettirish";
+"login_to" = "Avtorizatsiya qiling, kirsangiz:";
+"login_features" = "- Xar bir xariddan keshbek olasiz.\n- Xar bir xizmat uchun to‘lovdan keshbek olasiz";
+"really_logout" = "Siz xaqiqatdan xam chiqmoqchimisiz?";
+"cancel" = "Bekor qilish";
+"logout" = "Chiqish";
+"filter" = "Filtr";
+"clear_filter" = "Filtrni o‘chirish";
+"update_list" = "Ro‘yxatni yangilash";
+"enter" = "Kirish";
+"see_all" = "Barchasini ko‘rish";
+"close" = "Yopish";
+"refresh" = "Yangilash";
+"error" = "Xatolik";
+
+"first_new" = "Avval yangilari";
+"first_old" = "Avval eskilari";
+"first_expensive" = "Avval qimmatlari";
+"first_cheap" = "Avval arzonlari";
+
+"rating" = "Yuqori reyting";
+"first_discount" = "Ko'proq chegirmalar";
+"first_minimum_discount" = "Kamroq chegirmalar";
+
+"cash" = "Naqd to'lov";
+"currency" = "so‘m";
+"per_month" = "/ oy.";
+"error_text" = "Qandaydir xatolik yuz berdi. Iltimos qaytadan urinib ko'ring!";
+"not_showed" = "Ko‘rsatilmagan";
+"price" = "Narxi";
+"see_all_products" = "Barcha mahsulotlarni ko‘rish";
+"load_more" = "Yana ko‘rsatish";
+"show_products_count" = "Mahsulotni %1$d ini ko‘rsatish";
+"clear" = "Tozalash";
+"from" = "Dan";
+"to" = "Gacha";
+"show_products" = "Mahsulotlarni ko‘rsatish";
+"reset" = "O'chirish";
+"show_all_compare" = "Barcha solishtirmalarni ko‘rish";
+"short_about" = "Mahsulot xaqida qisqacha";
+"delivery" = "Yetkazib berish";
+"delivery_uzb" = "O'zbekiston bo'ylab yetkazib berish";
+"product_in_stock" = "Sotuvda mavjud";
+"add_basket" = "Savatchaga solish";
+"installment_buy" = "Bo‘lib to‘lashga olish";
+"read_all" = "Davomini o‘qish";
+"add_review" = "Fikr qoldirish";
+"see_all_reviews" = "Barcha fikrlarni ko‘rish";
+"mr_from" = "%1$d %2$d dan";
+"mr_to" = "%1$d %2$d gacha";
+"for_installment" = " muddatli to‘lovga";
+"in_favourite" = "Sevimlilarga";
+"to_favourite" = "Sevimlilarga";
+"in_compare" = "Solishtirishga ";
+"compare" = "Solishtirish";
+"hide" = "Berkitish";
+"added_to_favourite" = "Mahsulot sevimlilarga qo‘shildi";
+"added_to_compare" = "Mahsulot solishtiruvga qo‘shildi";
+"added_to_basket" = "Mahsulot savatga solindi";
+"product_reviews" = "Mahsulot xaqida fikrlar";
+"rate_product" = "Mahsulotni baxolang";
+"liked_this_product" = "Sizga mahsulot yoqdimi ? ";
+"add_review" = "Fikr qoldirish";
+"write_review" = "Izoh qoldiring";
+"add_photo" = "Rasm qo‘shish";
+"thanks_review" = "Izohingiz uchun tashakkur";
+"month" = "oy";
+"buy_installment" = "Bo‘lib to‘lashga xarid";
+"buy_installment_subtitle" = "Narxini xisoblash uchun boshlang‘ich to‘lov miqdorini tanlang";
+"first_payment" = "Boshlang‘ich to‘lov";
+"installment_month" = "Muddati";
+"permonth_payment" = "Oylik to‘lov";
+"overall_payment" = "Jami to‘lov miqdori";
+"checkout_installment" = "Rasmiylashtirish";
+"count" = "ta";
+"removed_basket" = "Mahsulot savatdan olib tashlandi";
+"comeback" = "Qaytarish";
+"address_tag" = "Manzil #";
+"add_new_address" = "Yangi manzil kiritish ";
+"empty_basket" = "Bu yerda xozircha xech narsa yo‘q";
+"add_review_to_product" = "Buyurtma bo‘yicha sharh qoldiring";
+"pickup_date" = "Olib ketish sanasi ";
+"pickup_station" = "Olib ketish punkti";
+"pickup_city" = "Olib ketish viloyati";
+"formalization_order" = "Buyurtmani rasmiylashtirish";
+"ship_address" = "Yetkazib berish manzili";
+"select_ship_address" = "Yetkazib berish manzilini kiriting";
+"ship_type" = "Yetkazib berish turi";
+"ship_district" = "Yetkazib berish tumani";
+"ship_region" = "Yetkazib berish viloyati";
+
+"region" = "Viloyat";
+
+"street" = "Ko‘cha";
+"house" = "Uy";
+"flat" = "Kvartira";
+"podyezd" = "Podyezd";
+"stage" = "Qavat";
+"saved_choose" = "Saqlanganlardan tanlash";
+"location_saved" = "Manzilni saqlandi";
+"save_current_address" = "Manzilni saqlash";
+"save" = "Saqlash";
+"pickup_address" = "Olib ketish uchun manzil";
+"pickup" = "O‘zim olib ketaman ";
+"type_ship" = "Yetkazib berish turi";
+"order_list" = "Buyurtma ro‘yxati";
+"personal_datas" = "Shaxsiy maʼlumotlar";
+"bonus" = "Bonus";
+"pickup_type" = "Olib ketish turi";
+"pickup_mode" = "Olib ketish punkti ish vaqti";
+"payment_type" = "To‘lov turi";
+"select_payment_type" = "To'lov turini tanlang";
+"price_cash" = "Qabul qilayotganda to‘lash summasi:";
+"delivery_price" = "Yetkazib berish qiymati:";
+"pay" = "To‘lash";
+"delivery_info" = "10 kg dan ortiq mahsulotni qavatdan qavatga olib chiqish xizmati uchun xizmat summasini bilish uchun aloqa markazimizga qo‘ng‘iroq qiling.\n";
+"delivery_info2" = "\n*Yetkazib berish jarayonida qiyinchilik tug‘diruvchi holatlar (masalan, katta hajmdagi buyurtmalarni lift nosoz holatda yuqori qavatlarga yetkazib berish)da qo‘shimcha to‘lov undiriladi.\n";
+"if_necessary" = "\n**  Zarur hollarda";
+
+"checkout_oferta" = "\"Rasmiylashtirish\" tugmasini bosganda, \n ommaviy oferta shartnomasi shartlariga roziligimni bildiraman";
+
+"express_delivery_info" = "Ekspress yetkazib berish xizmati faqat Toshkent shahri uchun ish kunlarida amal qiladi. Boshqa viloyatlarga ekspress yetkazib berish xizmati mavjud emas.";
+"order_num" = "Buyurtma № ";
+"overall_pay" = "Jami to‘lov miqdori";
+"method_payment" = "To‘lov turi:";
+"to_pay_order" = "buyurtma to‘lovi uchun ";
+"pay_subtitle" = "Siz to‘lovni amalga oshirish uchun boshqa sahifaga o‘tkazilasiz";
+"order_finish" = "Buyurtmangiz rasmiylashtirildi.\n Tasdiq uchun sms xabarini kuting.";
+"payment" = "To‘lov";
+"success_sent" = "Jo‘natildi";
+"success_sent_subtitle" = "Sizning arizangiz qabul qilindi va ko‘rib chiqish uchun bizga jo‘natildi. Javobini biroz vaqt ichida sms tarzida bilib olasiz.";
+"make_default" = "Asosiy etib belgilash";
+"edit" = "O‘zgartirish";
+"address" = "Manzil";
+"default" = "Asosiy manzil";
+"show" = "Batafsil";
+"order_delivered" = "Buyurtma yetkazib berildi";
+"canceled" = "Bekor qilingan";
+"formalized" = "Rasmiylashtirilgan";
+"on_road" = "Yo‘lda";
+"finished" = "Tugallangan";
+"waiting" = "Ko‘rib chiqilmoqda";
+"in_progress" = "Aktiv xolatda";
+"addresses" = "Manzillar";
+"orders_history" = "Buyurtmalar tarixi";
+"favourite" = "Sevimlilar";
+"follow_order" = "Buyurtmani kuzatish";
+"pickup_points" = "Qabul qilish punktlari";
+"help" = "Yordam";
+"compare_list" = "Solishtirma ro‘yxati";
+"extra" = "Qo‘shimcha";
+"safety" = "Havfsizlik";
+"birthday" = "Tug‘ulgan kun ";
+"gender" = "Jinsi";
+"edit_password" = "Parolni o‘zgartirish";
+"male" = "Erkak";
+"female" = "Ayol ";
+"save_space" = "Saqlab qo‘yish";
+"type_name" = "Ismingizni kiriting";
+"type_lastname" = "Familiyangizni kiriting";
+"editing_password" = "Parolni o‘zgartirish";
+"enter_current_password" = "Joriy parolingizni kiriting";
+
+"enter_new_password2" = "Yangi parolni qayta kiriting";
+"number_order" = "Buyurtma raqami ";
+"follow" = "Kuzatish";
+"number_order_sent" = "Buyurtma raqamingiz sms tarzida Sizga jo‘natildi. Undan tashqari Siz buyurtma raqamini shaxsiy kabinetingiz orqali yoki aloqa markaziga qo‘ng‘iroq qilib bilishingiz mumkin";
+"more_info" = "Batafsil";
+"order_date" = "Buyurtma qilingan vaqt";
+"contact_data" = "Aloqa uchun shaxs";
+"will_come" = "Yetib boradi";
+"help_number" = "Yetkazish bo‘yicha savolingiz bormi? Biz bilan bog‘laning: +998(71)-202-202-1";
+"delivered" = "Yetkazib berilgan";
+"installment_fire_datas" = "Muddatli to‘lovni to‘lash uchun maʼlumotlar";
+"term" = "Muddat";
+"payments" = "To‘lovlar ";
+"graph_payment" = "To‘lov grafigi";
+"fire_plan" = "To‘lov rejasi";
+"actual_payment" = "Aslida to‘langan";
+"balance" = "Qoldiq";
+"cause" = "Sababi";
+"detail" = "Batafsil";
+"overdue_day" = "Kechiktirilgan kun";
+"overdue_debt" = "Muddati o‘tgan qarzdorlik";
+"status" = "Status";
+"paid" = "To‘langan";
+"feedback" = "Qayta aloqaga buyurtma berish";
+"comments" = "Izoh";
+"when_feedback" = "Qachon qo‘ng‘iroq qilsak qulay ? ";
+"call_now" = "Menga xoziroq qo‘ng‘iroq qiling";
+"selected_time" = "Belgilangan vaqtda ";
+"request_call" = "Qo‘ng‘iroq buyurtma berish";
+"select_time" = "Vaqtni tanlang";
+"feedback_finish" = "Qo‘ng‘iroq qilishga arizangiz qabul qilindi.\nOperator javobini kutung.";
+"compare_products" = "Mahsulotlarni solishtirish ";
+"my_reviews" = "Mening izohlarim";
+"show_all" = "Barchasini ko‘rsatish";
+"all_price" = "Jami to‘lov miqdori";
+"show_in_map" = "Xaritada ko‘rsatish ";
+"push_notification" = "Push xabarnoma";
+"order_addresses" = "Yetkazib berish manzili";
+"add_address" = "Manzil qo‘shish";
+"address_removed" = "Manzil o‘chirib tashlangan";
+"adding_address" = "Qo‘shilgan manzillar";
+"editing_address" = "Manzilni o‘zgartirish";
+"delete" = "O‘chirish";
+"delete_account" = "Akkauntni o'chirish";
+"most_interesting" = "Eng qiziqarlilar";
+"sales" = "Aksiyalar";
+"fresh" = "Yangi maxsulotlar";
+"often_need" = "Ko‘pincha kerak bo‘lib qoladi";
+"news" = "Yangiliklar";
+"history" = "Tarix";
+"products_for_installment" = "Muddatli to‘lovga mahsulotlar";
+"subscribe" = "Aʼzo bo‘lish";
+"subscribe_info" = "Birinchilardan bo‘lib yangiliklardan Telegram- kanalimizda xabar toping";
+"all_products" = "Barcha mahsulotlar %1$d";
+"mr_fire" = "To‘lovlarni amalga oshirish uchun maʼlumotlar %1$d %2$d dan";
+"time_from_to" = "%1$d dan %2$d gacha";
+"actives" = "Aktiv";
+"not_actives" = "Aktiv bo‘lmaganlar";
+"official_products" = "%1$d brendining asl mahsuloti";
+"sales_and_discounts" = "Chegirmalar va aksiyalar";
+"reference" = "Maʼlumot";
+"empty_notification" = "Xabarnomalar yo‘q";
+"empty_notification_subtitle" = "Bu yerda Sizga xabarnomalar keladi";
+"choose_lang" = "Tilni tanlang";
+"onboarding_title1" = "Sizga yoqqan mahsulotni tanlang";
+"onboarding_title2" = "Muddatli to‘lovga juda keng assortiment ";
+"onboarding_title3" = "Butun O‘zbekiston bo‘ylab tezkor yetkazib berish";
+"skip" = "O‘tkazib yuborish";
+"search_in_olcha" = "Olchadan qidirish...";
+"open_olcha_acc" = "Olcha bonus xisob raqamini oching";
+"open_olcha_acc_subtitle" = "Olcha bonus xisob raqami ochish uchun verifikatsiyadan o‘ting va xar bir xariddan keshbek oling";
+"network_error" = "Iltimos internetga qayta ulaning va yana bir bor urinib ko‘ring.";
+
+"with_mover" = "Kuryer orqali";
+
+"buy_to_installment" = "Mahsulotlarni muddatli to'lovga xarid qil";
+
+
+"buy_to_installment_without_credit" = "Bank kreditisiz va penyasiz!";
+
+"description_and" = "Xarakter va tavsif";
+
+"scan_title" = "Kredit kartangizni ramka ichiga joylashtiring.";
+
+"scan_subtitle" = "Ekranda ko'rsatilgan ma'lumotlar xato bo'lsa, ularni to'g'rilash uchun ustiga bosing.";
+
+"confirm" = "Tasdiqlash";
+
+"product_count_error" = "Mahsulot omborda mavjud emas";
+
+
+"not_accessed_camera" = "Kameraga kirish bekor qilingan. Sozlamalar bo'limidan kameraga kirishga ruxsat bering.";
+
+"not_accessed_gallery" = "Galereyaga kirish bekor qilingan. Sozlamalar bo'limidan galereyaga kirishga ruxsat bering.";
+
+
+
+
+
+"camera" = "Kamera";
+"gallery" = "Galereya";
+
+"review_image" = "Rasm joylash.";
+
+"open" = "Ochish";
+
+
+
+"scan_error" = "Hozirda kartangizni skaner qilishni iloji bo'lmadi. Qo'lda kiritishga o'tish.";
+
+
+"use" = "Foydalanish";
+"coupon" = "Promokod";
+"use_coupon" = "Promokodni kiriting";
+
+
+//new
+"buy_one_click" = "Bir klikda sotib olish";
+"buy_one_click_success" = "Buyurtma muvaffaqiyatli bajarildi";
+"buy_one_click_error" = "Xatolik ro'y berdi";
+
+"isSelected" = "Maxsulotlardan birini tanlang";
+"preOrder" = "Oldindan buyurtma";
+
+"notAviable" = "Maxsulot omborda mavjud emas";
+"manufacturer" = "Ishlab chiqaruvchi";
+"termPayment" = "Muddatli to'lov uchun shaxsiy ma'lumotlar";
+
+
+"choose" = "Maxsulotlardan birini tanlang";
+
+"chooseOne" = "Birini tanlang";
+
+"changedMind" = "Fikrimni o'zgartirdim";
+"orderedTwo" = "Ikkita buyurtma berdim";
+"orderAgain" = "Qayta buyurtma beraman";
+"deliveryLong" = "Yetkazib berish uzoq";
+"foundCheap" = "Arzonini topdim";
+"other" = "Boshqa";
+
+
+
+"canceledOrder" = "Buyurtma muvaffaqiyatli bekor qilindi";
+
+"please" = "Iltimos";
+//error messags
+"enterAllFileds"="Iltimos, barcha maydonlar tug'ri to'ldiring";
+
+"monthly" = "Muddatli to'lov";
+
+"empty_product" = "Bunday xarakteristikalik mahsulot mavjud emas";
+
+
+//Order history type
+"order_all" = "Barcha buyurtmalar";
+
+"order_pending" = "Kutish jarayonida";
+
+"order_confirmed" = "Tasdiqlangan";
+
+"order_paid" = "To'langan";
+
+"order_shipping" = "Yetkazib berish jarayonida";
+
+"order_delivered" = "Yetkazib berilgan";
+
+"order_canceled" = "Bekor qilingan";
+
+"pending" = "Kutilmoqda";
+
+"track_checkout" = "Rasmiylashtirilgan";
+
+"track_on_way" = "Yo'lda";
+
+"pending_payment" = "To'lov kutilmoqda";
+
+"warranty_title" = "Kafolat muddati";
+
+"phone_numbers" = "Telefon nomerlar";
+
+"who_is" = "Kimingiz bo’ladi";
+
+"father" = "Dadam";
+
+"mother" = "Onam";
+
+"brother" = "Akam";
+
+"resend" = "Boshqatdan yuborish";
+
+"add" = "Qo’shish";
+
+"bank_cards" = "Bank karta ma’lumotlari";
+
+"identification" = "Identifikatsia";
+
+"add_new_card" = "Yangi karta qo’shish";
+
+"code_subtitle" = "Telefoningizga yuborilgan kodni kiriting";
+
+"connect_with_you" = "Siz bilan tez orada bog’lanamiz";
+
+"lang" = "O'zbekcha";
+
+"lang_short" = "O'zb";
+
+"select_card" = "Kartalardan birini tanlang";
+
+"empty_search_title" = "Ma'lumot topilmadi";
+
+"empty_search_subtitle" = "Ehtimol m'lumotni xato kiritgandirsiz,
+qaytadan urinib ko’ring";
+
+"empty_products_title" = "Mahsulot topilmadi";
+
+"empty_products_subtitle" = "Bu bo’limga mahsulotlar tez
+orada qo’shiladi";
+
+////v2 texts ----->/////// ---------------------------- ///////////////
+"anorbank_verify" = "Anorbank bank kartasini tasdiqlang";
+
+"day_products" = "Kun mahsulotlari";
+
+"all" = "Hammasi";
+"in_work" = "Ishlayapti";
+
+
+"search_with_products" = "Qidirish";
+
+"sale" = "Chegirmalar";
+
+"often_need" = "Ko'pincha kerak bo'ladi";
+
+"fresh" = "Yangi";
+
+"first_new" = "Avval yangilari";
+"first_old" = "Avval eskilari";
+"first_expensive" = "Avval qimmatlari";
+"first_cheap" = "Avval arzonlari";
+
+"price_sum" = "Narxi, so'm";
+
+"filters" = "Filtrlar";
+
+"checkout" = "Rasmiylashtirish";
+
+"accept" = "Qabul qilish";
+
+"done" = "Tayyor";
+
+"catalog" = "Katalog";
+
+"brands" = "Brendlar";
+
+"to_basket" = "Savatchaga";
+
+"month_short" = "oy.";
+
+"selected" = "Tanlangan";
+
+"video_reviews" = "video sharhlar";
+
+"question_reviews" = "savollar";
+
+"with_subscribe" = "Obuna bilan ";
+
+"on_payment" = "To'lashda ";
+
+"witch_olcha_cash" = "Olcha hisobi";
+
+"gift_for_order" = "Xarid uchun sovg'a";
+
+"description" = "Tavsif";
+
+"characteristics" = "Xususiyatlari";
+
+"general_characteristics" = "Umumiy xususiyatlar";
+
+"all_characteristics" = "Barcha xususiyatlar";
+
+"some_characteristics" = "Kamroq xususiyatlar";
+
+"general_descriptions" = "Umumiy tavsif";
+
+"all_descriptions" = "Barcha tavsif";
+
+"warranty" = "Kafolat";
+
+"warranty_subtitle" = "Ishlab chiqaruvchining rasmiy kafolati";
+
+"shipping_info" = "Yetkazib berish haqida ma'lumot";
+
+"express_shipping" = "Ekspress yetkazib berish";
+
+"shipping_with_olcha_express" = "Olcha Express kuryeri";
+
+"standard_shipping" = "Standart yetkazib berish";
+
+"shipping_with_olcha" = "Olcha kuryeri";
+
+"shipping_info_subtitle" = "Sotib olgach, yetkazib berish vaqtini sozlashingiz mumkin";
+
+"similar_products" = "Shunga o'xshash mahsulotlar";
+
+"analog_products" = "Analog mahsulotlar";
+
+"reviews" = "Sharhlar";
+
+"customers_pictures" = "Xaridorlardan rasmlar";
+
+"to_comment" = "Izoh yozish";
+
+"product_gift" = "Xarid uchun sovg'a";
+
+"product_gift_content" = "Avtomatik ravishda mahsulot bilan birga savatga qo'shiladi\n\nFoydali paket bilan bir vaqtda amal qilmaydi.";
+
+"all_rating" = "Umumiy reyting";
+
+"product_in_basket" = "Savatdagi mahsulot";
+
+"go_basket" = "Savatchaga o'tish";
+
+"seen_with_product" = "Ushbu mahsulot bilan tomosha qilinmoqda";
+
+"order_one_click" = "1 bosishda buyurtma bering";
+
+"contact_number" = "Kontakt nomerlar";
+
+"agree" = "Shartlarga roziman";
+
+"agree_subtitle" = "Savdo platformasidan foydalanish shartlari va qaytarish qoidalari";
+
+"more" = "Yana";
+
+"less" = "Kamroq";
+
+
+"initial_pay" = "Minimal boshlang'ich to'lov bilan";
+"initial_fee" = "Bosh. to'lov";
+
+"overall_payment" = "Umumiy summa";
+
+"first_payment" = "Boshlang'ich to'lov";
+
+"store_products_header" = "Bu mahsulot boshqa sotuvchilardan";
+
+"order_success" = "Buyurtma muvaffaqiyatli yakunlandi";
+
+"select_product" = "Iltimos, \n mahsulotlardan birini tanlang";
+
+"ask_question" = "Savol bermoq";
+
+"question" = "Savol";
+
+"faq_placeholder" = "Mahsulot haqida nimani bilmoqchisiz?";
+
+"send_question" = "Savol yuboring";
+
+"your_rating" = "Sizning bahoyingiz:";
+
+"review_placeholder" = "Umumiy taassurotni tavsiflang";
+
+"review" = "Sharh";
+
+"add_photo" = "Surat qo'shing";
+
+"add_video" = "Video qo'shing";
+
+"send_review" = "Sharh yuborish";
+
+"select_photo" = "Surat tanlang";
+
+"thanks_review" = "Fikr-mulohaza uchun rahmat!";
+
+"thanks_question" = "Savol uchun rahmat!";
+
+"thanks_review_subtitle" = "U moderator tomonidan tekshirilgandan so'ng e'lon qilinadi";
+"thanks_question_subtitle" = "Tez orada sizning savolingizga javob beriladi";
+"thanks_asking" = "Javob uchun rahmat";
+
+"go_products" = "Mahsulotga o'tish";
+
+"questions" = "Savollar";
+
+"see_all_faqs" = "Barcha savollarni ko'ring";
+
+"product_questions" = "Mahsulot haqida savollar";
+
+"faq_subtitle" = "O'zingiz so'rang yoki boshqalar so'ragan narsalarni o'qing";
+
+"reply" = "Javob bering";
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+"reply_placeholder" = "Savolga javobingiz";
+
+"answer" = "Javob";
+
+"is_helpfull" = "Bu javob sizga yordam berdimi?";
+
+"fast_shipping" = "Tez yetkazib berish";
+
+"price_history" = "Narxlar tarixi";
+
+"diapazone" = "Diapazon:";
+
+"tap_description" = "Narxni ko'rish uchun diagramma ustiga bosing";
+
+
+"popular_products" = "Ommabop takliflar";
+
+"sponsor_products" = "Homiylik qilingan mahsulotlar";
+
+"add_products" = "Mahsulotlar qo'shish";
+
+"clear_categories" = "Kategoriyani tozalash";
+
+"added_favourites" = "Sevimlilarga qo'shildi";
+
+"added_compare" = "Taqqoslash uchun qo'shildi";
+
+"tags" = "Teglar";
+
+"all_brands" = "Barcha brendlar";
+
+"all_big" = "Hammasi";
+
+"popular_products" = "Ommabop tovarlar";
+
+"bestsellers" = "Bestsellerlar";
+
+"my_orders" = "Mening buyurtmalarim";
+
+"favourites" = "Tanlangan mahsulotlar";
+
+"call_friends" = "Do'stlarni taklif qiling";
+
+"get_bonuses" = "Va bonus ball oling!";
+
+"search_places" = "Joylar va manzillarni qidiring";
+
+"add_new_address" = "Yangi manzil qo'shing";
+
+"shipping_address" = "Yetkazib berish manzili";
+
+"house_number" = "Uy raqami";
+
+"flat" = "Kvartira";
+
+"podyezd" = "Podyezd";
+
+"floor" = "Qavat";
+
+"shipping_comment" = "Kuryerga sharh";
+
+"save_next" = "Saqlash va davom etish";
+
+"buy_credit" = "Muddatli to'lovga";
+
+"select_all" = "Hammasini tanlang";
+
+"remove_selected" = "Tanlanganni o'chirish";
+
+"products" = "Mahsulotlar";
+
+"products_count" = " ta mahsulot";
+
+"balans_system" = "Olcha verifikatsiya";
+
+"phone_number" = "Telefon raqami";
+
+"empty_cart" = "Savatcha bo‘sh";
+
+"empty_cart_subtitle" = "Lekin siz uni har doim to'ldirishingiz mumkin";
+
+"empty_favourites" = "Sizda tanlangan tovarlar yo'q";
+
+"empty_favourites_subtitle" = "Ammo xarid qilishni boshlash vaqti keldi...";
+
+"empty_compare" = "Sizda solishtiradigan tovar yo‘q";
+
+"empty_compare_subtitle" = "Ammo xarid qilishni boshlash vaqti keldi...";
+
+"empty_notification" = "Sizda bildirishnomalar yo‘q";
+
+"passport_front" = "Pasportning old tomoni";
+
+"selfi_passport" = "Pasport bilan selfi";
+
+"add" = "Qo'shish";
+
+"code_hint" = "Raqamga yuborilgan 5 xonali kodni kiriting";
+
+"code" = "Kod";
+
+"send_code" = "Kodni yuborish";
+
+"resend_code" = "Kodni qayta yuborish";
+
+"delete_card" = "Kartani o'chirish";
+
+"add_card" = "Yangi karta qo'shing";
+
+
+"phone_numbers" = "Telefon raqamlari";
+
+"who_is" = "Kim";
+
+"father" = "Ota";
+
+"mother" = "Ona";
+
+"brother" = "Aka-uka";
+
+"bank_cards" = "Bank kartasi ma'lumotlari";
+
+"identification" = "Identifikatsiya";
+
+"add_new_card" = "Yangi karta qo'shing";
+
+"anorbank_verify" = "Anorbank bank kartasini tasdiqlang";
+
+"id" = "foydalanuvchi IDsi";
+
+"birthday" = "Tug'ilgan kun";
+
+"mail" = "Elektron pochta";
+
+"address_doc" = "Yashash joyi";
+
+"extra_phone" = "Qo'shimcha telefonlar";
+
+"passport" = "Pasport seriyasi";
+
+"name_lastname" = "Ism, familiya";
+
+"attached_cards" = "Biriktirilgan kartalar";
+
+"card" = "Bank kartasi";
+
+"current_password" = "Joriy Parol";
+
+"edit_name" = "Ism kiriting";
+
+"edit_email" = "Elektron pochtangizni kiriting";
+
+"code_sent" = "SMS kod yuborildi";
+
+"welcome" = "Xush kelibsiz";
+
+"receive_code" = "Kodni olish";
+
+"register" = "Roʻyxatdan oʻtish";
+
+"guest_login_title" = "Kirish yoki Ro'yxatdan o'tish";
+
+"guest_login_subtitle" = "Xarid qilish, buyurtmalarni kuzatish va shaxsiy chegirmalar va ballardan bahramand bo'lish.";
+
+"guest_login_button" = "Kirish yoki ro'yxatdan o'tish";
+
+"monthly_buy" = "Muddatli to'lov";
+"cash_buy" = "Sotib olish";
+
+"credit_type_olcha" = "Muddatli toʻlov turi:";
+
+"fill_promocode" = "Promokodni kiriting";
+
+"shipping_price" = "Yetkazib berish narxi";
+
+"date_cost" = "Sana va vaqt";
+
+"coupon_error" = "Promokod qabul qilinmadi!";
+"coupon_success" = "Promokod qabul qilindi!";
+
+"order_success" = "Buyurtma qabul qilindi";
+"connect_with_you" = "Tez orada siz bilan bog'lanamiz";
+
+"no" = "Yo'q";
+"yes" = "Ha";
+
+"really_delete" = "Manzil o'chirilishi tasdiqlansinmi?";
+"really_delete_account" = "Akkauntni oʻchirilishi tasdiqlansinmi?";
+
+
+"good" = "Yaxshi";
+
+"order_will_cancel" = "Buyurtma quyidagi hollarda bekor qilinadi:";
+
+
+"confirmed" = "Tasdiqlangan";
+
+"pending" = "Kutish jarayonida";
+
+"order_confirmed" = "Tasdiqlangan";
+
+"order_paid" = "To'langan";
+
+"shipping" = "Yetkazib berish jarayonida 🚚";
+
+"delivered" = "Buyurtma yetkazib berildi";
+
+"canceled" = "Bekor qilingan";
+
+"fixing" = "Ta'mirlash";
+
+"paid" = "To'langan";
+
+"waiting_payment" = "KUTILGAN TO'LOV";
+
+"order_waiting_payment" = "Buyurtmaga to'lov kutilmoqda";
+
+"order_shipping_subtitle" = "Kuryer sizning tovarlaringizni ombordan olib, buyurtmalarni yetkazib bera boshladi";
+
+"order_type" = "Buyurtma turi";
+"select_order_type" = "Buyurtma turini tanlang";
+
+"order_date" = "Buyurtma vaqti";
+
+"order_price" = "Umumiy qiymati";
+
+"order_contact" = "Bo'glanishga shaxs";
+
+"phone" = "Telefon";
+
+
+
+
+"your_balance" = "Hisobingizda:";
+
+"online_bank_card" = "Bank kartasi orqali onlayn";
+
+"amount_to_pay" = "To'lanishi kerak bo'lgan pul";
+
+"pay_all_button" = "To'liq to'lash";
+
+"graph_actual_payment" = "Haqiqiy to'lov sanasi";
+
+"balance_owed" = "Qarz qoldig'i";
+
+"payment_schedule" = "To'lov jadvali";
+
+"overdue_days" = "Kechiktirilgan kunlar";
+
+"past_due_debt" = "Muddati o'tgan qarz";
+
+"success" = "Muvaffaqiyatli";
+
+"brand" = "Brend";
+
+"from_pin_card" = "Biriktirilgan karta orqali";
+
+"payment_uzcard_humo" = "Toʻlov UzCard va Humo bank kartalari orqali qabul qilinadi";
+
+"fill_balans" = "Balansni to'ldirish";
+
+"fill" = "To'ldirish";
+
+"select_card" = "Kartalardan birini tanlang";
+
+"from_bank_card" = "Biriktirilgan karta orqali";
+
+"enter_payment" = "Summani kiriting";
+
+"summa" = "Summa";
+
+"fill_code" = "Kodni kiriting";
+
+"payment_successfull" = "Toʻlov muvaffaqiyatli boʻldi";
+
+"play_video" = "Videoni tomosha qiling";
+
+"maximum_limit_10" = "Maksimal buyurtma chegarasi 10 ta mahsulot";
+
+"sold_out" = "Sotilib bo'lindi";
+
+"not_enough_money" = "Balansda mablag'lar yetarli emas:";
+
+"anorbank_verified_successfully" = "Anorbank bank kartasi muvaffaqiyatli tasdiqlandi";
+
+"anorbank_card_required" = "Bizda Anor Bankdan bo‘lib to‘lash kartasi bo‘lishi kerak";
+
+"anorbank_card_order" = "Anor Bank kartasiga buyurtma berish";
+
+"to_cancel" = "Bekor qilish";
+
+"adult_product" = "Kattalar uchun";
+
+
+"agree_age" = "Yoshingizni tasdiqlang";
+
+"agree_age_content" = "Ushbu bo'lim faqat 18 yoshga to'lgan tashrif buyuruvchilar uchun mo'ljallangan!";
+
+"gift" = "Sovg'a";
+
+"registration_verification" = "Passport propiskasi yoki ID kartaning orqasi";
+
+"warning" = "Diqqat";
+"message" = "Xabar";
+
+"delete_success_message" = "Hurmatli foydalanuvchi, akkauntingizni o'chirish uchun arizangiz qabul qilinadi. Bu jarayon biroz vaqt talab qilishi mumkin. Akkauntingiz faol buyurtma tarixiga tekshiriladi.";
+
+"payment_success" = "To'lov amalga oshirildi";
+
+"order_cause_title" = "Bekor qilish sabablarini yozing";
+
+"sale" = "Chegirma";
+
+"new_update" = "Yangi versiya";
+
+"new_update_content" = "Yangi versiya mavjud. Ilova samarali va to'g'ri ishlashi uchun uni yangilashingiz kerak";
+
+"update" = "Yangilash";
+
+"phones_unique_error" = "Barcha raqamlar noyob bo'lishi kerak.";
+
+"payment_comission" = "Naqd pul to'lash uchun komissiya miqdori";
+
+"not_anorbank_credit_card" = "Sizda Anorbankdan muddatli to'lov uchun karta bor bo'lishi kerak";
+
+"to_history" = "Buyurtmalar tarixiga o'tish";
+
+"review_title" = "Biz uchun Sizning fikringiz muhim. Iltimos, xizmatimizni baholang";
+
+"rate_product" = "Mahsulotni baholang";
+"rate_shipping" = "Yetkazib berish xizmati";
+"rate_shipping_placeholder" = "Yetkazib berish haqida (majburiy emas)";
+"rate_call" = "Call-markazi xizmati";
+"rate_call_placeholder" = "Call-markazi haqida (majburiy emas)";
+
+"review_anonym" = "Sharh maxfiy tarzda yuborilsinmi?";
+
+"review_rating_required" = "Izoh qoldirish uchun sharh yozish va baholash talab qilinadi";
+
+"my_questions" = "Mening savollarim";
+
+"empty_reviews" = "Izohlar yo'q";
+
+"empty_faqs" = "Savollar yo'q";
+
+"max_use_bonus" = "Bonusdan foydalanish uchun maksimal miqdor:";
+"max_bonus" = "Bonus hisobingiz:";
+
+"year" = "yil";
+
+"month" = "oy";
+
+"day" = "kun";
+
+"with_gift" = "Sovg'a bilan";
+
+"ramazan_from_title" = "Og'iz yopish duosi";
+
+"ramazan_to_title" = "Og'iz ochish duosi";
+
+"ramazan_from_content" = "Navaytu an asuma sovma shahri ramazona minal fajri ilal mag'ribi, xolisan lillahi ta'aala. Allohu akbar.";
+
+"ramazan_to_content" = "Allohumma laka sumtu va bika amantu va 'alayka tavakkaltu va 'alaa rizqika aftartu. Fag'firli Ya G'offaru ma qoddamtu va ma axxortu.";
+
+"ramazan_time" = "Ramazon taqvimi";
+
+"ramazan_from" = "Saharlik";
+"ramazan_to" = "Iftorlik";
+
+
+"enter_amount" = "Summani kiriting";
+"incorrect_amount" = "To'g'ri summani kiriting";
+
+
+/*********************************************************************************
+ OLCHA-PAY-MODULE
+ *********************************************************************************/
+
+"named" = "Nomi";
+
+"card_name" = "Karta nomi";
+"select_color" = "Rang tanlang";
+"make_default" = "Asosiy etib belgilash";
+"card_color" = "Karta rangi";
+"card_settings" = "Karta sozlamalari";
+"balance" = "Balans";
+"delete_card" = "Kartani o'chirish";
+
+"cards" = "Kartalar";
+"transactions_history_card" = "Kartaning to'lovlar tarixi";
+"saved_transactions" = "Saqlangan to'lovlar";
+
+"transactions_history" = "To'lovlar tarixi";
+"enter_pincode" = "Pinkodni kiriting";
+
+"wallet" = "Hamyon";
+"payments" = "To'lov";
+"search" = "Qidiruv";
+
+"add_new_pincode" = "Yangi pinkod kiriting";
+"confirm_new_pincode" = "Pinkodni tasdiqlang";
+"edit_pincode" = "Pinkodni o'zgartirish";
+
+"more" = "Batafsil";
+
+"notifications" = "Bildirishnomalar";
+
+"news" = "Yangiliklar";
+
+"face_id_unlock" = "FaceID orqali shaxsingizni tasdiqlang";
+
+"touch_id_unlock" = "TouchID orqali shaxsingizni tasdiqlang";
+
+"scan_with_camera" = "Kamera yordamida skaner qiling";
+
+"phone_pinned_card" = "Karta ulangan telefon raqam";
+
+"next" = "Keyingisi";
+
+"card_number" = "Karta raqami";
+
+"expire_to" = "Amal qilish muddati";
+
+"adding_card" = "Karta qo'shish";
+
+"delete_card" = "Kartani o'chirish?";
+
+"really_delete_card" = "Haqiqatda kartani o'chirmoqchimisiz?";
+
+"delete" = "O'chirish";
+"edit" = "Tahrirlash";
+
+"add_card" = "Karta qo'shish";
+
+"agree_camera_usage" = "Kamerani ishlatishga ruxsat bering";
+
+"card_number_error" = "Karta raqamni to'g'ri kiriting";
+"phone_number_error" = "Telefon raqamni to'g'ri kiriting";
+"card_expire_error" = "Muddatni to'g'ri kiting";
+
+"name_error" = "Karta nomini kiriting";
+
+"onboarding_title" = "Olcha Pay bilan tez va xavfsiz toʻlovlarni amalga oshiring";
+
+"link_card" = "Kartangizni ulang";
+
+"pay" = "To'lash";
+
+"close" = "Yopish";
+
+"summa" = "Summa";
+
+"card_transfering" = "Hisobdan chiqarish kartasi";
+
+"retry" = "Takrorlash";
+
+"detail" = "Tafsilotlar";
+
+"code_sent_subtitle" = "Tasdiqlash kodi kartaga ulangan telefon raqamiga yuborildi";
+
+"retry_code" = "Kodni qayta yuborish";
+
+"code" = "Kod";
+
+"enter_code" = "Kodni kiriting";
+
+"check_card_data_subtitle" = "Ma'lumotlarni tekshiring. Agar ular boshqacha bo'lsa, yana suratga olishga urinib ko'ring yoki ma'lumotlarni qo'lda kiriting";
+
+"name" = "Ism";
+
+"due_to" = "Amal qilish muddati";
+
+"skip" = "O'tkazib yuborish";
+
+"monitoring" = "Monitoring";
+
+"filtr" = "Filtr";
+
+"date" = "Sana";
+
+"accept" = "Qabul qilish";
+
+"payment_name" = "To'lov uchun nom";
+
+"payment_saved" = "To'lov saqlangan to'lovlarga qo'shildi";
+
+"detalization" = "Tafsilotlar";
+
+"pay_with_qr" = "QR orqali to'lov";
+
+"support" = "Qo'llab-quvvatlash xizmati";
+
+"public_offerta" = "Ommaviy oferta";
+
+"privacy_policy" = "Maxfiylik siyosati";
+
+"call_center" = "Qo'ng'iroqlar markazi bilan bog'lanish";
+
+"message_operator" = "Operatorga yozing";
+
+"face_id_title" = "FaceID orqali kirish";
+
+"touch_id_title" = "TouchID orqali kirish";
+
+
+"agree_face_id_usage" = "FaceID ga ruxsat bering";
+"agree_touch_id_usage" = "TouchID ga ruxsat bering";
+
+"name_lastname" = "Ism va familiya";
+
+"birthday" = "Tug'ilgan sana";
+
+"id" = "ID";
+
+"yes" = "Ha";
+
+"no" = "Yo'q";
+
+"pay_mobile_net" = "Mobil to'lov";
+
+"all_balance" = "Umumiy balans";
+
+"card_color" = "Karta rangi";
+
+"currency" = "so'm";
+
+"my_cards" = "Mening kartalarim";
+
+"qr_scan" = "QR-skanner";
+
+"sender" = "Yuboruvchi";
+
+"all_services" = "Barcha servislar";
+
+"categories" = "Kategoriyalar";
+
+"sender_card" = "Yuboruvchi kartasi";
+
+"sender" = "Yuboruvchi";
+
+"cashback" = "Keshbek";
+
+"status" = "Status";
+
+
+//transaction status
+"commited" = "Tugallangan";
+"canceled" = "Bekor qilingan";
+"reversed" = "Qaytarilgan";
+"pending" = "Kutish jarayonida";
+
+"transaction_not_found" = "Tranzaksiya topilmadi";
+
+
+
+"not_found" = "Hech nima topilmadi";
+
+"card_not_selected" = "Kartani tanlang";
+
+"empty" = "Bo'sh bo'lishi mumkin emas";
+
+"empty_count" = "Eng kam begilar soni:";
+
+"sending_to" = "Yuborildi";
+
+"payment_success" = "To'lov yakunlandi";
+
+"profilactica" = "Profilaktika";
+
+"service_not_exist" = "Servis mavjud emas";
+
+"incorrect_password" = "Parol xato kiritildi";
+
+"incorrect_confirm_password" = "Parollar bir xil bo'lishi kerak";
+
+"spent" = "Sarflangan";
+
+"retry" = "Takrorlash";
+"really_retry" = "Siz haqiqatan takrorlamoqchimisiz?";
+
+"show_check" = "Chekni ko'rish";
+
+"min_price_empty" = "Summa 0 so'mdan katta bo'lishi kerak";
+
+"tooltip_next_button" = "Keyingisi";
+"tooltip_done_button" = "Tayyor";
+"settings_clear_tooptip_cache" = "Mashg'ulotni takrorlash";
+
+"regex_validation" = "Ma'lumotni to'g'ri kiriting";
+
+"min_length_validation" = "Eng kam belgilar soni:";
+
+"cash_not_enough" = "Sizning hisobingizda yetarli mablag' mavjud emas.";
+
+"select_variation" = "Mahsulot tanlang";
+
+"empty_notifications" = "Sizda xabarlar yo'q";
+
+"empty_monitoring" = "Sizda hozircha o'tkazmalar yo'q";
+
+"main" = "Asosiy";
+"back" = "Orqaga";
+"partners" = "Hamkorlar";
+"my_applications" = "Arizalarim";
+"package_tab_item" = "Tariflar";
+
+
+"return_defect_products" = "Tovarlarni qaytarish yoki almashtirish";
+
+"articul" = "Artikul";
+
+"return_products" = "Tovarlarni qaytarish";
+
+"change_products" = "Tovarlarni almashtirish";
+
+"other" = "Boshqa";
+
+"empty_placeholder_refresh" = "Yangilash";
+
+"pay_main_tab_item" = "Asosiy";
+"pay_wallet_tab_item" = "Pay";
+"pay_cards_tab_item" = "Kartalar";
+"pay_payments_tab_item" = "To'lov";
+"pay_monitoring_tab_item" = "Monitoring";
+"pay_profile_tab_item" = "Profil";
+
+"olcha_home_tab_item" = "Asosiy";
+"olcha_main_tab_item" = "Market";
+"olcha_catalog_tab_item" = "Katalog";
+"olcha_cart_tab_item" = "Savatcha";
+"olcha_favourite_tab_item" = "Sevimlilar";
+"olcha_profile_tab_item" = "Profil";
+
+"support_title" = "Aloqa uchun";
+
+"not_accessed_location" = "Joylashuvni olishga ruxsat berilmagan. Sozlamalar bo'limidan joylashuvni olishga ruxsat bering.";
+
+"empty_search_title" = "Ma'lumot topilmadi";
+
+"empty_search_subtitle" = "Ehtimol m'lumotni xato kiritgandirsiz,
+qaytadan urinib ko’ring";
+
+"empty_products_title" = "Mahsulot topilmadi";
+
+"empty_products_subtitle" = "Bu bo’limga mahsulotlar tez
+orada qo’shiladi";
+
+"verify_description" = "Hamkor do‘konlarimizdan bir zumda texnikadan tortib kiyim va poyabzalgacha o‘zingiz xohlagan narsani halol muddatli to‘lovga xarid qiling.";
+
+"profile_name" = "Mehmon";
+"profile_id" = "-";
+
+"go_profile" = "Profilga o’tish";
+
+
+"payment_type_select_error" = "To'lov turi tanlanmagan";
+
+"nasiya_alert_request" = "Sizning arizangiz yuborildi. Iltimos kuting.";
+"nasiya_alert_success" = "Identifikatsiya muvaffaqiyatli amalga oshdi";
+"nasiya_alert_reject" = "Sizning malumotlaringiz tasdiqlanmadi iltmos qayta urinib ko’ring";
+ 
+"more_information" = "Batafsil ma'lumot";
+
+"order_empty_placeholder" = "Buyurtmalar topilmadi";
+
+"export_products_exist" = "Ro'yxatingizda chet eldan keladigan mahsulotlar mavjud:";
+
+
+"refresh_auth_expired" = "Seansingiz tugadi, profilingizga qayta kiring";
+
+"enter_profile" = "Profilga kiring";
+
+
+"limit_balance" = "Sizning nasiya limitingiz";
+
+"network_disconnected" = "Internet bilan bog’lanishda xatolik yuzaga keldi";
+
+"receiver_order" = "Buyurtmani qabul qiluvchi";
+
+"understand" = "Tushunarli";
+
+"limit_balance_error" = "Sizda muddatli to’lovga xarid qilish uchun limit mavjud emas";
+
+"bonus_max_rule" = "Siz ishlatishingiz mumkin bo'lgan miqdor";
+
+"for_you_cashback" = "Siz uchun bonus va cashbacklar!";
+
+"invalid_service" = "Ushbu xizmat ishlab chiqish jarayonida";
+
+"your_level" = "Sizning darajangiz";
+
+"level_and_loyalty_programm" = "Daraja va sodiqlik dasturi";
+
+"level_and_loyalty_programm_subtitle" = "Buyurtmalar qancha ko'p bo'lsa, daraja shunchalik yuqori bo'ladi";
+
+"cashback_for_purchase" = "Xaridlar uchun \ncashback";
+
+"sale_for_purchase" = "Buyurtmani to'lashda chegirma ballari";
+
+"enter_your_passport_data" = "Pasport ma'lumotlaringizni kiriting";
+"passport_series_or_number" = "Pasprot/ID karta seriyasi va raqami";
+
+// Confirmation Screen
+"your_one_time_code" = "Your One-Time Code";
+"scan_the_code_below" = "Scan the code below at the register";
+"code_placeholder" = "0000 0000 0000";
+"expires_in_45s" = "Expires in 45s";
+"expires_in_%ds" = "Expires in %ds";
+"qr_code" = "QR Code";
+"code_expired" = "Code Expired";
+"please_request_new_code" = "Please request a new code to continue";
+"refresh_code" = "Refresh Code";
+"close" = "Close";
+"expired_icon" = "Expired Icon";
+
+"error_generating_barcode" = "Error generating barcode. Please try again.";
+"barcode_confirmation" = "Barcode";
+
+"credit_requirement_title" = "Diqqat, talab etiladi!";
+"credit_requirement_subtitle" = "O'zbekiston Respublikasi raqamli hukumat foydalanuvchilarining Yagona Identifikatsiya tizimi";
+"credit_requirement_description" = "Bo'lib to'lashga buyurtmani rasmiylashtirish uchun OneID ni faollashtirish kerak. OneID ilovasini yuklab oling va faollashtirish bo'yicha ko'rsatmalarga amal qiling.";
+"credit_requirement_download" = "OneID ilovasini yuklab olish";
+"credit_requirement_guide" = "Ko'rsatmani ko'rish";
+"credit_requirement_order" = "Buyurtmani rasmiylashtirish";
+"receive_order" = "Buyurtmani qabul qilish";
+"delivery_code" = "Yetkazib berish kodi";
+"delivery_code_subtitle" = "Buyurtmani qabul qilish uchun bu kodni kuryerga ko'rsating";
+"order_number" = "Buyurtma №";

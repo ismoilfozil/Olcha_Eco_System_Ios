@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "u_truck-loading.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

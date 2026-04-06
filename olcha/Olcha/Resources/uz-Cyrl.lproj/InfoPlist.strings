@@ -1,0 +1,16 @@
+/*
+  InfoPlist.strings
+  NewOlcha
+
+  Created by Muhammadjon on 8/5/21.
+  
+*/
+
+
+"NSCameraUsageDescription" = "Olcha.uz га фото, видео ва шахсий маълумотларингизни осон юклай олишингиз учун галереяга киришга рухсат беринг!";
+
+"NSPhotoLibraryAddUsageDescription" = "Olcha.uz га фото, видео ва шахсий маълумотларингизни осон юклай олишингиз учун галереяга киришга рухсат беринг!";
+
+"NSPhotoLibraryUsageDescription" = "Olcha.uz га фото, видео ва шахсий маълумотларингизни осон юклай олишингиз учун галереяга киришга рухсат беринг!";
+
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Olcha.uz сизнинг харита маълумотларингизни олиши учун GPSга рухсат беринг!";

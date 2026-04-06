@@ -1,0 +1,36 @@
+/*
+  Localizable.strings
+  OlchaVerification
+
+  Created by Elbek Khasanov on 21/05/23.
+  
+*/
+"identification" = "Identifikatsiya";
+"passport_front" = "Pasportning old tomoni";
+"selfi_passport" = "Pasport bilan selfi";
+"registration_verification" = "Passport propiskasi yoki ID kartaning orqasi";
+"checkout_installment" = "Rasmiylashtirish";
+"phone_numbers" = "Telefon raqamlari";
+"verify_profile" = "Verifikatsiya";
+
+"passports_verification_page_passport_title" = "Pasportning old tomoni";
+"passports_verification_page_passport_description" = "Pasport yoki ID-kartangizning old tomoni rasmini yuklang yoki suratga oling, fotosurat hajmi 5 mb dan oshmasligi kerak.";
+
+"passports_verification_page_selfie_title" = "Pasport bilan selfi";
+"passports_verification_page_selfie_description" = "Pasport yoki ID-kartangiz bilan selfiga oling, fotosurat hajmi 5 mb dan oshmasligi kerak";
+
+"passports_verification_page_registration_title" = "Pasportning yashash joyi sahifasini yoki ID kartaning orqa tomoni";
+"passports_verification_page_registration_description" = "Pasportning yashash joyini sahifasini yoki ID-kartaning orqa tomonini suratga oling yoki yuklang, fotosurat hajmi 5 mb dan oshmasligi kerak";
+
+"success_identification" = "Identifikatsiya muvaffaqiyatli amalga oshdi";
+"deny_identification" = "Sizning ma'lumotlaringiz tasdiqlanmagan. Iltimos, yana bir bor urinib ko'ring";
+"timer_title" = "Ma'lumotlaringiz tekshirilmoqda, iltimos kuting. Tez orada tekshirib chiqamiz.";
+
+"status_approved" = "Statusingiz: Tasdiqlangan";
+"status_rejected" = "Statusingiz: Rad etilgan";
+"status_requested" = "Statusingiz: Tekshirilmoqda";
+"status_none" = "Statusingiz: Tasdiqlanmagan";
+"status_expired" = "Statusingiz: Tasdiqlanmagan";
+"status_blocked" = "Statusingiz: Bloklangan";
+
+

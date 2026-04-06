@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "olcha-logo.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

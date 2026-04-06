@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "olcha-nasiya.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

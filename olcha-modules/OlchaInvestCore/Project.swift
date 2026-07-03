@@ -8,7 +8,7 @@ let baseSettings = SettingsDictionary().merging([
     "OTHER_LDFLAGS": "-ObjC",
     "SWIFT_VERSION": "5"
 ])
-let settings = Settings(base: baseSettings)
+let settings = Settings.settings(base: baseSettings)
 
 let dependencies: [TargetDependency] = [
     .project(target: "OlchaAuth", path: "../OlchaAuth"),

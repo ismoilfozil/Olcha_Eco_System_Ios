@@ -13,19 +13,20 @@ extension UserCartPage {
         
         let request = data.1
         
-        orderSuccessed(paymentURL: data.0?.redirect_url)
+        orderSuccessed(paymentURL: data.0?.redirect_url,
+                       shouldAutoRedirect: data.0?.auto == true)
         
         if let order = data.0 {
             MetricEvents.shared.purchaseEvent(observers, order)
         }
     }
     
-    func successActions(paymentURL: String) {
+    func successActions(paymentURL: String, showPaymentAction: Bool = true) {
         clearCart()
         
         var alertType: OrderSuccessAlertView.SuccessType = .history
         
-        if paymentURL != "" {
+        if showPaymentAction && paymentURL != "" {
             alertType = .payment
         }
         
@@ -37,10 +38,14 @@ extension UserCartPage {
             guard let self = self else { return }
             switch alertType {
             case .payment:
-                self.coordinator?.pushPayment(paymentURL: paymentURL)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) {
+                    self.coordinator?.pushPayment(paymentURL: paymentURL)
+                }
                 break
             case .history:
-                self.coordinator?.pushMyOrdersList()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) {
+                    self.coordinator?.pushMyOrdersList()
+                }
                 break
             default:
                 break
@@ -48,11 +53,18 @@ extension UserCartPage {
         })
     }
     
-    func orderSuccessed(paymentURL: String? = nil) {
+    func orderSuccessed(paymentURL: String? = nil, shouldAutoRedirect: Bool = false) {
         clearCartLocal()
         
         productsEmpty()
-        successActions(paymentURL: paymentURL ?? "")
+        
+        let paymentURL = paymentURL ?? ""
+        if shouldAutoRedirect && !paymentURL.isEmpty {
+            clearCart()
+            coordinator?.pushPayment(paymentURL: paymentURL)
+        } else {
+            successActions(paymentURL: paymentURL, showPaymentAction: false)
+        }
         
         initialRequest()
         datasUpdated()

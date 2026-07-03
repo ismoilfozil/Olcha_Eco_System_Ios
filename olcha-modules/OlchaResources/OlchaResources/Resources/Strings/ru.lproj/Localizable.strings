@@ -947,7 +947,17 @@
 "credit_requirement_download" = "Скачать приложение OneID";
 "credit_requirement_guide" = "Посмотреть инструкцию";
 "credit_requirement_order" = "Оформить заказ";
+"external_installment_requirement_title" = "Требуется лимит рассрочки";
+"external_installment_requirement_description" = "Для оформления заказа в рассрочку у вас должен быть одобренный лимит у провайдера %@. Если лимит уже есть — продолжите оформление. Если нет — получите его на сайте провайдера.";
+"external_installment_requirement_info" = "Рассрочка через %@. Договор оформляется в личном кабинете %@ после заказа.";
+"external_installment_requirement_continue" = "Продолжить оформление";
+"external_installment_requirement_details" = "Подробнее о рассрочке %@";
+"best_installment_offer" = "Выгоднее всего";
 "receive_order" = "Получить заказ";
 "delivery_code" = "Код доставки";
 "delivery_code_subtitle" = "Покажите этот код курьеру для получения заказа";
 "order_number" = "Заказ №";
+"verified_product" = "Проверенный товар";
+"only_verified_sellers" = "Только проверенные продавцы";
+"support_24_7" = "Поддержка 24/7";
+"help_with_any_question" = "Поможем с любым вопросом";

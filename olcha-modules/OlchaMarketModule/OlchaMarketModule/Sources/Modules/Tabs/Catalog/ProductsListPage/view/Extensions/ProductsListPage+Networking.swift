@@ -11,6 +11,7 @@ import UIKit
 extension ProductsListPage: ButtonMenusDelegate {
     func loadMore() {
         self.filters.paging.isLoading = true
+        self.collection.reloadSections(.init(integer: Section.footer.rawValue))
         self.loadProducts()
     }
     
@@ -29,14 +30,25 @@ extension ProductsListPage: ButtonMenusDelegate {
     }
     
     func checkPaginator(index: Int) {
-        if index == (self.products.count - self.filters.paging.per_page / 2) {
-            if !self.filters.paging.isLoading {
-                self.filters.paging.current = self.filters.paging.current + 1
-                if self.filters.paging.current <= self.filters.paging.total {
-                    loadMore()
-                }
-            }
-        }
+        let threshold = max(self.products.count - self.filters.paging.per_page / 2, 0)
+        guard index >= threshold,
+              !self.filters.paging.isLoading,
+              self.filters.paging.current < self.filters.paging.total else { return }
+
+        self.filters.paging.current += 1
+        loadMore()
+    }
+
+    func checkPaginator(scrollView: UIScrollView) {
+        let bottomOffset = scrollView.contentOffset.y + scrollView.bounds.height
+        let triggerOffset = scrollView.contentSize.height - 400
+
+        guard bottomOffset >= triggerOffset,
+              !self.filters.paging.isLoading,
+              self.filters.paging.current < self.filters.paging.total else { return }
+
+        self.filters.paging.current += 1
+        loadMore()
     }
     
     public func selected(sort: SortItem) {

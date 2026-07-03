@@ -63,9 +63,14 @@ extension UserCartPage: UITableViewDelegate, UITableViewDataSource {
         case .orderType:
             let cell = tableView.dequeue(CartItemRoom.self, for: indexPath)
             cell.makeRoundStyle(section.roundStyle, 14)
+            let display = getOrderTypeDisplay()
             cell.setup(section: section,
-                       showState: observers.errorlyChecked,
-                       value: observers.selectedBuyType?.title)
+                       showState: observers.errorlyChecked || display.inlineImageSuffix != nil,
+                       subtitle: display.subtitle,
+                       value: display.value,
+                       valueImageURL: display.logoURL,
+                       valueImage: display.logoImage,
+                       inlineImageSuffix: display.inlineImageSuffix)
             return cell
         case .paymentType:
             let cell = tableView.dequeue(CartItemRoom.self, for: indexPath)
@@ -295,6 +300,22 @@ extension UserCartPage {
         }
     }
     
+    private func getOrderTypeDisplay() -> (value: String?, logoURL: String?, logoImage: UIImage?, subtitle: String?, inlineImageSuffix: String?) {
+        guard let buyType = observers.selectedBuyType, buyType != .none else {
+            return (nil, nil, nil, nil, nil)
+        }
+        if let ext = observers.credit?.externalInstalment {
+            let provider = viewModels.checkout.externalProviders.first { $0.checkoutAlias == ext.alias }
+            return (buyType.title, provider?.logoUrl, nil, nil, "\(ext.period) oy")
+        }
+        if buyType == .credit,
+           let instPayTime = observers.credit?.creditDatas[observers.credit?.creditType ?? .olcha]?.inst_pay_time,
+           instPayTime > 0 {
+            return (buyType.title, nil, .olcha_logo, nil, "\(instPayTime) oy")
+        }
+        return (buyType.title, nil, nil, nil, nil)
+    }
+
     func checkRegionForPayment() {
         guard let selectedAddress = observers.selectedAddress else { return }
         if MarketTexts.TASHKENT_ID == selectedAddress.region?.id {

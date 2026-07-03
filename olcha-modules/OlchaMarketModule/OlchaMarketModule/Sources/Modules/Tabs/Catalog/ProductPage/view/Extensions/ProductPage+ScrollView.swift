@@ -29,8 +29,12 @@ extension ProductPage {
                 giftSetup()
             case .buyActions:
                 buyActionsSetup()
+            case .installment:
+                installmentSetup()
             case .shippingData:
                 shippingDataSetup()
+            case .trustInfo:
+                trustInfoSetup()
             case .storeProducts:
                 storeProductsSetup()
             case .description:
@@ -86,6 +90,15 @@ extension ProductPage {
         case .buyActions:
             factory.actionsRoom.setup(with: fullProduct, product: product)
             factory.stateSection(section: .buyActions, isHidden: fullProduct == nil)
+        case .installment:
+            let hasPlan = Funcs.isAvailableCredit(fullProduct: fullProduct)
+            let hasProviders = !checkoutViewModel.externalProviders.isEmpty
+            let quantity = (product?.quantity ?? "0").int
+            let status = product?.status ?? 0
+            let isInStock = fullProduct != nil && quantity > 0 && status > 0
+            let isAvailable = isInStock && (hasPlan || hasProviders)
+            factory.installmentRoom.setup(product: product, providers: checkoutViewModel.externalProviders)
+            factory.stateSection(section: .installment, isHidden: !isAvailable)
         case .description:
             let isEmpty = ((product?.getDescription() ?? "")  == "") && (characteristicsData?.features?.isEmpty ?? true)
             
@@ -108,6 +121,8 @@ extension ProductPage {
         case .brand:
             factory.brandRoom.setup(with: self.product?.manufacturer, categories: self.brandCategories?.categories ?? [])
             factory.stateSection(section: .brand, isHidden: brandCategories?.categories?.isEmpty ?? true)
+        case .trustInfo:
+            break
         case .shippingData:
             factory.shippingDataRoom.setup(with: [product?.store].compactMap { $0 })
         case .reviews:
@@ -280,6 +295,9 @@ extension ProductPage {
         scrollView.addArrangedSubview(view: factory.shippingDataRoom)
         factory.shippingDataRoom.mainTableReloader = mainTableReloader
     }
+    private func trustInfoSetup() {
+        scrollView.addArrangedSubview(view: factory.trustInfoRoom)
+    }
     private func reviewsSetup() {
         scrollView.addArrangedSubview(view: factory.reviewsHeaderRoom)
         factory.reviewsHeaderRoom.pushReviewMedia = pushReviewMedia
@@ -346,10 +364,19 @@ extension ProductPage {
             guard let self = self else { return }
             self.coordinator?.pushAskQuestion(product: self.product)
         }
-        
+
         scrollView.addArrangedSubview(view: factory.faqsRoom)
         factory.faqsRoom.pushFaqReplies = pushFaqReplies
         factory.faqsRoom.pushAllFAQs = pushAllFAQs
         factory.faqsRoom.likeObserver = likeObserver
+    }
+
+    private func installmentSetup() {
+        scrollView.addArrangedSubview(view: factory.installmentRoom)
+        factory.installmentRoom.isHidden = true
+        factory.installmentRoom.onBuyTapped = { [weak self] in
+            guard let self else { return }
+            presentCreditVariation()
+        }
     }
 }

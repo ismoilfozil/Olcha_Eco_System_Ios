@@ -49,7 +49,6 @@ extension ProductsListPage: UICollectionViewDelegateFlowLayout {
                 cell.configure(with: self.filters.cellType,
                                withSeparator: indexPath.item != self.products.count)
                 cell.setup(with: self.products[indexPath.item])
-                checkPaginator(index: indexPath.item)
             }
             
             cell.listSeparators(indexPath: indexPath)
@@ -77,6 +76,9 @@ extension ProductsListPage: UICollectionViewDelegateFlowLayout {
     
     public func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         (cell as? BaseCollectionCell)?.cellWillAppear()
+        if sections()[indexPath.section] == .products {
+            checkPaginator(index: indexPath.item)
+        }
     }
     
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -91,6 +93,8 @@ extension ProductsListPage: UICollectionViewDelegateFlowLayout {
     }
     
     public override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        checkPaginator(scrollView: scrollView)
+
         let y = scrollView.contentOffset.y
         
         let pin = !(scrollView.panGestureRecognizer.translation(in: scrollView).y < 0)

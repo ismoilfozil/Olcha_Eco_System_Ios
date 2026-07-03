@@ -36,6 +36,20 @@ extension UserCartPage {
             return
         }
         
+        if let externalInstallment = observers.credit?.externalInstalment {
+            let provider = viewModels.checkout.externalProviders.first {
+                $0.checkoutAlias == externalInstallment.alias
+            }
+            coordinator?.presentExternalInstallmentRequirementModal(
+                provider: provider,
+                continueAction: { [weak self] in
+                    guard let self else { return }
+                    self.processOrder(products: products)
+                }
+            )
+            return
+        }
+
         switch observers.selectedBuyType {
         case .credit:
             coordinator?.presentCreditRequirementModal(
@@ -105,6 +119,7 @@ extension UserCartPage {
     func screenAppearRequests() {
         placeholderIndicatorWorker()
         CartViewModel.shared.loadCart()
+        viewModels.checkout.loadExternalProviders()
         viewModels.checkout.loadBonus()
         viewModels.balance.loadBalance()
         viewModels.locations.loadUserLocations(page: 1)
@@ -122,27 +137,56 @@ extension UserCartPage {
     }
     
     private func getCostRequest(products:  [[String : Int]]) -> GetCostRequest {
-        return GetCostRequest(products: products,
-                              name: observers.getName(),
-                              phone: observers.getPhone(),
-                              email: nil,
-                              region_id: observers.selectedAddress?.region?.id,
-                              district_id: observers.selectedAddress?.district?.id,
-                              delivery_id: observers.shippingType?.id,
-                              address_id: observers.selectedAddress?.id,
-                              street: observers.selectedAddress?.street,
-                              entrance: observers.selectedAddress?.entrance,
-                              floor: observers.selectedAddress?.floor,
-                              house_number: observers.selectedAddress?.house_number,
-                              payment_type: observers.selectedPayment?.alias,
-                              comment: observers.comment,
-                              coupon: observers.coupon?.code,
-                              first_fee_sum: observers.credit?.creditDatas[observers.credit?.creditType ?? .olcha]?.first_fee_sum,
-                              inst_pay_time: observers.credit?.creditDatas[observers.credit?.creditType ?? .olcha]?.inst_pay_time,
-                              order_type: observers.selectedBuyType?.rawValue ?? "",
-                              bonus: observers.isBonusUsing ? (observers.bonus?.usingBonus?.int) ?? 0 : 0)
-        
-        
+        let orderType: String
+        let instPayTime: Int?
+        let firstFeeSum: Int?
+        let installmentProvider: String?
+        let installmentMonths: Int?
+
+        if let ext = observers.credit?.externalInstalment {
+            // ext.alias stores checkoutAlias; look up the provider to get the actual alias
+            let provider = viewModels.checkout.externalProviders.first {
+                $0.checkoutAlias == ext.alias
+            }
+            orderType = BuyType.credit.rawValue
+            instPayTime = ext.period
+            firstFeeSum = 0
+            installmentProvider = provider?.alias
+            installmentMonths = ext.period
+        } else {
+            orderType = observers.selectedBuyType?.rawValue ?? ""
+            instPayTime = observers.credit?.creditDatas[observers.credit?.creditType ?? .olcha]?.inst_pay_time
+            firstFeeSum = observers.credit?.creditDatas[observers.credit?.creditType ?? .olcha]?.first_fee_sum
+            installmentProvider = nil
+            installmentMonths = nil
+        }
+
+        return GetCostRequest(
+            user_id: AuthGlobalDefaults.user.id,
+            products: products,
+            name: observers.getName(),
+            phone: observers.getPhone(),
+            email: nil,
+            region_id: observers.selectedAddress?.region?.id,
+            district_id: observers.selectedAddress?.district?.id,
+            delivery_id: observers.shippingType?.id,
+            address_id: observers.selectedAddress?.id,
+            street: observers.selectedAddress?.street,
+            entrance: observers.selectedAddress?.entrance,
+            apartment: observers.selectedAddress?.apartment,
+            floor: observers.selectedAddress?.floor,
+            house_number: observers.selectedAddress?.house_number,
+            payment_type: observers.selectedPayment?.alias,
+            comment: observers.comment,
+            coupon: observers.coupon?.code,
+            first_fee_sum: firstFeeSum,
+            inst_pay_time: instPayTime,
+            order_type: orderType,
+            bonus: observers.isBonusUsing ? (observers.bonus?.usingBonus?.int) ?? 0 : 0,
+            installment_provider: installmentProvider,
+            installment_months: installmentMonths,
+            checkout_type: observers.shippingType?.checkout_type ?? "delivery"
+        )
     }
     
     private func isEqual(_ product: ProductModel?, _ cartItem: CartItem?) -> Bool {

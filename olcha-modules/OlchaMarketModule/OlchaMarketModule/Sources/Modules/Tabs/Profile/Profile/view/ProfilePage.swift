@@ -89,6 +89,7 @@ class ProfilePage: BaseViewController {
     let balanceViewModel: BalanceViewModel
     
     var input: Input
+    var shouldOpenPersonalDataAfterStepLoad = false
     
     init(
         input: Input = .init(),
@@ -168,6 +169,18 @@ class ProfilePage: BaseViewController {
                 input.verification = step.value
                 input.userSkeleton.isAnimating = isLoading
                 table.reloadData()
+
+                guard shouldOpenPersonalDataAfterStepLoad else { return }
+                switch step {
+                case .success(let verificationData):
+                    shouldOpenPersonalDataAfterStepLoad = false
+                    openPersonalData(with: verificationData)
+                case .failure(let error):
+                    shouldOpenPersonalDataAfterStepLoad = false
+                    showError(text: error?.message)
+                default:
+                    break
+                }
             })
             .store(in: &bag)
         

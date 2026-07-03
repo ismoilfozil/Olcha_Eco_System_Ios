@@ -36,7 +36,9 @@ class ProductPageFactory {
     let storeGiftRoom = StoreGiftRoomView()
     let variationsRoom = VariationsRoomView()
     let warrantyRoom = WarrantyRoomView()
-    
+    let installmentRoom = InlineInstallmentRoomView()
+    let trustInfoRoom = TrustInfoRoomView()
+
     func stateSection(section: ProductPage.Sections, isHidden: Bool) {
         switch section {
         case .images:
@@ -84,6 +86,10 @@ class ProductPageFactory {
             similarProductsRoom.isHidden = isHidden
         case .productsData:
             dataRoom.isHidden = isHidden
+        case .installment:
+            installmentRoom.isHidden = isHidden
+        case .trustInfo:
+            trustInfoRoom.isHidden = isHidden
         default: break
         }
     }

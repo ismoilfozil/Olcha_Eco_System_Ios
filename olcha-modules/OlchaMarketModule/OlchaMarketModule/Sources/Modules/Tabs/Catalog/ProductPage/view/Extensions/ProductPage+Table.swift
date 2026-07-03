@@ -19,6 +19,7 @@ extension ProductPage {
         case variations
         case gift
         case buyActions
+        case installment
         case shippingData
         case storeProducts
         case description
@@ -30,6 +31,7 @@ extension ProductPage {
         case faqs
         case seenAlsoProducts
         case similarProducts
+        case trustInfo
         case all
         var height: CGFloat {
             switch self {
@@ -56,6 +58,8 @@ extension ProductPage {
                 return 32
             case .buyActions:
                 return 24
+            case .installment:
+                return 24
             case .shippingData:
                 return 24
             case .storeProducts:
@@ -78,6 +82,8 @@ extension ProductPage {
                 return 48
             case .similarProducts:
                 return 48
+            case .trustInfo:
+                return 24
             case .all:
                 return 0
             }

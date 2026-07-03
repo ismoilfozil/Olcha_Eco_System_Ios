@@ -1,17 +1,18 @@
 import UIKit
 import OlchaUI
 import OlchaUtils
+import OlchaVerification
 
 extension EcoProfileViewController: TableDelegates {
-  
+
     public func numberOfSections(in tableView: UITableView) -> Int {
         sections.count
     }
-    
+
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         sections[section].rows.count
     }
-    
+
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch sections[indexPath.section] {
         case .login:
@@ -34,22 +35,22 @@ extension EcoProfileViewController: TableDelegates {
             return cell
         }
     }
-    
+
     public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let title = sections[section].title else { return nil }
         let view = EcoProfileSectionHeader()
         view.setup(with: title)
         return view
     }
-    
+
     public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         sections[section].title
     }
-    
+
     public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         sections[section].title == nil ? 0 : 36
     }
-    
+
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let row = sections[indexPath.section].rows[indexPath.row]
         switch sections[indexPath.section] {
@@ -73,7 +74,7 @@ extension EcoProfileViewController: TableDelegates {
                 coordinator?.clickActionRouter(action: MarketClickAction.orders)
             case .refundAndExchange:
                 coordinator?.clickActionRouter(action: MarketClickAction.orderReturn)
-            case .ticketsAndTours: 
+            case .ticketsAndTours:
                 showInvalidSnackbar(container)
             }
         case .products:
@@ -94,7 +95,7 @@ extension EcoProfileViewController: TableDelegates {
             case .bonusProgram:
                 showInvalidSnackbar(container)
             case .installmentData:
-                coordinator?.clickActionRouter(action: NasiyaClickAction.profile)
+                openInstallmentDataAfterStepCheck()
             case .myCards:
                 coordinator?.clickActionRouter(action: PayClickAction.cards)
             case .notifications:
@@ -126,5 +127,28 @@ extension EcoProfileViewController: TableDelegates {
                 }
             }
         }
+    }
+}
+
+extension EcoProfileViewController {
+
+    func openInstallmentDataAfterStepCheck() {
+        guard !shouldOpenInstallmentDataAfterStepLoad else { return }
+        shouldOpenInstallmentDataAfterStepLoad = true
+        verificationViewModel.loadStep()
+    }
+
+    func openInstallmentData(with verificationData: VerificationData?) {
+        guard let verificationData else {
+            coordinator?.clickActionRouter(action: NasiyaClickAction.profile)
+            return
+        }
+
+        if verificationData.is_verified == true {
+            showSuccess(text: "verification_finish".localized())
+            return
+        }
+
+        coordinator?.clickActionRouter(action: NasiyaClickAction.profile)
     }
 }

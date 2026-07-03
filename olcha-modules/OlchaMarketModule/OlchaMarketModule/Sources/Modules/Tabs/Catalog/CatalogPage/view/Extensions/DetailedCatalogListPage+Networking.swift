@@ -5,7 +5,7 @@
 //  Created by Elbek Khasanov on 11/08/22.
 //
 
-import Foundation
+import UIKit
 extension DetailedCatalogListPage: ButtonMenusDelegate {
     
     public func selected(sort: SortItem) {
@@ -19,14 +19,12 @@ extension DetailedCatalogListPage: ButtonMenusDelegate {
     }
     
     func checkCategoriesPaginator(index: Int) {
-        if index == (helper.loadedCategoryProducts.count - 1) {
-            if !helper.categoriesPaging.isLoading {
-                helper.categoriesPaging.current = helper.categoriesPaging.current + 1
-                if helper.categoriesPaging.current <= helper.categoriesPaging.total {
-                    loadProducts()
-                }
-            }
-        }
+        guard index >= helper.loadedCategoryProducts.count - 1,
+              !helper.categoriesPaging.isLoading,
+              helper.categoriesPaging.current < helper.categoriesPaging.total - 1 else { return }
+
+        helper.categoriesPaging.current += 1
+        loadProducts()
     }
     
     func loadProducts() {
@@ -86,13 +84,24 @@ extension DetailedCatalogListPage: ButtonMenusDelegate {
     }
     
     func checkPaginator(index: Int) {
-        if index == (products.count - 3) {
-            if !filters.paging.isLoading {
-                filters.paging.current = filters.paging.current + 1
-                if filters.paging.current <= filters.paging.total {
-                    loadCategoryProductsMore()
-                }
-            }
-        }
+        let threshold = max(products.count - 3, 0)
+        guard index >= threshold,
+              !filters.paging.isLoading,
+              filters.paging.current < filters.paging.total else { return }
+
+        filters.paging.current += 1
+        loadCategoryProductsMore()
+    }
+
+    func checkPaginator(scrollView: UIScrollView) {
+        let bottomOffset = scrollView.contentOffset.y + scrollView.bounds.height
+        let triggerOffset = scrollView.contentSize.height - 400
+
+        guard bottomOffset >= triggerOffset,
+              !filters.paging.isLoading,
+              filters.paging.current < filters.paging.total else { return }
+
+        filters.paging.current += 1
+        loadCategoryProductsMore()
     }
 }

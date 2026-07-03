@@ -19,6 +19,7 @@ enum CheckoutAPI: OlchaMarketAPI {
     case order(model: GetCostRequest)
     case loadPaymentsBalance(url: String)
     case bonusRule
+    case externalInstallmentProviders
 }
 
 extension CheckoutAPI {
@@ -41,6 +42,8 @@ extension CheckoutAPI {
         case .getCost:
             return Texts.url.getVersion(3)
         case .bonusRule:
+            return Texts.url.getVersion(3)
+        case .externalInstallmentProviders:
             return Texts.url.getVersion(3)
         default:
             return Texts.url.getVersion(2)
@@ -88,6 +91,8 @@ extension CheckoutAPI {
             return ""
         case .bonusRule:
             return "bonusRule"
+        case .externalInstallmentProviders:
+            return "external-installment/providers"
         }
     }
     
@@ -112,6 +117,8 @@ extension CheckoutAPI {
         case .loadPaymentsBalance:
             return .get
         case .bonusRule:
+            return .get
+        case .externalInstallmentProviders:
             return .get
         }
     }

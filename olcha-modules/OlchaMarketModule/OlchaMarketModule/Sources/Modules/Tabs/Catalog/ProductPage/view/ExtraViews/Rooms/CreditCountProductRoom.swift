@@ -13,8 +13,12 @@ class CreditCountProductRoom: BaseTableCell {
     private let productContainer = BasketProduct()
     private let actionsContainer = UIStackView()
     let countButton = BasketCounterButton()
-    let acceptButton = OlchaButton()
     private let separator = UIView()
+
+    var hideAcceptButton: Bool = false {
+        didSet { acceptButton.isHidden = hideAcceptButton }
+    }
+    let acceptButton = OlchaButton()
     
     private var product: ProductModel?
     private var bag = Set<AnyCancellable>()

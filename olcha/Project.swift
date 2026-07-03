@@ -15,7 +15,7 @@ extension SettingsDictionary {
 
 
 let infoPlist = InfoPlist.file(path: "../Olcha/Info.plist")
-let documentsPath = "/Users/ismoilfoziljonov/Downloads/ios2"
+let documentsPath = "/Users/ismoilfoziljonov/iosProjects/Olcha_Eco_System_Ios"
 
 // MARK: - Constants
 
@@ -38,7 +38,7 @@ let baseSettingsDictionary = SettingsDictionary()
         "SWIFT_VERSION": "5"
     ])
 
-let settings = Settings(base: baseSettingsDictionary)
+let settings = Settings.settings(base: baseSettingsDictionary)
     
     
     let dependencies: [TargetDependency] = [
@@ -78,6 +78,7 @@ let project = Project(
             infoPlist: .file(path: "Olcha/Info.plist"),
             sources: ["Olcha/Sources/**"],
             resources: ["Olcha/Resources/**"],
+            entitlements: "Olcha/Olcha.entitlements",
             dependencies: dependencies
         ),
         
@@ -103,7 +104,7 @@ let project = Project(
     schemes: [
         Scheme(name: "Olcha",
                shared: true,
-               buildAction: BuildAction(targets: ["Olcha"])
+               buildAction: BuildAction.buildAction(targets: ["Olcha"])
               )
     ]
     

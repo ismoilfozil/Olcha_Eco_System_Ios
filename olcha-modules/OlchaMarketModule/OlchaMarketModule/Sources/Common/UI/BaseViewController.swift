@@ -347,6 +347,10 @@ open class BaseViewController: UIViewController {
         
         modalHeaderTitle.style(.bold, 18)
         modalHeaderTitle.textColor = .olchaTextBlack
+        modalHeaderTitle.numberOfLines = 0
+        modalHeaderTitle.lineBreakMode = .byWordWrapping
+        modalHeaderTitle.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
+        modalHeaderTitle.setContentCompressionResistancePriority(.required, for: .vertical)
         
         headerContainer.axis = .horizontal
         headerContainer.spacing = 8

@@ -39,6 +39,7 @@ extension UserCartPage {
             .cartItemChanged
             .sink { [weak self] cartItem in
                 guard let self = self else { return }
+                let shouldPreserveInitialCreditOrder = self.initialCreditOrder != nil
 //                self.alsoSeenProducts?.products?.changeCartCount(cartItem: cartItem) {
 //                    DispatchQueue.main.async {
 //                        self.observers.cart.productsUpdated.send(true)
@@ -51,7 +52,10 @@ extension UserCartPage {
                 cancelCoupon()
                 bottomNavigationDatas()
                 productsUpdated()
-                navigationController?.popToRootViewController(animated: true)
+                applyInitialCreditOrderIfNeeded(consume: true)
+                if !shouldPreserveInitialCreditOrder {
+                    navigationController?.popToRootViewController(animated: true)
+                }
             }.store(in: &bag)
         
         CartViewModel
@@ -116,6 +120,19 @@ extension UserCartPage {
                 data?.paymentSystems?.forEach { self.viewModels.checkout.loadBalance(from: $0) }
                 
                 observers.action.tableReloader.send()
+            }.store(in: &bag)
+
+        viewModels
+            .checkout
+            .$externalProviders
+            .dropFirst()
+            .sink { [weak self] _ in
+                guard let self else { return }
+                if self.observers.credit?.externalInstalment != nil {
+                    self.datasUpdated()
+                } else {
+                    self.observers.action.tableReloader.send()
+                }
             }.store(in: &bag)
         
         viewModels
@@ -218,7 +235,8 @@ extension UserCartPage {
             .sink { [weak self] in
                 guard let self else { return }
                 coordinator?.presentBuyTypeModalPage(observers: observers,
-                                                     balanceViewModel: viewModels.balance)
+                                                     balanceViewModel: viewModels.balance,
+                                                     checkoutViewModel: viewModels.checkout)
             }.store(in: &bag)
         
         observers
@@ -262,6 +280,8 @@ extension UserCartPage {
                     self.initialLoading = false
                     self.presentCreditModalPage()
                 }
+                
+                self.applyInitialCreditOrderIfNeeded(consume: true)
                 
             }.store(in: &bag)
         
@@ -411,6 +431,7 @@ extension UserCartPage {
             .calculateFinished
             .sink { [weak self] data in
                 guard let self = self else { return }
+                self.observers.credit = data
                 self.observers.action.buyTypeSelected.send(.credit)
             }.store(in: &bag)
         
@@ -473,6 +494,17 @@ extension UserCartPage {
                 input.verification = step.value
             }.store(in: &bag)
     }
+
+    func applyInitialCreditOrderIfNeeded(consume: Bool) {
+        guard let initialCreditOrder else { return }
+        observers.selectedBuyType = .credit
+        observers.credit = initialCreditOrder
+        if consume {
+            self.initialCreditOrder = nil
+        }
+        observers.action.tableReloader.send()
+        observers.action.loadGetCost.send()
+    }
     
     func startVerificationByCurrentStep() {
         if let verificationData = input.verification {
@@ -496,5 +528,3 @@ extension UserCartPage {
         }
     }
 }
-
-

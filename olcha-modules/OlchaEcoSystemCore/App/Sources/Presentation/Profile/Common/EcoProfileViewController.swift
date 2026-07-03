@@ -3,6 +3,7 @@ import OlchaUI
 import OlchaAuth
 import OlchaCommon
 import OlchaUtils
+import OlchaVerification
 
 public class EcoProfileViewController: BaseViewController<EcoProfileNavigationBar> {
     
@@ -52,18 +53,22 @@ public class EcoProfileViewController: BaseViewController<EcoProfileNavigationBa
     public var output: Output
     public let commonViewModel: CommonViewModel
     public let profileViewModel: ProfileViewModel
+    public let verificationViewModel: VerificationViewModel
 //    public let loyaltyViewModel: LoyaltyViewModel
     public weak var coordinator: EcoProfileCoordinatorProtocol?
+    public var shouldOpenInstallmentDataAfterStepLoad = false
     
     public init(
         commonViewModel: CommonViewModel,
         profileViewModel: ProfileViewModel,
+        verificationViewModel: VerificationViewModel,
 //        loyaltyViewModel: LoyaltyViewModel,
         input: Input = .init(),
         output: Output = .init()
     ) {
         self.commonViewModel = commonViewModel
         self.profileViewModel = profileViewModel
+        self.verificationViewModel = verificationViewModel
 //        self.loyaltyViewModel = loyaltyViewModel
         self.input = input
         self.output = output
@@ -159,6 +164,15 @@ public class EcoProfileViewController: BaseViewController<EcoProfileNavigationBa
             notificationsView.destroy {
                 self.notificationsView.addCards(notifications: self.input.notifications.models)
             }
+        })
+        handle(verificationViewModel.$step, showLoader: true, success: { [weak self] step in
+            guard let self, shouldOpenInstallmentDataAfterStepLoad else { return }
+            shouldOpenInstallmentDataAfterStepLoad = false
+            openInstallmentData(with: step)
+        }, failure: { [weak self] error in
+            guard let self, shouldOpenInstallmentDataAfterStepLoad else { return }
+            shouldOpenInstallmentDataAfterStepLoad = false
+            showError(text: error?.message)
         })
         notificationsView.$readNotification
             .compactMap({ $0?.id })

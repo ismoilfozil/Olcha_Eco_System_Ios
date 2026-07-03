@@ -29,7 +29,10 @@ public class CheckoutViewModel: OldBaseViewModel {
     @Published var paymentsBalance: Bool = false
     
     var simpleBuyIndicator = CurrentValueSubject<Bool, Never>(false)
-    
+
+    @Published var externalProviders: [ExternalInstallmentProvider] = []
+    let externalProvidersLoading = CurrentValueSubject<Bool, Never>(false)
+
     init() {
         super.init(manager: OlchaDIContainer.shared.resolve())
     }
@@ -147,6 +150,14 @@ public class CheckoutViewModel: OldBaseViewModel {
             guard let self = self else { return }
             loadingPayments?.balance = data?.platformBalance
             self.paymentsBalance = true
+        }
+    }
+
+    func loadExternalProviders() {
+        let api: CheckoutAPI = .externalInstallmentProviders
+        startRequesting(api: api, indicator: externalProvidersLoading) { [weak self] (data: ExternalProvidersResponse?) in
+            guard let self else { return }
+            self.externalProviders = data?.providers ?? []
         }
     }
 }

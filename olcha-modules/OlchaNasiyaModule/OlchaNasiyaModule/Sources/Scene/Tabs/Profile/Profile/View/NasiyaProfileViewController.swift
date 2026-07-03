@@ -91,6 +91,7 @@ public class NasiyaProfileViewController: BaseViewController<NasiyaNavigationBar
     let profileViewModel: ProfileViewModel
     let verificationViewModel: VerificationViewModel
     var input: Input
+    var shouldOpenProfileDataAfterStepLoad = false
     
     public init(profileViewModel: ProfileViewModel,
                 verificationViewModel: VerificationViewModel,
@@ -159,6 +160,20 @@ public class NasiyaProfileViewController: BaseViewController<NasiyaNavigationBar
             .combineLatest(verificationViewModel.$step, OlchaVerificationDIContainer.shared.authCreditViewModel().$isVerified)
             .sink(receiveValue: { [weak self] (user, step, verified) in
                 guard let self else { return }
+                guard !shouldOpenProfileDataAfterStepLoad else {
+                    switch step {
+                    case .success(let verificationData):
+                        shouldOpenProfileDataAfterStepLoad = false
+                        openProfileData(with: verificationData)
+                    case .failure(let error):
+                        shouldOpenProfileDataAfterStepLoad = false
+                        showError(text: error?.message)
+                    default:
+                        break
+                    }
+                    return
+                }
+
                 let isLoading = user == .loading || verified == .loading || step == .loading
                 input.user = profileViewModel.userData
                 input.verification = step.value

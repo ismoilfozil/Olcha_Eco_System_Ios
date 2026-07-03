@@ -13,7 +13,7 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name
 public enum OlchaStrings {
   public enum InfoPlist {
-    /// Olcha.uz ga foto, video va shaxsiy ma'lumotlaringizni oson yuklay olishingiz uchun galereyaga kirishga ruxsat bering!
+  /// Olcha.uz ga foto, video va shaxsiy ma'lumotlaringizni oson yuklay olishingiz uchun galereyaga kirishga ruxsat bering!
     public static let nsCameraUsageDescription = OlchaStrings.tr("InfoPlist", "NSCameraUsageDescription")
     /// Olcha.uz sizning xarita ma'lumotlaringizni olishi uchun GPSga ruxsat bering!
     public static let nsLocationAlwaysAndWhenInUseUsageDescription = OlchaStrings.tr("InfoPlist", "NSLocationAlwaysAndWhenInUseUsageDescription")
@@ -23,7 +23,7 @@ public enum OlchaStrings {
     public static let nsPhotoLibraryUsageDescription = OlchaStrings.tr("InfoPlist", "NSPhotoLibraryUsageDescription")
   }
   public enum Localizable {
-    /// About Us
+  /// About Us
     public static let aboutUs = OlchaStrings.tr("Localizable", "about_us")
     /// Add to Cart
     public static let addToCart = OlchaStrings.tr("Localizable", "add_to_cart")

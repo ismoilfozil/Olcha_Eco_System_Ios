@@ -23,6 +23,7 @@ public struct OrderCheckoutData : Codable {
 
 public struct CheckoutOrdered : Codable {
     var redirect_url: String?
+    var auto:Bool?
     var order_id: Int?
 }
 

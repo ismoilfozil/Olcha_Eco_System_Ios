@@ -143,9 +143,12 @@ open class BaseModalViewController: DefaultViewController, ModalPageType {
         
         modalHeaderTitle.style(.bold, 18)
         modalHeaderTitle.textColor = .olchaTextBlack
+        modalHeaderTitle.numberOfLines = 0
+        modalHeaderTitle.lineBreakMode = .byWordWrapping
         ProgressHUD.animationType = .circleStrokeSpin
         modalHeaderTitle.setContentHuggingPriority(.required, for: .vertical)
-//        modalHeaderTitle.setContentCompressionResistancePriority(.defaultLow, for: .ver)
+        modalHeaderTitle.setContentCompressionResistancePriority(.required, for: .vertical)
+        modalHeaderTitle.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
         
         dismissConfiguration()
     }
@@ -156,19 +159,32 @@ open class BaseModalViewController: DefaultViewController, ModalPageType {
     
     public func setContainerHeight(_ height: CGFloat = UIScreen.main.bounds.height) {
         let maxHeight = self.view.frame.height - 150
+        let titleWidth = max(view.bounds.width, UIScreen.main.bounds.width) - 64
+        let trackerHeight = max(
+            dismissTrackerContainer.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height,
+            40
+        )
+        let headerHeight = trackerHeight
+            + modalHeaderTitle.systemLayoutSizeFitting(
+                CGSize(width: titleWidth, height: UIView.layoutFittingCompressedSize.height),
+                withHorizontalFittingPriority: .required,
+                verticalFittingPriority: .fittingSizeLevel
+            ).height
+            + 20
+        let modalHeight = min(maxHeight, height + headerHeight)
 
         modalMainContainer.snp.remakeConstraints { make in
             make.top.greaterThanOrEqualToSuperview().inset(100)
             make.left.right.equalToSuperview()
             make.bottom.equalToSuperview()
-            make.height.equalTo(min(maxHeight, height))
+            make.height.equalTo(modalHeight)
         }
         
     }
     
     public func setHeader(title: String, textAlignment: NSTextAlignment = .left) {
         modalHeaderTitle.text = title
-        modalHeaderTitle.textAlignment = .left
+        modalHeaderTitle.textAlignment = textAlignment
     }
     
     

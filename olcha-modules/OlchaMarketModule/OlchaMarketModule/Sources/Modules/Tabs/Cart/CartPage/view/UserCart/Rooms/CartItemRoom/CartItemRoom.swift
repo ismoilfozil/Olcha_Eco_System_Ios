@@ -67,6 +67,41 @@ class CartItemRoom: BaseTableCell {
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
+
+    private let inlineValueStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.spacing = 4
+        stackView.alignment = .center
+        return stackView
+    }()
+
+    private let inlinePrefixLabel: UILabel = {
+        let label = UILabel()
+        label.style(.medium, 16)
+        label.textColor = .olchaTextBlack
+        label.textAlignment = .left
+        label.numberOfLines = 1
+        label.lineBreakMode = .byTruncatingTail
+        label.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
+        return label
+    }()
+
+    private let inlineLogoImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
+        return imageView
+    }()
+
+    private let inlineSuffixLabel: UILabel = {
+        let label = UILabel()
+        label.style(.medium, 16)
+        label.textColor = .olchaTextBlack
+        label.textAlignment = .left
+        label.numberOfLines = 1
+        label.lineBreakMode = .byTruncatingTail
+        return label
+    }()
     
     private let titleLabelContainer = UIView()
     
@@ -136,6 +171,10 @@ class CartItemRoom: BaseTableCell {
         titleLabelContainer.addSubview(titleLabel)
         titleLabelContainer.addSubview(infoButton)
         valueStackView.addSubview(valueImageView)
+        valueStackView.addSubview(inlineValueStackView)
+        inlineValueStackView.addArrangedSubview(inlinePrefixLabel)
+        inlineValueStackView.addArrangedSubview(inlineLogoImageView)
+        inlineValueStackView.addArrangedSubview(inlineSuffixLabel)
         titlesStackView.addArrangedSubview(subtitleLabel)
     }
     
@@ -186,6 +225,16 @@ class CartItemRoom: BaseTableCell {
             make.centerY.equalToSuperview()
             make.left.equalToSuperview()
         }
+
+        inlineValueStackView.snp.makeConstraints { make in
+            make.top.bottom.left.equalToSuperview()
+            make.right.lessThanOrEqualToSuperview()
+        }
+
+        inlineLogoImageView.snp.makeConstraints { make in
+            make.width.equalTo(54)
+            make.height.equalTo(18)
+        }
         
         subtitleLabel.snp.makeConstraints { make in
             make.left.right.equalToSuperview()
@@ -218,14 +267,20 @@ class CartItemRoom: BaseTableCell {
                rightImageType: RightImageView = .anchor,
                subtitle: String? = nil,
                value: String? = nil,
-               valueImageURL: String? = nil
+               valueImageURL: String? = nil,
+               valueImage: UIImage? = nil,
+               inlineImageSuffix: String? = nil
     ) {
         leftImageView.image = section.icon
-        setup(section: section, valueTitle: value, valueImageURL: valueImageURL)
+        setup(section: section,
+              valueTitle: value,
+              valueImageURL: valueImageURL,
+              valueImage: valueImage,
+              inlineImageSuffix: inlineImageSuffix)
         setup(subtitle: subtitle)
 
         
-        setup(state: showState ? ((value == nil) ? .error : .success) : .default,
+        setup(state: showState ? ((value == nil && valueImageURL == nil) ? .error : .success) : .default,
               rightImageType: rightImageType)
     }
     
@@ -258,14 +313,42 @@ class CartItemRoom: BaseTableCell {
         }
     }
     
-    private func setup(section: UserCartPage.Section, valueTitle: String?, valueImageURL: String?) {
+    private func setup(section: UserCartPage.Section,
+                       valueTitle: String?,
+                       valueImageURL: String?,
+                       valueImage: UIImage?,
+                       inlineImageSuffix: String?) {
         valueImageView.isHidden = true
         titleLabelContainer.isHidden = true
-        
+        inlineValueStackView.isHidden = true
+
         headerLabel.isHidden = true
         headerLabel.text = section.header
-        
-        if !valueImageURL.isNillOrEmpty {
+
+        if !valueTitle.isNillOrEmpty, !valueImageURL.isNillOrEmpty, !inlineImageSuffix.isNillOrEmpty {
+            headerLabel.isHidden = false
+            inlineValueStackView.isHidden = false
+            inlinePrefixLabel.text = "\(valueTitle ?? "") ("
+            inlineLogoImageView.isHidden = false
+            inlineLogoImageView.load(from: valueImageURL, withIndicator: false, imageType: .ignoreResize, withPlaceholder: false)
+            inlineSuffixLabel.text = " × \(inlineImageSuffix ?? "") )"
+            enableInlineValueConstraints()
+        } else if !valueTitle.isNillOrEmpty, valueImage != nil, !inlineImageSuffix.isNillOrEmpty {
+            headerLabel.isHidden = false
+            inlineValueStackView.isHidden = false
+            inlinePrefixLabel.text = "\(valueTitle ?? "") ("
+            inlineLogoImageView.isHidden = false
+            inlineLogoImageView.image = valueImage
+            inlineSuffixLabel.text = " × \(inlineImageSuffix ?? "") )"
+            enableInlineValueConstraints()
+        } else if !valueTitle.isNillOrEmpty, !inlineImageSuffix.isNillOrEmpty {
+            headerLabel.isHidden = false
+            inlineValueStackView.isHidden = false
+            inlinePrefixLabel.text = "\(valueTitle ?? "")"
+            inlineLogoImageView.isHidden = true
+            inlineSuffixLabel.text = " · \(inlineImageSuffix ?? "")"
+            enableInlineValueConstraints()
+        } else if !valueImageURL.isNillOrEmpty {
             headerLabel.isHidden = false
             valueImageView.isHidden = false
             valueImageView.load(from: valueImageURL)
@@ -280,7 +363,7 @@ class CartItemRoom: BaseTableCell {
             titleLabel.text = section.title
             disableValueImageConstraints()
         }
-        
+
         infoButton.isHidden = !section.info
     }
     
@@ -290,15 +373,27 @@ class CartItemRoom: BaseTableCell {
     }
     
     private func enableValueImageConstraints() {
+        inlineValueStackView.snp.removeConstraints()
         valueImageView.snp.remakeConstraints { make in
-            make.top.bottom.equalToSuperview()
-            make.width.equalTo(100)
-            make.height.equalTo(40)
             make.left.equalToSuperview()
+            make.centerY.equalToSuperview()
+            make.top.greaterThanOrEqualToSuperview()
+            make.bottom.lessThanOrEqualToSuperview()
+            make.width.equalTo(100)
+            make.height.equalTo(32)
         }
     }
-    
+
     private func disableValueImageConstraints() {
         valueImageView.snp.removeConstraints()
+        inlineValueStackView.snp.removeConstraints()
+    }
+
+    private func enableInlineValueConstraints() {
+        valueImageView.snp.removeConstraints()
+        inlineValueStackView.snp.remakeConstraints { make in
+            make.top.bottom.left.equalToSuperview()
+            make.right.lessThanOrEqualToSuperview()
+        }
     }
 }

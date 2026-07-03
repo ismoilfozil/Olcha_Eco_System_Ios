@@ -183,10 +183,38 @@ open class ProductsListPage: BaseViewController, SkeletonCollectionViewDataSourc
             .sink { [weak self] data in
                 guard let self = self else { return }
 
+                let page = data?.paginator?.current_page ?? 1
+                let newProducts = data?.products ?? []
                 self.filters.paging.finished(paginator: data?.paginator)
-                self.products.append(contentsOf: data?.products ?? [])
-//                self.collection.reloadData()
-                self.collection.collectionViewLayout.invalidateLayout()
+
+                if page == 1 {
+                    self.products = newProducts
+                    self.collection.reloadData()
+                    DispatchQueue.main.async {
+                        self.checkPaginator(scrollView: self.collection)
+                    }
+                } else {
+                    let startIndex = self.products.count
+                    let indexPaths = newProducts.indices.map {
+                        IndexPath(item: startIndex + $0, section: Section.products.rawValue)
+                    }
+
+                    guard !indexPaths.isEmpty else {
+                        self.collection.reloadData()
+                        DispatchQueue.main.async {
+                            self.checkPaginator(scrollView: self.collection)
+                        }
+                        return
+                    }
+
+                    self.collection.performBatchUpdates {
+                        self.products.append(contentsOf: newProducts)
+                        self.collection.insertItems(at: indexPaths)
+                    } completion: { _ in
+                        self.collection.reloadSections(.init(integer: Section.footer.rawValue))
+                        self.checkPaginator(scrollView: self.collection)
+                    }
+                }
             }.store(in: &bag)
         
         featuresViewModel
@@ -229,6 +257,7 @@ open class ProductsListPage: BaseViewController, SkeletonCollectionViewDataSourc
                 if isError {
                     self.filters.paging.isLoading = false
                     self.filters.paging.current -= 1
+                    self.collection.reloadSections(.init(integer: Section.footer.rawValue))
                 }
             }.store(in: &bag)
         
@@ -364,7 +393,7 @@ open class ProductsListPage: BaseViewController, SkeletonCollectionViewDataSourc
     override func refreshList(_ sender: AnyObject) {
         if !collection.isDragging {
             products.removeAll()
-            filters.paging = .init()
+            filters.paging.reset()
             initialRequest()
         }
     }
@@ -424,5 +453,3 @@ open class ProductsListPage: BaseViewController, SkeletonCollectionViewDataSourc
         return ProductCell.classIdentifier
     }
 }
-
-

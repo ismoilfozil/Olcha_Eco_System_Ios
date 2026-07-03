@@ -21,8 +21,9 @@ class ProductPage: BaseViewController {
         .cashAd,
         .variations,///needs to fix
         .gift,
-        .buyActions,
+        .installment,
         .shippingData,
+        .trustInfo,
         .storeProducts,
         .description,
         .warranty,
@@ -51,6 +52,7 @@ class ProductPage: BaseViewController {
     
     //MARK: - ViewModels
     private let viewModel = ProductViewModel()
+    let checkoutViewModel = CheckoutViewModel()
     
     
     private let brandViewModel = BrandPageViewModel()
@@ -465,6 +467,14 @@ class ProductPage: BaseViewController {
             checkVariation(product: product, productType: .storeProduct)
         }.store(in: &bag)
         
+        checkoutViewModel
+            .$externalProviders
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                guard let self else { return }
+                self.reloadSection(section: .installment)
+            }.store(in: &bag)
+
         pushObservers()
         table.canCancelContentTouches = false
     }
@@ -618,6 +628,7 @@ class ProductPage: BaseViewController {
         loadProduct()
         loadVariations()
         setupCombineObservers()
+        checkoutViewModel.loadExternalProviders()
     }
     
     func loadVariations() {

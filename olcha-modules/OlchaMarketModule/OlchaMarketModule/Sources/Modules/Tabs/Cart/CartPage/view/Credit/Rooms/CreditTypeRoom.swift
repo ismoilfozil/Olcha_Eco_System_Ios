@@ -129,6 +129,7 @@ class CreditTypeRoom: BaseTableCell {
     override func configureViews() {
         checkRound.isUserInteractionEnabled = false
         stackContainer.axis = .vertical
+        stackContainer.setCustomSpacing(12, after: slider)
         paymentInfoContainer.axis = .vertical
         hintInfoIcon.setIcon(.info?.withColor(.olchaOrange ?? .orange))
         hintInfoTitle.style(.regular, 12)

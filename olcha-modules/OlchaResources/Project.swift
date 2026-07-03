@@ -1,7 +1,7 @@
 import ProjectDescription
 import ProjectDescriptionHelpers
 
-let settings = Settings(base: SettingsDictionary().merging([
+let settings = Settings.settings(base: SettingsDictionary().merging([
     "SWIFT_VERSION": "5"
 ]))
 

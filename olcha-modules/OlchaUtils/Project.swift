@@ -15,7 +15,7 @@ let baseSettingsDictionary = SettingsDictionary()
         "SWIFT_VERSION": "5"
     ])
 
-let settings = Settings(base: baseSettingsDictionary)
+let settings = Settings.settings(base: baseSettingsDictionary)
 
 let project = Project(
     name: "OlchaUtils",

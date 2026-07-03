@@ -32,6 +32,7 @@ public class BankCardsVerificationPage: BaseViewController<TitleNavigationBar>, 
     private let cardFill = CardFillView()
     let cardsTable = BaseTableView()
     private let confirmButton = OlchaButton()
+    private let returnProfileButton = IButton()
     
     public weak var coordinator: VerificationCoordinatorProtocol?
     
@@ -67,6 +68,7 @@ public class BankCardsVerificationPage: BaseViewController<TitleNavigationBar>, 
     public var withStatus: Bool = true {
         didSet {
             status.isHidden = !withStatus
+            returnProfileButton.isHidden = !withStatus
         }
     }
     
@@ -91,6 +93,7 @@ public class BankCardsVerificationPage: BaseViewController<TitleNavigationBar>, 
         scrollContainer.addArrangedSubview(cardFill)
         scrollContainer.addArrangedSubview(cardsTable)
         scrollContainer.addArrangedSubview(confirmButton)
+        scrollContainer.addArrangedSubview(returnProfileButton)
    
     }
     
@@ -109,12 +112,22 @@ public class BankCardsVerificationPage: BaseViewController<TitleNavigationBar>, 
         confirmButton.snp.makeConstraints { make in
             make.height.equalTo(40)
         }
+        
+        returnProfileButton.snp.makeConstraints { make in
+            make.height.equalTo(40)
+        }
     }
     
     public override func configureViews() {
         navigationBar.setTitle("verify_profile".localized(.verification))
         
         confirmButton.setTitle("confirm".localized())
+        returnProfileButton.setTitle("go_profile".localized(), for: .normal)
+        returnProfileButton.setTitleColor(.olchaTextBlack, for: .normal)
+        returnProfileButton.titleLabel?.style(.medium, 16)
+        returnProfileButton.backgroundColor = .lightGray1
+        returnProfileButton.layer.cornerRadius = 8
+        returnProfileButton.layer.borderWidth = 0
         
         scrollContainer.layoutIfNeeded()
         scrollContainer.axis = .vertical
@@ -139,6 +152,7 @@ public class BankCardsVerificationPage: BaseViewController<TitleNavigationBar>, 
         
         cardFill.isHidden = true
         cardsTable.isHidden = true
+        returnProfileButton.isHidden = !withStatus
         checkButtonState()
     }
     
@@ -209,6 +223,11 @@ public class BankCardsVerificationPage: BaseViewController<TitleNavigationBar>, 
         confirmButton.settings.clicked { [weak self] in
             guard let self = self else { return }
             completion?()
+        }
+        
+        returnProfileButton.clicked { [weak self] in
+            guard let self = self else { return }
+            self.coordinator?.navigationController.popToRootViewController(animated: true)
         }
         
         handle(verificationViewModel.$step, withError: false) { [weak self] data in

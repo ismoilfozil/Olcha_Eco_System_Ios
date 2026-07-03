@@ -26,7 +26,7 @@ class DetailedCatalogPaginator {
     var brandsPaging = Paging(current: 0)
     
     func isCategoryProductsLoaded() -> Bool {
-        categoriesPaging.isFinishedPaging
+        !categoriesPaging.isLoading && loadedCategoryProducts.count >= categories.count
     }
     
 }

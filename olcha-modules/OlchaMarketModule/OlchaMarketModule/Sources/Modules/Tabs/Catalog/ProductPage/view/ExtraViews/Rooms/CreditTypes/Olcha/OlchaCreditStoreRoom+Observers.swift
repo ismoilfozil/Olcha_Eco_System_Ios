@@ -63,6 +63,7 @@ extension OlchaCreditStoreRoom {
             .sink { [weak self] data in
                 guard let self else { return }
                 graphObserver?.send(data)
+                updateEmbeddedGraph(with: data)
             }.store(in: &bag)
     }
 }

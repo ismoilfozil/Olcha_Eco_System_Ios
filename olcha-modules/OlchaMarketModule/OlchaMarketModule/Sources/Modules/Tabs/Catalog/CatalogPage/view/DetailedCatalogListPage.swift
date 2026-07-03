@@ -205,6 +205,10 @@ public class DetailedCatalogListPage: BaseViewController {
                         self.collection.insertItems(at: indexPaths)
                         
                     }
+
+                    DispatchQueue.main.async {
+                        self.checkPaginator(scrollView: self.collection)
+                    }
                 }
                 
             }.store(in: &bag)
@@ -401,7 +405,7 @@ public class DetailedCatalogListPage: BaseViewController {
                             self.collection.insertItems(at: [newIndexPath])
                         } completion: { isUpdated in
                             if isUpdated {
-                                
+                                self.collection.reloadSections(.init(integer: Section.footer.rawValue))
                             }
                         }
                     } catch {}
@@ -417,6 +421,7 @@ public class DetailedCatalogListPage: BaseViewController {
                 self.sortProductsIndicator.send(false)
                 self.helper.categoriesPaging.isLoading = false
                 self.helper.categoriesPaging.current -= 1
+                self.collection.reloadSections(.init(integer: Section.footer.rawValue))
             }.store(in: &bag)
     }
     

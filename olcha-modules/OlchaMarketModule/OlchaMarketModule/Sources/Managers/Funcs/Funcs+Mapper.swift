@@ -7,19 +7,20 @@
 
 import UIKit
 import OlchaUI
+import OlchaUtils
 extension Funcs {
     static func getOrder(id: String?) -> Order {
         return .init(id: id?.int ?? 0)
     }
-    
+
     static func getProductModel(id: Int?,
                                 alias: String? = nil,
                                 name_ru: String? = nil,
                                 name_oz: String? = nil,
                                 name_uz: String? = nil
     ) -> ProductModel {
-        
-        
+
+
         return ProductModel(id: id,
                             inStock: nil,
                             name: nil,
@@ -76,9 +77,9 @@ extension Funcs {
                             max_price: nil,
                             store_id: nil
         )
-        
+
     }
-    
+
     static func getCategoryModel(id: Int,
                                  name_ru: String? = nil,
                                  name_uz: String? = nil,
@@ -116,7 +117,7 @@ extension Funcs {
                              products:nil,
                              background_image: nil)
     }
-    
+
     static func getCategoryModel(alias: String,
                                  id: Int? = nil,
                                  name_ru: String? = nil,
@@ -155,7 +156,7 @@ extension Funcs {
                              products:nil,
                              background_image: nil)
     }
-    
+
     static func getManufacturer(id: Int? = nil,
                                 slug: String? = nil,
                                 name_ru: String? = nil,
@@ -169,36 +170,37 @@ extension Funcs {
                             main_image: nil,
                             categories: nil)
     }
-    
+
     public static func jsonMapper(jsonParams: [AnyHashable: Any]) -> CloudMessagingData {
-        
+        let jsonParams = notificationPayload(from: jsonParams)
+
         let product_id: String? = jsonParams["product_id"] as? String
-        
+
         let title_ru: String? = jsonParams["title_ru"] as? String
         let title_uz: String? = jsonParams["title_uz"] as? String
         let title_oz: String? = jsonParams["title_oz"] as? String
-        
+
         let name_ru: String? = jsonParams["name_ru"] as? String
         let name_uz: String? = jsonParams["name_uz"] as? String
         let name_oz: String? = jsonParams["name_oz"] as? String
-        
+
         let click_action: String? = jsonParams["click_action"] as? String
-        
+
         let payment_link: String? = jsonParams["payment_link"] as? String
         let order_id: String? = jsonParams["order_id"] as? String
         let link: String? = jsonParams["link"] as? String
         let brand_id: String? = jsonParams["brand_id"] as? String
         let category_id: String? = jsonParams["category_id"] as? String
-        
-        
+
+
         let data = CloudMessagingData(name_ru: name_ru,
                                       name_uz: name_uz,
                                       name_oz: name_oz,
                                       category_id: category_id,
                                       brand_id: brand_id,
                                       product_id: product_id,
-                                      
-                                      
+
+
                                       title_ru: title_ru,
                                       title_uz: title_uz,
                                       title_oz: title_oz,
@@ -206,13 +208,93 @@ extension Funcs {
                                       payment_link: payment_link,
                                       link: link,
                                       order_id: order_id)
-        
+
         return data
     }
-    
+
+    public static func clickActionMapper(jsonParams: [AnyHashable: Any]) -> ClickActionModel? {
+        let jsonParams = notificationPayload(from: jsonParams)
+
+        if let notification = decoded(RemoteNotification.self, from: jsonParams) {
+            return notification.click_action
+        }
+
+        if let clickAction = jsonParams["click_action"] as? [AnyHashable: Any] {
+            return decoded(ClickActionModel.self, from: clickAction)
+        }
+
+        if let clickAction = jsonParams["click_action"] as? [String: Any] {
+            return decoded(ClickActionModel.self, from: clickAction)
+        }
+
+        if let clickAction = jsonParams["click_action"] as? String {
+            if let data = clickAction.data(using: .utf8),
+               let jsonObject = try? JSONSerialization.jsonObject(with: data),
+               let action = decoded(ClickActionModel.self, from: jsonObject) {
+                return action
+            }
+
+            let action: [String: Any?] = [
+                "click_action": clickAction,
+                "click_action_id": jsonParams["click_action_id"],
+                "click_action_alias": jsonParams["click_action_alias"]
+            ]
+
+            return decoded(ClickActionModel.self, from: action.compactMapValues { $0 })
+        }
+
+        return nil
+    }
+
+    private static func notificationPayload(from jsonParams: [AnyHashable: Any]) -> [AnyHashable: Any] {
+        var payload = jsonParams
+
+        if let nestedData = jsonParams["data"] as? [AnyHashable: Any] {
+            nestedData.forEach { payload[$0.key] = $0.value }
+        } else if let nestedData = jsonParams["data"] as? [String: Any] {
+            nestedData.forEach { payload[$0.key] = $0.value }
+        } else if let nestedData = jsonParams["data"] as? String,
+                  let data = nestedData.data(using: .utf8),
+                  let jsonObject = try? JSONSerialization.jsonObject(with: data),
+                  let dictionary = jsonObject as? [String: Any] {
+            dictionary.forEach { payload[$0.key] = $0.value }
+        }
+
+        return payload
+    }
+
+    private static func decoded<T: Decodable>(_ type: T.Type, from object: Any) -> T? {
+        guard let jsonObject = validJSONObject(from: object),
+              JSONSerialization.isValidJSONObject(jsonObject),
+              let data = try? JSONSerialization.data(withJSONObject: jsonObject) else {
+            return nil
+        }
+
+        return try? JSONDecoder().decode(type, from: data)
+    }
+
+    private static func validJSONObject(from object: Any) -> Any? {
+        switch object {
+        case let dictionary as [AnyHashable: Any]:
+            return dictionary.reduce(into: [String: Any]()) { result, item in
+                result[String(describing: item.key)] = validJSONObject(from: item.value)
+            }
+        case let dictionary as [String: Any]:
+            return dictionary.reduce(into: [String: Any]()) { result, item in
+                result[item.key] = validJSONObject(from: item.value)
+            }
+        case let array as [Any]:
+            return array.compactMap { validJSONObject(from: $0) }
+        case Optional<Any>.none:
+            return nil
+        default:
+            return object
+        }
+    }
+
     static func getFile(_ image: String) -> File {
         return File(full_path: image)
     }
-    
-    
+
+
 }

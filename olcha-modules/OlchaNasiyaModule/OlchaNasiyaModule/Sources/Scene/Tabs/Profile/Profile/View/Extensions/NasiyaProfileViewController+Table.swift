@@ -44,7 +44,7 @@ extension NasiyaProfileViewController: TableDelegates {
                     isVerified: isVerified,
                     status: input.verification?.status
                 )
-                cell.progressView.progress = input.verification?.percentage ?? 0
+                cell.progressView.progress = input.verification?.displayPercentage ?? 0
             }
             return cell
         case .verificationStatus:
@@ -99,7 +99,7 @@ extension NasiyaProfileViewController: TableDelegates {
         switch sections[indexPath.section] {
             
         case .header:
-            coordinator?.pushProfileData()
+            openProfileDataAfterStepCheck()
         case .phoneNumbers:
             coordinator?.pushPhones()
         case .bankCards:
@@ -132,6 +132,35 @@ extension NasiyaProfileViewController: TableDelegates {
             coordinator?.pushPhones()
         case .bankCard:
             coordinator?.pushBankCards()
+        }
+    }
+
+    func openProfileDataAfterStepCheck() {
+        guard !shouldOpenProfileDataAfterStepLoad else { return }
+        shouldOpenProfileDataAfterStepLoad = true
+        verificationViewModel.loadStep()
+    }
+
+    func openProfileData(with verificationData: VerificationData?) {
+        guard let verificationData else {
+            coordinator?.pushVerificationFlow()
+            return
+        }
+
+        if verificationData.is_verified == true {
+            showSuccess(text: "verification_finish".localized())
+            return
+        }
+
+        switch verificationData.step {
+        case 0, 1:
+            pushVerification(step: .identification)
+        case 2:
+            pushVerification(step: .phones)
+        case 3:
+            pushVerification(step: .bankCard)
+        default:
+            coordinator?.pushVerificationFlow()
         }
     }
 }

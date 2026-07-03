@@ -23,4 +23,4 @@ public let baseSettingsDictionary = SettingsDictionary()
         "CFBundleVersion": SettingValue(stringLiteral: buildNumber)
     ])
 
-public let settings = Settings(base: baseSettingsDictionary)
+public let settings = Settings.settings(base: baseSettingsDictionary)

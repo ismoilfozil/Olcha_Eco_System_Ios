@@ -10,6 +10,9 @@
 #elseif os(tvOS) || os(watchOS)
   import UIKit
 #endif
+#if canImport(SwiftUI)
+  import SwiftUI
+#endif
 
 // swiftlint:disable superfluous_disable_command file_length implicit_return
 
@@ -23,7 +26,7 @@ public enum OlchaAsset {
 
 // MARK: - Implementation Details
 
-public final class OlchaColors: @unchecked Sendable {
+public final class OlchaColors {
   public fileprivate(set) var name: String
 
   #if os(macOS)
@@ -39,6 +42,23 @@ public final class OlchaColors: @unchecked Sendable {
     }
     return color
   }()
+
+  #if canImport(SwiftUI)
+  private var _swiftUIColor: Any? = nil
+  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+  public private(set) var swiftUIColor: SwiftUI.Color {
+    get {
+      if self._swiftUIColor == nil {
+        self._swiftUIColor = SwiftUI.Color(asset: self)
+      }
+
+      return self._swiftUIColor as! SwiftUI.Color
+    }
+    set {
+      self._swiftUIColor = newValue
+    }
+  }
+  #endif
 
   fileprivate init(name: String) {
     self.name = name
@@ -58,6 +78,16 @@ public extension OlchaColors.Color {
     #endif
   }
 }
+
+#if canImport(SwiftUI)
+@available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+public extension SwiftUI.Color {
+  init(asset: OlchaColors) {
+    let bundle = OlchaResources.bundle
+    self.init(asset.name, bundle: bundle)
+  }
+}
+#endif
 
 // swiftlint:enable all
 // swiftformat:enable all

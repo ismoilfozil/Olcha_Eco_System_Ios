@@ -201,6 +201,7 @@ public class SwiftDataTable: UIView {
     public override func layoutSubviews() {
         super.layoutSubviews()
         let searchBarHeight = self.heightForSearchView()
+        self.searchBar.isHidden = !self.shouldShowSearchSection()
         self.searchBar.frame = CGRect(x: 0, y: 0, width: self.bounds.width, height: searchBarHeight)
         self.collectionView.frame = CGRect(x: 0, y: searchBarHeight, width: self.bounds.width, height: self.bounds.height-searchBarHeight)
     }

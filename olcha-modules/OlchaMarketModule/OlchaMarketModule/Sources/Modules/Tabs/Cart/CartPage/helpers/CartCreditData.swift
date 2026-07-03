@@ -17,7 +17,20 @@ public class CartCreditData {
     }
 }
 
+public struct ExternalInstallmentData {
+    public var alias: String
+    public var period: Int
+    public var monthlyPayment: Int
+
+    public init(alias: String, period: Int, monthlyPayment: Int) {
+        self.alias = alias
+        self.period = period
+        self.monthlyPayment = monthlyPayment
+    }
+}
+
 public class CreditOrder {
     public var creditDatas: [CreditType: CartCreditData] = [:]
     public var creditType: CreditType = .olcha
+    public var externalInstalment: ExternalInstallmentData?
 }

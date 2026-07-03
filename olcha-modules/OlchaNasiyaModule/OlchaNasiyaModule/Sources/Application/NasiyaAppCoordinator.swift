@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 import OlchaUI
 import OlchaAuth
 import OlchaPincode
@@ -22,6 +23,9 @@ public protocol NasiyaAppCoordinatorProtocol: AppCoordinatorProtocol {
 public class NasiyaAppCoordinator: NasiyaAppCoordinatorProtocol {
     
     private let viewModel: VersionViewModel = CommonDIContainer.shared.resolve(argument: Organization.nasiya)
+    private let verificationViewModel: VerificationViewModel = OlchaVerificationDIContainer.shared.resolve()
+    private var bag = Set<AnyCancellable>()
+    private var shouldOpenProfileAfterStepLoad = false
     
     public var pincodeCoordinator: PincodeCoordinatorProtocol
     
@@ -56,6 +60,7 @@ public class NasiyaAppCoordinator: NasiyaAppCoordinatorProtocol {
             version: Bundle.main.appVersionLong,
             url: Texts.appUrl.nasiyaUrl
         )
+        setupVerificationStepObserver()
     }
     
     public func start(appStarted: (() -> Void)?) {
@@ -176,7 +181,7 @@ public extension NasiyaAppCoordinator {
         case .store(let storeId):
             partnerCoordinator?.pushPartnerInfo(partner: PartnerModel(slug: storeId?.description))
         case .profile:
-            selectTab(for: NasiyaTab.profile)
+            openProfileAfterStepCheck()
         }
     }
     
@@ -216,4 +221,57 @@ public extension NasiyaAppCoordinator {
         tabcontroller?.selectedIndex = index
     }
     
+}
+
+private extension NasiyaAppCoordinator {
+
+    func setupVerificationStepObserver() {
+        verificationViewModel.$step
+            .sink { [weak self] step in
+                guard let self else { return }
+                guard shouldOpenProfileAfterStepLoad else { return }
+                switch step {
+                case .success(let verificationData):
+                    shouldOpenProfileAfterStepLoad = false
+                    openProfile(with: verificationData)
+                case .failure(let error):
+                    shouldOpenProfileAfterStepLoad = false
+                    navigationController.topViewController?.showError(text: error?.message)
+                default:
+                    break
+                }
+            }
+            .store(in: &bag)
+    }
+
+    func openProfileAfterStepCheck() {
+        guard !shouldOpenProfileAfterStepLoad else { return }
+        shouldOpenProfileAfterStepLoad = true
+        verificationViewModel.loadStep()
+    }
+
+    func openProfile(with verificationData: VerificationData?) {
+        guard let verificationData else {
+            selectTab(for: NasiyaTab.profile)
+            tabcontroller?.profileCoordinator?.profileCoordinator.pushVerificationFlow()
+            return
+        }
+
+        if verificationData.is_verified == true {
+            navigationController.topViewController?.showSuccess(text: "verification_finish".localized())
+            return
+        }
+
+        selectTab(for: NasiyaTab.profile)
+        switch verificationData.step {
+        case 0, 1:
+            tabcontroller?.profileCoordinator?.profileCoordinator.pushPassportData()
+        case 2:
+            tabcontroller?.profileCoordinator?.profileCoordinator.pushPhones()
+        case 3:
+            tabcontroller?.profileCoordinator?.profileCoordinator.pushBankCards()
+        default:
+            tabcontroller?.profileCoordinator?.profileCoordinator.pushVerificationFlow()
+        }
+    }
 }

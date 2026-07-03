@@ -8,10 +8,11 @@ let baseSettings: SettingsDictionary = [
     "OTHER_LDFLAGS": "-ObjC",
     "SWIFT_VERSION": "5"
 ]
-let settings: Settings = Settings(base: baseSettings)
+let settings: Settings = Settings.settings(base: baseSettings)
 
 let dependencies: [TargetDependency] = [
     .project(target: "OlchaAuth", path: "../OlchaAuth"),
+    .project(target: "OlchaVerification", path: "../OlchaVerification"),
     .project(target: "OlchaUI", path: "../OlchaUI"),
     .project(target: "OlchaBalance", path: "../OlchaBalance"),
     .project(target: "OlchaNasiyaModule", path: "../OlchaNasiyaModule"),

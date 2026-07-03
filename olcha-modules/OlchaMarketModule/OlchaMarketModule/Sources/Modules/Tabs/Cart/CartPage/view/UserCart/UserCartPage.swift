@@ -91,6 +91,7 @@ class UserCartPage: OlchaUI.BaseViewController<OlchaUI.TitleNavigationBar> {
     
     let viewModels = ViewModelsFactory()
     let observers = CartObservers()
+    var initialCreditOrder: CreditOrder?
     
     var input = Input()
     

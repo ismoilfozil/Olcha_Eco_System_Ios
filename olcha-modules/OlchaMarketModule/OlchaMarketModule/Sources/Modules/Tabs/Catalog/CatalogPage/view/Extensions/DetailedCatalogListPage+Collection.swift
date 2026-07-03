@@ -120,7 +120,6 @@ extension DetailedCatalogListPage: UICollectionViewDelegate, UICollectionViewDat
                 cell.configure(with: self.filters.cellType,
                                withSeparator: indexPath.item != self.products.count)
                 cell.setup(with: self.products[indexPath.item])
-                checkPaginator(index: indexPath.item)
             }
             cell.listSeparators(indexPath: indexPath)
             return cell
@@ -169,6 +168,8 @@ extension DetailedCatalogListPage: UICollectionViewDelegate, UICollectionViewDat
             checkCategoriesPaginator(index: indexPath.item)
             loadCategoryBrands()
             break
+        case .products:
+            checkPaginator(index: indexPath.item)
         default: break
         }
     }
@@ -194,6 +195,8 @@ extension DetailedCatalogListPage: UICollectionViewDelegate, UICollectionViewDat
     }
     
     public override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        checkPaginator(scrollView: scrollView)
+
         let y = scrollView.contentOffset.y
 
         let pin = !(scrollView.panGestureRecognizer.translation(in: scrollView).y < 0)

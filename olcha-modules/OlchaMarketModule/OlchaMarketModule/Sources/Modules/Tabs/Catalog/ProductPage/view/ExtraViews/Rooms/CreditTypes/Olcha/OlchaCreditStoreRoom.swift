@@ -9,6 +9,7 @@ import UIKit
 import Combine
 import OlchaUI
 import OlchaUtils
+import SnapKit
 
 class OlchaCreditStoreRoom: BaseTableCell {
 
@@ -25,6 +26,16 @@ class OlchaCreditStoreRoom: BaseTableCell {
     let dataSection = UIView()
     let slider = MonthSlider()
     let expandeButton = IconButton()
+    private let bestOfferBadge: UILabel = {
+        let label = UILabel()
+        label.style(.semibold, 11)
+        label.textColor = .white
+        label.backgroundColor = .olchaGreen
+        label.textAlignment = .center
+        label.clipsToBounds = true
+        label.isHidden = true
+        return label
+    }()
     
     let paymentInfoContainer = UIStackView()
     let limitLabel: UILabel = {
@@ -75,27 +86,60 @@ class OlchaCreditStoreRoom: BaseTableCell {
         }
     }
     
+    var isBestOffer: Bool = false {
+        didSet {
+            bestOfferBadge.isHidden = !isBestOffer
+            isChosen ? selectedStyle() : unselectedStyle()
+        }
+    }
+
     weak var isReady: PassthroughSubject<Bool, Never>?
     weak var graphObserver: CurrentValueSubject<[String: InstallmentInfo], Never>?
     weak var observers: CartObservers?
 
+    // MARK: - Embedded graph
+    private let graphToggleSection = UIView()
+    private let graphToggleButton = UIButton(type: .system)
+    private let graphContainer = UIView()
+    private lazy var graphTable: SwiftDataTable = makeGraphTable()
+    private lazy var graphConfiguration: DataTableConfiguration = {
+        var c = DataTableConfiguration()
+        c.shouldShowFooter = false
+        c.shouldShowSearchSection = false
+        c.fixedColumns = .init(leftColumns: 1)
+        return c
+    }()
+    private var graphData: [String: InstallmentInfo] = [:]
+    private var isGraphVisible = false
+    var onHeightChanged: (() -> Void)?
+    var onPeriodChanged: ((Int) -> Void)?
+    var onSelected: (() -> Void)?
+    private var graphHeightConstraint: Constraint?
+    private let topTapButton = IButton()
+
     override func setupViews() {
         container.addSubview(stackContainerBackground)
         stackContainerBackground.addSubview(stackContainer)
+        stackContainerBackground.addSubview(bestOfferBadge)
         stackContainer.addArrangedSubview(staticSection)
         stackContainer.addArrangedSubview(paymentFieldBottomSection)
-        
+        stackContainer.addArrangedSubview(graphToggleSection)
+        stackContainer.addArrangedSubview(graphContainer)
+
         staticSection.addSubview(dataSection)
-        
+        staticSection.addSubview(topTapButton)
+
         dataSection.addSubview(slider)
         dataSection.addSubview(paymentInfoContainer)
         dataSection.addSubview(hintInfoIcon)
         dataSection.addSubview(hintInfoTitle)
-        
-        
+
         paymentFieldBottomSection.addSubview(separator)
         paymentFieldBottomSection.addSubview(firstPaymentField)
         paymentFieldBottomSection.addSubview(errorLabel)
+
+        graphToggleSection.addSubview(graphToggleButton)
+        graphContainer.addSubview(graphTable)
     }
     
     override func autolayout() {
@@ -103,14 +147,27 @@ class OlchaCreditStoreRoom: BaseTableCell {
             make.top.bottom.equalToSuperview().inset(8)
             make.left.right.equalToSuperview().inset(16)
         }
-        
+
         stackContainer.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
+
+        bestOfferBadge.snp.makeConstraints { make in
+            make.top.equalToSuperview().inset(-1)
+            make.left.equalToSuperview().inset(18)
+            make.height.equalTo(22)
+            make.width.greaterThanOrEqualTo(92)
+        }
+
         dataSection.snp.makeConstraints { make in
             make.top.equalToSuperview().inset(16)
             make.left.right.equalToSuperview()
             make.bottom.equalToSuperview().inset(16)
+        }
+
+        topTapButton.snp.makeConstraints { make in
+            make.left.right.bottom.equalToSuperview()
+            make.top.equalTo(slider.snp.bottom)
         }
         
         slider.snp.makeConstraints { make in
@@ -119,7 +176,7 @@ class OlchaCreditStoreRoom: BaseTableCell {
         }
         
         paymentInfoContainer.snp.makeConstraints { make in
-            make.top.equalTo(slider.snp.bottom)
+            make.top.equalTo(slider.snp.bottom).offset(12)
             make.left.right.equalToSuperview().inset(16)
         }
         
@@ -152,6 +209,18 @@ class OlchaCreditStoreRoom: BaseTableCell {
             make.top.equalTo(firstPaymentField.snp.bottom).inset(-8)
             make.bottom.equalToSuperview().inset(16)
         }
+
+        graphToggleButton.snp.makeConstraints { make in
+            make.top.equalToSuperview().inset(8)
+            make.bottom.equalToSuperview().inset(8)
+            make.left.right.equalToSuperview().inset(16)
+            make.height.equalTo(48)
+        }
+
+        graphTable.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+            graphHeightConstraint = make.height.equalTo(200).constraint
+        }
     }
     
     override func configureViews() {
@@ -159,6 +228,8 @@ class OlchaCreditStoreRoom: BaseTableCell {
         self.isChosen = false
         self.isExpande = false
         stackContainer.axis = .vertical
+        bestOfferBadge.text = "best_installment_offer".localized()
+        bestOfferBadge.layer.cornerRadius = 11
         
         icon.image = .olchaIcon
         expandeButton.setIcon(.large_shrinked)
@@ -181,9 +252,22 @@ class OlchaCreditStoreRoom: BaseTableCell {
         stackContainerBackground.round()
         setupObservers()
         stackContainerBackground.clipsToBounds = true
-        
-        
+
+        topTapButton.clicked { [weak self] in
+            guard let self else { return }
+            self.onSelected?()
+        }
         setHighContent(view: errorLabel)
+
+        graphContainer.isHidden = true
+        graphToggleButton.setTitleColor(.olchaTextBlack, for: .normal)
+        graphToggleButton.titleLabel?.font = UIFont.style(.medium, 15)
+        graphToggleButton.layer.cornerRadius = 12
+        graphToggleButton.layer.borderWidth = 1
+        graphToggleButton.layer.borderColor = UIColor.olchaLightNeutralGray?.cgColor ?? UIColor.lightGray.cgColor
+        graphToggleButton.backgroundColor = .olchaWhite
+        graphToggleButton.setTitle("▼  " + "payment_graph".localized(), for: .normal)
+        graphToggleButton.addTarget(self, action: #selector(toggleGraph), for: .touchUpInside)
     }
     
     private func setHighContent(view: UIView) {
@@ -195,13 +279,13 @@ class OlchaCreditStoreRoom: BaseTableCell {
     func selectedStyle() {
         stackContainerBackground.round()
         checkRound.setIcon(.round_selected_check)
-        stackContainerBackground.darkBorder(with: .olchaAccentColor)
+        stackContainerBackground.darkBorder(with: isBestOffer ? .olchaGreen : .olchaAccentColor)
     }
     
     func unselectedStyle() {
         stackContainerBackground.round()
         checkRound.setIcon(.round_unselected_check)
-        stackContainerBackground.darkBorder(with: .olchaLightNeutralGray)
+        stackContainerBackground.darkBorder(with: isBestOffer ? .olchaGreen : .olchaLightNeutralGray)
     }
     
     
@@ -218,7 +302,7 @@ class OlchaCreditStoreRoom: BaseTableCell {
         
     }
     
-    func setupTempData() {
+    func setupTempData(preferredMonth: Int? = nil) {
         
         if let creditData = creditOrder?.creditDatas[.olcha] {
             tempCreditData = creditData
@@ -228,6 +312,12 @@ class OlchaCreditStoreRoom: BaseTableCell {
             tempCreditData = .init()
         }
         
+        if let preferredMonth,
+           preferredMonth >= viewModel.minMonth,
+           preferredMonth <= viewModel.maxMonth {
+            viewModel.month = preferredMonth
+        }
+
         slider.forcedStep = viewModel.month
         valueChanged(month: viewModel.month)
         firstPaymentField.settings.text = viewModel.initialPayment.int.string.priceWithoutCurrency
@@ -242,6 +332,7 @@ extension OlchaCreditStoreRoom: SliderViewDelegate {
         viewModel.month = month
         viewModel.calculate(products: products)
         updateData()
+        onPeriodChanged?(month)
     }
     
     func expandeCheck() {
@@ -335,5 +426,73 @@ extension OlchaCreditStoreRoom {
         }
         
         return stack
+    }
+}
+
+// MARK: - Embedded installment graph
+
+extension OlchaCreditStoreRoom: SwiftDataTableDelegate {
+
+    @objc func toggleGraph() {
+        isGraphVisible.toggle()
+        graphContainer.isHidden = !isGraphVisible
+        let arrow = isGraphVisible ? "▲" : "▼"
+        let text  = isGraphVisible ? "hide_graph".localized() : "payment_graph".localized()
+        graphToggleButton.setTitle("\(arrow)  \(text)", for: .normal)
+        onHeightChanged?()
+    }
+
+    func updateEmbeddedGraph(with data: [String: InstallmentInfo]) {
+        graphData = data
+        graphTable.set(data: graphTableData(),
+                       headerTitles: graphColumnHeaders(),
+                       options: graphConfiguration,
+                       shouldReplaceLayout: true)
+        graphTable.reloadEverything()
+
+        let headerH: CGFloat = 44
+        let rowH: CGFloat = 44
+        let rowCount = CGFloat(products.count)
+        let height = min(300, max(60, headerH + rowCount * rowH))
+        graphHeightConstraint?.update(offset: height)
+        if isGraphVisible { onHeightChanged?() }
+    }
+
+    private func makeGraphTable() -> SwiftDataTable {
+        let table = SwiftDataTable(data: graphTableData(),
+                                   headerTitles: graphColumnHeaders(),
+                                   options: graphConfiguration)
+        table.backgroundColor = .olchaWhite
+        table.delegate = self
+        return table
+    }
+
+    private func graphColumnHeaders() -> [String] {
+        var list = ["products".localized() + " " + products.count.string]
+        list.append("initial_fee".localized())
+        for i in 0..<viewModel.month {
+            list.append("\(i + 1)" + "month_short".localized())
+        }
+        return list
+    }
+
+    private func graphTableData() -> [[DataTableValueType]] {
+        graphTableRows().map { $0.compactMap(DataTableValueType.init) }
+    }
+
+    private func graphTableRows() -> [[Any]] {
+        products.map { product in
+            var row: [String] = [product.main_image ?? ""]
+            if let info = graphData[product.id?.string ?? ""] {
+                row.append(info.first_fee.string.originalPriceWithoutCurrency)
+                for i in 0..<viewModel.month {
+                    let amount = info.maxPeriod.int > i
+                        ? info.paymentPerMonth.string.originalPriceWithoutCurrency
+                        : "0".originalPriceWithoutCurrency
+                    row.append(amount)
+                }
+            }
+            return row
+        }
     }
 }

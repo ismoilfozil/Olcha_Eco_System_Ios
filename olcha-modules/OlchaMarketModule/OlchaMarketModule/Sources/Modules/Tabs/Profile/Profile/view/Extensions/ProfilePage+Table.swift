@@ -56,7 +56,7 @@ extension ProfilePage: UITableViewDelegate, UITableViewDataSource {
                     isVerified: input.isVerified,
                     status: input.verification?.status
                 )
-                cell.progressView.progress = input.verification?.percentage ?? 0
+                cell.progressView.progress = input.verification?.displayPercentage ?? 0
             }
             return cell
         case .balans:
@@ -125,25 +125,7 @@ extension ProfilePage: UITableViewDelegate, UITableViewDataSource {
         case .ramazan:
             coordinator?.pushRamazanTaqvim()
         case .personalData:
-            if let verificationData = input.verification {
-                let currentStep = verificationData.getStep()
-                let verificationStep: VerificationStatusStep
-                
-                switch currentStep {
-                case 0, 1:
-                    verificationStep = .identification
-                case 2:
-                    verificationStep = .phones
-                case 3:
-                    verificationStep = .bankCard
-                default:
-                    verificationStep = .identification
-                }
-                
-                coordinator?.pushVerification(step: verificationStep)
-            } else {
-                coordinator?.pushVerificationPage1()
-            }
+            openPersonalDataAfterStepCheck()
         case .oneIdGuide:
             coordinator?.pushOneIdGuide()
         case .myOrders:
@@ -192,4 +174,45 @@ extension ProfilePage: UITableViewDelegate, UITableViewDataSource {
         (indexPath.item == 1)
     }
 
+}
+
+extension ProfilePage {
+
+    func openPersonalDataAfterStepCheck() {
+        guard !shouldOpenPersonalDataAfterStepLoad else { return }
+        shouldOpenPersonalDataAfterStepLoad = true
+        verificationViewModel.loadStep()
+    }
+
+    func openPersonalData(with verificationData: VerificationData?) {
+        guard let verificationData else {
+            coordinator?.pushVerificationPage1()
+            return
+        }
+
+        if verificationData.is_verified == true {
+            showSuccess(text: "verification_finish".localized())
+            return
+        }
+
+        guard let currentStep = verificationData.step else {
+            coordinator?.pushVerificationPage1()
+            return
+        }
+
+        coordinator?.pushVerification(step: verificationStep(for: currentStep))
+    }
+
+    private func verificationStep(for currentStep: Int) -> VerificationStatusStep {
+        switch currentStep {
+        case 0, 1:
+            return .identification
+        case 2:
+            return .phones
+        case 3:
+            return .bankCard
+        default:
+            return .identification
+        }
+    }
 }

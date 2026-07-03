@@ -40,13 +40,15 @@ public protocol CartCoordinatorProtocol: Coordinator {
     func presentReceiverModalPage(observers: CartObservers?)
     func presentShippingModalPage(text: String?)
     func presentGetCostModalPage(observers: CartObservers?)
-    func presentBuyTypeModalPage(observers: CartObservers?, balanceViewModel: BalanceViewModel?)
+    func presentBuyTypeModalPage(observers: CartObservers?, balanceViewModel: BalanceViewModel?, checkoutViewModel: CheckoutViewModel?)
     func presentPaymentsModalPage(observers: CartObservers?, checkoutViewModel: CheckoutViewModel?)
     func presentCouponModalPage(observers: CartObservers?, checkoutViewModel: CheckoutViewModel?)
     func presentBonusModalPage(observers: CartObservers?, completion: (() -> Void)?)
     func presentEmptyBonusModalPage()
     func presentCartProducts(observers: CartObservers?)
     func presentCreditRequirementModal(continueAction: (() -> Void)?)
+    func presentExternalInstallmentRequirementModal(provider: ExternalInstallmentProvider?,
+                                                    continueAction: (() -> Void)?)
     func pushWebPage(urlString: String, title: String?)
 
     func startVerificationByCurrentStep(step: VerificationStatusStep?)
@@ -95,6 +97,7 @@ public class CartCoordinator: OlchaMainCoordinator, CartCoordinatorProtocol {
             let vc = UserCartPage()
             vc.coordinator = self
             vc.type = .credit
+            vc.initialCreditOrder = data
             vc.observers.selectedBuyType = .credit
             vc.observers.credit = data
             self.navigationController.push(vc)
@@ -218,10 +221,11 @@ public class CartCoordinator: OlchaMainCoordinator, CartCoordinatorProtocol {
         navigationController.presentModally(vc)
     }
     
-    public func presentBuyTypeModalPage(observers: CartObservers?, balanceViewModel: BalanceViewModel?) {
+    public func presentBuyTypeModalPage(observers: CartObservers?, balanceViewModel: BalanceViewModel?, checkoutViewModel: CheckoutViewModel?) {
         let vc = BuyTypeModalPage()
         vc.observers = observers
         vc.balanceViewModel = balanceViewModel
+        vc.checkoutViewModel = checkoutViewModel
         vc.setupOptionalActions()
         navigationController.presentModally(vc)
     }
@@ -265,6 +269,14 @@ public class CartCoordinator: OlchaMainCoordinator, CartCoordinatorProtocol {
         let vc = CreditRequirementModalPage()
         vc.continueAction = continueAction
         vc.coordinator = self
+        navigationController.presentModally(vc)
+    }
+
+    public func presentExternalInstallmentRequirementModal(provider: ExternalInstallmentProvider?,
+                                                           continueAction: (() -> Void)?) {
+        let vc = ExternalInstallmentRequirementModalPage()
+        vc.provider = provider
+        vc.continueAction = continueAction
         navigationController.presentModally(vc)
     }
 
